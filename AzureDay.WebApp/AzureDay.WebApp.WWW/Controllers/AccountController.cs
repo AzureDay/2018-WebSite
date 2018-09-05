@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 
@@ -32,6 +33,13 @@ namespace AzureDay.WebApp.WWW.Controllers
             var properties = new AuthenticationProperties {RedirectUri = redirectUrl};
             properties.Items[AzureAdB2COptions.PolicyAuthenticationProperty] = _options.ResetPasswordPolicyId;
             return Challenge(properties, OpenIdConnectDefaults.AuthenticationScheme);
+        }
+
+        [HttpGet]
+        [Authorize]
+        public IActionResult Profile()
+        {
+            return View();
         }
 
         [HttpGet]

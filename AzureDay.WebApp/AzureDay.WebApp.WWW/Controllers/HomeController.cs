@@ -11,17 +11,33 @@ namespace AzureDay.WebApp.WWW.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Schedule()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
-
-        public IActionResult Contact()
+        
+        public IActionResult Workshops()
         {
-            ViewData["Message"] = "Your contact page.";
-
+            return View();
+        }
+        
+        public IActionResult Workshop(string id)
+        {
+            return View();
+        }
+        
+        public IActionResult Speakers()
+        {
+            return View();
+        }
+        
+        public IActionResult Speaker(string id)
+        {
+            return View();
+        }
+        
+        public IActionResult Partners()
+        {
             return View();
         }
 

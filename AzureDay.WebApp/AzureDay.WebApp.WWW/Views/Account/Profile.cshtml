@@ -1,0 +1,24 @@
+@using System.Security.Claims
+@{
+    ViewData["Title"] = "Profile";
+}
+<h2>@ViewData["Title"]</h2>
+
+<table>
+    <tr>
+        <td>Full name</td>
+        <td>@User.GetFullName()</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>@User.GetEmail()</td>
+    </tr>
+    <tr>
+        <td>Job</td>
+        <td>@User.GetJobTitle() &#64; @User.GetCompany() </td>
+    </tr>
+    <tr>
+        <td>From</td>
+        <td>@User.GetCity() / @User.GetCountry() </td>
+    </tr>
+</table>
