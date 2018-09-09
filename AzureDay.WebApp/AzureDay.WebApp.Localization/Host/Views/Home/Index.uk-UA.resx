@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>Про AzureDay</value>
+  </data>
+  <data name="About01a" xml:space="preserve">
+    <value>Мета AzureDay - зібрати разом професіоналів, що вже мають</value>
+  </data>
+  <data name="About01b" xml:space="preserve">
+    <value>практичний досвід в Azure</value>
+  </data>
+  <data name="About01c" xml:space="preserve">
+    <value>а також новачків, що лише починають з ним працювати, для ефективного обміну знаннями.</value>
+  </data>
+  <data name="About02a" xml:space="preserve">
+    <value>На AzureDAY будуть</value>
+  </data>
+  <data name="About02b" xml:space="preserve">
+    <value>відокремлені технологічні потоки,</value>
+  </data>
+  <data name="About02c" xml:space="preserve">
+    <value>що найбільш повно відображають аспекти хмарних технологій.</value>
+  </data>
+  <data name="About03" xml:space="preserve">
+    <value>Спікери AzureDAY - відомі хмарні експерти, тренери, власники бізнесу з України та інших країн світу.</value>
+  </data>
+  <data name="About04a" xml:space="preserve">
+    <value>Участь у AzureDAY платна.</value>
+  </data>
+  <data name="About04b" xml:space="preserve">
+    <value>У ціну квитка входять перерви на каву</value>
+  </data>
+  <data name="About04c" xml:space="preserve">
+    <value>. У нас є знижки для ранніх пташок,знижки для студентів та партнерів.</value>
+  </data>
+  <data name="About05a" xml:space="preserve">
+    <value>Протягом AzureDAY ви можете</value>
+  </data>
+  <data name="About05b" xml:space="preserve">
+    <value>взяти участь у лабораторних роботах,</value>
+  </data>
+  <data name="About05c" xml:space="preserve">
+    <value>що відбудуться 8го вересня. Будь ласка зауважте, що для участі у лабораторних роботах вам необхідно придбати окремий квиток на лабораторні роботи.</value>
+  </data>
+  <data name="About06" xml:space="preserve">
+    <value>Лабораторні роботи мають обмежену кількість учасників через фізичний ліміт уваги тренера, тому ми просимо вас вказати, на яку саме лабораторну роботу ви хочете прийти, при купівлі квитка. </value>
+  </data>
+  <data name="AzureDAY01" xml:space="preserve">
+    <value>третя щорічна</value>
+  </data>
+  <data name="AzureDAY01a" xml:space="preserve">
+    <value>хмарна</value>
+  </data>
+  <data name="AzureDAY01b" xml:space="preserve">
+    <value>конференція в Україні -</value>
+  </data>
+  <data name="AzureDAY01c" xml:space="preserve">
+    <value>це зустріч технологій, людей, досвідів, інновацій та професійної спліьноти.</value>
+  </data>
+  <data name="AzureDAY02" xml:space="preserve">
+    <value>На AzureDAY будуть</value>
+  </data>
+  <data name="AzureDAY02a" xml:space="preserve">
+    <value>відокремлені технологічні потоки,</value>
+  </data>
+  <data name="AzureDAY02b" xml:space="preserve">
+    <value>що найбільш повно відображають аспекти хмарних технологій,</value>
+  </data>
+  <data name="AzureDAY02c" xml:space="preserve">
+    <value>а також повний день (8е вересня)</value>
+  </data>
+  <data name="AzureDAY02d" xml:space="preserve">
+    <value>лабораторних робіт.</value>
+  </data>
+  <data name="Icon_box_01" xml:space="preserve">
+    <value>ЗА МЕЖАМИ УКРАЇНИ</value>
+  </data>
+  <data name="Icon_box_01_text" xml:space="preserve">
+    <value>Іноземні доповідачі, Microsoft Most Valuable Professionals, учасники та послідовники із різних країн світу.</value>
+  </data>
+  <data name="Icon_box_02" xml:space="preserve">
+    <value>ІДЕЇ ТА ІННОВАЦІЇ</value>
+  </data>
+  <data name="Icon_box_02_text" xml:space="preserve">
+    <value>Вивчіть нові ідеї та досвід зі світу хмар від експертів.</value>
+  </data>
+  <data name="Icon_box_03" xml:space="preserve">
+    <value>Лабораторні роботи</value>
+  </data>
+  <data name="Icon_box_03_text" xml:space="preserve">
+    <value>Усі доповідачі мають глибокий практичний досвід. Ви можете взяти участь у дні лабораторних робіт.</value>
+  </data>
+  <data name="Icon_box_04" xml:space="preserve">
+    <value>СПІЛЬНОТА ТА КОНТАКТИ</value>
+  </data>
+  <data name="Icon_box_04_text" xml:space="preserve">
+    <value>Станьте один із спільноти і познайомтеся з новими колегами, партнерами або працівниками.</value>
+  </data>
+  <data name="Sponsors01" xml:space="preserve">
+    <value>Хочете підтримати конференцію?</value>
+  </data>
+  <data name="Sponsors01a" xml:space="preserve">
+    <value>Якщо ви хочете підтримати конференцію AzureDAY - надати нам доповідача, призи для учасників, або стати інформаційним партнером - приймате участь у нашій партнерській програмі.</value>
+  </data>
+  <data name="Sponsors01b" xml:space="preserve">
+    <value>Ви можете дізнатися більше інформації про партнерські програми, зв'язавшись із організаторами конференції. </value>
+  </data>
+  <data name="Sponsors01c" xml:space="preserve">
+    <value>Зв'яжіться з нами</value>
+  </data>
+  <data name="Sponsors02" xml:space="preserve">
+    <value>Яким партнером ви хочете стати?</value>
+  </data>
+  <data name="Sponsors03" xml:space="preserve">
+    <value>Золотий партнер</value>
+  </data>
+  <data name="Sponsors03a" xml:space="preserve">
+    <value>Допоможіть нам грошима для того, щоб забезпечити учасникам конференції обіди та перерви на каву.</value>
+  </data>
+  <data name="Sponsors04" xml:space="preserve">
+    <value>Партнер з призів</value>
+  </data>
+  <data name="Sponsors04a" xml:space="preserve">
+    <value>Надайте свої призи для розіграшу серез учасників конференції. </value>
+  </data>
+  <data name="Sponsors05" xml:space="preserve">
+    <value>Інформаційний партнер</value>
+  </data>
+  <data name="Sponsors05a" xml:space="preserve">
+    <value>Допоможіть нам донести інформацію про AzureDAY до ваших партнерів, працівників та\або клієнтів.</value>
+  </data>
+</root>

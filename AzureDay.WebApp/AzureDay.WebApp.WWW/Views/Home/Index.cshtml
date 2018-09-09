@@ -1,106 +1,263 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using AzureDay.WebApp.Config
+@using AzureDay.WebApp.Localization.Host.Views.Home
+
+@model AzureDay.WebApp.WWW.Models.Home.IndexModel
+
+@{
+	ViewBag.Title = $"AzureDay {Configuration.Year}";
 }
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner3.svg" alt="Package Management" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Bring in libraries from NuGet and npm, and automate tasks using Grunt or Gulp.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner4.svg" alt="Microsoft Azure" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+<div class="boxedcontent" style="margin-top: 79px;">
+	@await Html.PartialAsync("_Banner")
 </div>
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Run &amp; Deploy</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
-        </ul>
-    </div>
-</div>
+<div class="boxedcontent">
+	<section class="introblock whites">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1>
+						<span class="animated fadeInDown">
+							AzureDAY @{ Write(Configuration.Year); } @Index.AzureDAY01 <span class="colortext">@Index.AzureDAY01a</span> @Index.AzureDAY01b<br>
+							@Index.AzureDAY01c
+						</span>
+					</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end introblock -->
+
+	<section class="service-box whites">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 text-center">
+					<div class="icon-box-top">
+						<a href="#">
+							<i class="fontawesome-icon medium circle-white center fa fa-plane"></i>
+						</a>
+						<h1>@Index.Icon_box_01</h1>
+						<p>
+							@Index.Icon_box_01_text
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 text-center">
+					<div class="icon-box-top active">
+						<a href="#">
+							<i class="fontawesome-icon medium circle-white center fa fa-rocket"></i>
+						</a>
+						<h1>@Index.Icon_box_02</h1>
+						<p>
+							@Index.Icon_box_02_text
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 text-center">
+					<div class="icon-box-top">
+						<a href="#">
+							<i class="fontawesome-icon medium circle-white center fa fa-code"></i>
+						</a>
+						<h1>@Index.Icon_box_03</h1>
+						<p>
+							@Index.Icon_box_03_text
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 text-center">
+					<div class="icon-box-top">
+						<a href="#">
+							<i class="fontawesome-icon medium circle-white center fa fa-users"></i>
+						</a>
+						<h1>@Index.Icon_box_04</h1>
+						<p>
+							@Index.Icon_box_04_text
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end servicesbox -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="titleborder center">
+					<div>
+						<h1 class="animated fadeInDownBig">@Index.About</h1>
+					</div>
+				</div>
+
+				<div class="shortcode row">
+					<div class="col-md-6">
+						<!-- begin box shadow -->
+						<div class="box effect2">
+							@Index.About01a <span class='colortext'>@Index.About01b</span> @Index.About01c
+						</div>
+						<!-- end box shadow -->
+					</div>
+					<div class="col-md-6">
+						<div class="box effect2">
+							@Index.About02a <span class='colortext'>@Index.About02b</span> @Index.About02c
+						</div>
+					</div>
+				</div>
+
+				<div class="shortcode row">
+					<div class="col-md-6">
+						<!-- begin box shadow -->
+						<div class="box effect6">
+							@Index.About03
+						</div>
+						<!-- end box shadow -->
+					</div>
+					<div class="col-md-6">
+						<div class="box effect6">
+							@Index.About04a <span class='colortext'>@Index.About04b</span>@Index.About04c
+						</div>
+					</div>
+				</div>
+
+				<div class="shortcode row">
+					<div class="col-md-6">
+						<!-- begin box shadow -->
+						<div class="box effect2">
+							@Index.About05a <span class='colortext'>@Index.About05b</span> @Index.About05c
+						</div>
+						<!-- end box shadow -->
+					</div>
+					<div class="col-md-6">
+						<div class="box effect2">
+							@Index.About06
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<section class="bgsizecover" style="background-image: url('lib/theme/css/img/_bgnd/2017/011.jpg'); background-attachment: fixed; background-position: relative; height: 250px;">
+		<div class="transp">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+					</div>
+					<div class="col-md-6 text-center">
+						<h1 class="maintitle" style="color: #fff;"></h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end parallax -->
+
+	<section class="introblock whites">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1>
+						<span class="animated fadeInRightBig">
+							@Index.AzureDAY02 
+							<span class='colortext'>@Index.AzureDAY02a</span>
+							@Index.AzureDAY02b<br />
+							@Index.AzureDAY02c
+							<span class='colortext'>@Index.AzureDAY02d</span>
+						</span>
+					</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	@await Html.PartialAsync("_Speakers", Model.Speakers)
+
+	<section class="bgsizecover" style="background-image: url('lib/theme/css/img/_bgnd/2017/010.jpg'); background-attachment: fixed; background-position: relative; height: 250px;">
+		<div class="transp">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+					</div>
+					<div class="col-md-6 text-center">
+						<h1 class="maintitle" style="color: #fff;"></h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end parallax -->
+
+	<div class="container">
+		<div class="row">
+			<div class="panel1">
+				<div class="col-md-9">
+					<h4 class="animated fadeInLeft">@Index.Sponsors01</h4>
+					@Index.Sponsors01a 
+					@Index.Sponsors01b
+				</div>
+				<div class="col-md-3">
+					<a href="mailto:partner@azureday.net" class="sbutton square noshadow medium mainthemebgcolor"><i class="fa fa-comment"></i> @Index.Sponsors01c</a>
+				</div>
+				<div class="clearfix">
+				</div>
+			</div>
+			<!-- end panel -->
+		</div>
+	</div>
+
+	@await Html.PartialAsync("_Partners", Model.Partners)
+
+	<section class="infoarea whites">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-md-12">
+					<h1 class="maintitle">@Index.Sponsors02</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<i class="fa fa-star infoareaicon"></i>
+					<div class="infoareawrap">
+						<h1 class="text-center subtitle">@Index.Sponsors03</h1>
+						<p>
+							@Index.Sponsors03a
+						</p>
+						<p class='text-center'>
+							<a href='mailto:partner@azureday.net'>@Index.Sponsors01c</a>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<i class="fa fa-moon-o infoareaicon"></i>
+					<div class="infoareawrap">
+						<h1 class="text-center subtitle">@Index.Sponsors04</h1>
+						<p>
+							@Index.Sponsors04a
+						</p>
+						<p class='text-center'>
+							<a href='mailto:partner@azureday.net'>@Index.Sponsors01c</a>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<i class="fa fa-bullhorn infoareaicon"></i>
+					<div class="infoareawrap">
+						<h1 class="text-center subtitle">@Index.Sponsors05</h1>
+						<p>
+							@Index.Sponsors05a
+						</p>
+						<p class='text-center'>
+							<a href='mailto:partner@azureday.net'>@Index.Sponsors01c</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end infoarea -->
+
+	<!-- end homerecentportfolio -->
+
+</div><!-- end boxedcontent -->

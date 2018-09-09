@@ -1,9 +1,7 @@
 namespace AzureDay.WebApp.Database.Entities
 {
-    public class RoomEntity
+    public class RoomEntity: BaseEntity<int>
     {
-        public int Id { get; set; }
-        
         public string Name { get; set; }
     }
 }

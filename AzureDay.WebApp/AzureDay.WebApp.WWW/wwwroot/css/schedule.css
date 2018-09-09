@@ -1,0 +1,26 @@
+@media (min-width: 768px) {
+    .col-md-2.col-schedule {
+        width: 20% !important;
+    }
+    .col-sm-2.col-schedule {
+        width: 20% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-2.col-schedule {
+        width: 20% !important;
+    }
+    .col-sm-2.col-schedule {
+        width: 20% !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-md-2.col-schedule {
+        width: 20% !important;
+    }
+    .col-sm-2.col-schedule {
+        width: 20% !important;
+    }
+}

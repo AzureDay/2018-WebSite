@@ -6,6 +6,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="LigerShark.WebOptimizer.Core" Version="1.0.215" />
+        <PackageReference Include="Microsoft.ApplicationInsights" Version="2.8.0-beta1" />
+        <PackageReference Include="Microsoft.ApplicationInsights.DependencyCollector" Version="2.8.0-beta1" />
+        <PackageReference Include="Microsoft.ApplicationInsights.PerfCounterCollector" Version="2.8.0-beta1" />
+        <PackageReference Include="Microsoft.ApplicationInsights.Web" Version="2.8.0-beta1" />
         <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" PrivateAssets="All" />
         <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" PrivateAssets="All" />
@@ -14,6 +19,17 @@
     <ItemGroup>
         <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
         <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Translation" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\AzureDay.WebApp.Config\AzureDay.WebApp.Config.csproj" />
+      <ProjectReference Include="..\AzureDay.WebApp.Database\AzureDay.WebApp.Database.csproj" />
+      <ProjectReference Include="..\AzureDay.WebApp.Localization\AzureDay.WebApp.Localization.csproj" />
+      <ProjectReference Include="..\AzureDay.WebApp.PaymentGateway\AzureDay.WebApp.PaymentGateway.csproj" />
     </ItemGroup>
 
 </Project>

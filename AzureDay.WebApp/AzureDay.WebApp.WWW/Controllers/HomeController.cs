@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using AzureDay.WebApp.WWW.Models;
+using AzureDay.WebApp.WWW.Models.Home;
 
 namespace AzureDay.WebApp.WWW.Controllers
 {
@@ -8,7 +9,9 @@ namespace AzureDay.WebApp.WWW.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var model = new IndexModel();
+            
+            return View(model);
         }
 
         public IActionResult Schedule()

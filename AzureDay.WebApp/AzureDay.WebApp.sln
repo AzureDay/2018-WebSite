@@ -4,6 +4,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDay.WebApp.WWW", "Azur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDay.WebApp.Database", "AzureDay.WebApp.Database\AzureDay.WebApp.Database.csproj", "{A9FB99A3-644D-4674-A65F-3BA2F2B083AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDay.WebApp.Config", "AzureDay.WebApp.Config\AzureDay.WebApp.Config.csproj", "{2BA06969-99B3-4BD1-8367-E2D8F77A7031}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDay.WebApp.PaymentGateway", "AzureDay.WebApp.PaymentGateway\AzureDay.WebApp.PaymentGateway.csproj", "{52DE0ABB-D699-469D-B6AE-ADA545D3AE6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDay.WebApp.Localization", "AzureDay.WebApp.Localization\AzureDay.WebApp.Localization.csproj", "{0E473760-8F29-48F7-A8A8-1ABDFE09CE78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +24,17 @@ Global
 		{A9FB99A3-644D-4674-A65F-3BA2F2B083AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9FB99A3-644D-4674-A65F-3BA2F2B083AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9FB99A3-644D-4674-A65F-3BA2F2B083AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BA06969-99B3-4BD1-8367-E2D8F77A7031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BA06969-99B3-4BD1-8367-E2D8F77A7031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BA06969-99B3-4BD1-8367-E2D8F77A7031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BA06969-99B3-4BD1-8367-E2D8F77A7031}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52DE0ABB-D699-469D-B6AE-ADA545D3AE6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52DE0ABB-D699-469D-B6AE-ADA545D3AE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52DE0ABB-D699-469D-B6AE-ADA545D3AE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52DE0ABB-D699-469D-B6AE-ADA545D3AE6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E473760-8F29-48F7-A8A8-1ABDFE09CE78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E473760-8F29-48F7-A8A8-1ABDFE09CE78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E473760-8F29-48F7-A8A8-1ABDFE09CE78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E473760-8F29-48F7-A8A8-1ABDFE09CE78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
