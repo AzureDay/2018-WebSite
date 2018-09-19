@@ -1,1 +1,123 @@
 @model AzureDay.WebApp.WWW.Models.Home.SpeakersModel
+
+<div id="speakersCarousel" class="carousel slide" data-ride="carousel">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		@for (var i = 0; i < Model.SpeakersCollections.Count; i++)
+		{
+			<li style="border-color: #000;" data-target="#speakersCarousel" data-slide-to="@i" class="@{ Write(i == 0 ? "active" : ""); }"></li>
+		}
+	</ol>
+
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner" role="listbox">
+		@for (var i = 0; i < Model.SpeakersCollections.Count; i++)
+		{
+			<div class="item @{ Write(i == 0 ? "active" : ""); }">
+				@foreach (var speaker in Model.SpeakersCollections[i])
+				{
+					<div class="col-md-3">
+						<img class="mySpeakerFlagImg" src="@speaker.Country.ImageUrl" />
+						<div class="thumbnail">
+
+							<img src="@speaker.PhotoUrl" alt="@speaker.FullName" />
+							<div class="caption">
+								<h4>
+									<a href="/Speaker/@speaker.Id">
+										@speaker.FullName <br />
+									<span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+								</a>
+							</h4>
+
+								<h6 style="letter-spacing: 0px;">@speaker.Occupation</h6>
+
+								<span class="fontitalic">@speaker.Country.Title</span>
+
+								<div style="line-height: 1.0; text-align: justify;">
+									@Html.Raw(speaker.Bio)<br />
+								</div>
+								<div class="social-icons">
+									@if (!string.IsNullOrEmpty(speaker.WebUrl))
+									{
+										<a href="@speaker.WebUrl" target="_blank"><i class="fa fa-globe"></i></a>
+									}
+									@if (!string.IsNullOrEmpty(speaker.FacebookUrl))
+									{
+										<a href="@speaker.FacebookUrl" target="_blank"><i class="fa fa-facebook"></i></a>
+									}
+									@if (!string.IsNullOrEmpty(speaker.LinkedInUrl))
+									{
+										<a href="@speaker.LinkedInUrl" target="_blank"><i class="fa fa-linkedin"></i></a>
+									}
+									@if (!string.IsNullOrEmpty(speaker.GoogleUrl))
+									{
+										<a href="@speaker.GoogleUrl" target="_blank"><i class="fa fa-google-plus"></i></a>
+									}
+									@if (!string.IsNullOrEmpty(speaker.YouTubeUrl))
+									{
+										<a href="@speaker.YouTubeUrl" target="_blank"><i class="fa fa-youtube"></i></a>
+									}
+									@if (!string.IsNullOrEmpty(speaker.TwitterUrl))
+									{
+										<a href="@speaker.TwitterUrl" target="_blank"><i class="fa fa-twitter"></i></a>
+									}
+									@if (!string.IsNullOrEmpty(speaker.MvpUrl))
+									{
+										<a href="@speaker.MvpUrl" target="_blank"><i class="fa fa-user-circle-o"></i></a>
+									}
+									@if (!string.IsNullOrEmpty(speaker.MsdnUrl))
+									{
+										<a href="@speaker.MsdnUrl" target="_blank"><i class="fa fa-list-alt"></i></a>
+									}
+									@if (!string.IsNullOrEmpty(speaker.GitHubUrl))
+									{
+										<a href="@speaker.GitHubUrl" target="_blank"><i class="fa fa-github"></i></a>
+									}
+								</div>
+						</div>
+					</div>
+				</div>
+				}
+			</div>
+		}
+	</div>
+</div>
+
+<script>
+	function carouselNormalization() {
+		var items = $('#speakersCarousel .item');
+		var heights = [];
+		var tallest;
+
+		if (items.length) {
+			function normalizeHeights() {
+				items.each(function() {
+					heights.push($(this).height());
+				});
+
+				tallest = Math.max.apply(null, heights);
+
+				items.each(function() {
+					$(this).css('min-height', tallest + 'px');
+				});
+			};
+
+			normalizeHeights();
+
+			$(window).on('resize orientationchange', function() {
+				tallest = 0;
+				heights.length = 0;
+
+				items.each(function() {
+					$(this).css('min-height', '0');
+				});
+
+				normalizeHeights();
+			});
+		}
+	}
+
+	$(window).load(function() {
+		carouselNormalization();
+	});
+</script>

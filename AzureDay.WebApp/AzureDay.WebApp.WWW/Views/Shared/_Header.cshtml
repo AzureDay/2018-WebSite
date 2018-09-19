@@ -1,0 +1,20 @@
+@using AzureDay.WebApp.Localization.Host.Views.Shared
+@using AzureDay.WebApp.WWW.Models.Shared
+
+<div class="fixedmenu" style="margin-left: auto; margin-right: auto;">
+    <div class="container">
+        <div class="row">
+            <a class="navbar-brand" href="~/">
+                <img src="@_Header.LogoUrl" alt="">
+            </a>
+
+            <nav class="navbar pull-right" role="navigation">
+                <div class="collapse navbar-collapse">
+                    <ul id="main-menu" class="nav navbar-nav">
+                        @Html.Partial("_MenuItems", new MenuItemsModel { ShowLanguages = true })
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>

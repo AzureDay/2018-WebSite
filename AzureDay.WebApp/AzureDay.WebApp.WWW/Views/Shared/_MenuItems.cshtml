@@ -1,0 +1,32 @@
+@using AzureDay.WebApp.Localization.Host.Views.Shared
+
+<li><a href="/">@_MenuItems.Home</a></li>
+<li><a href="/speakers">@_MenuItems.Speakers</a></li>
+<li><a href="/schedule">@_MenuItems.Agenda</a></li>
+<li><a href="/workshops">@_MenuItems.Workshops</a></li>
+<li><a href="/partners">@_MenuItems.Partners</a></li>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <li><a style="font-weight: bold; color: #B9B900; font-size: 1.2em;" href="/profile/my">@_MenuItems.Profile</a></li>
+    <li><a href="/profile/logout">@_MenuItems.Logout</a></li>
+}
+else
+{
+    <li><a style="font-weight: bold; color: #B9B900; font-size: 1.2em;" href="/profile/registration">@_MenuItems.Buy_Tickets</a></li>
+    <li><a href="/profile/login">@_MenuItems.Login</a></li>
+}
+
+@if (Model.ShowLanguages)
+{
+    <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            @_MenuItems.Language <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="/language/en">English</a></li>
+            <li><a href="/language/ru">Русский</a></li>
+            <li><a href="/language/uk-UA">Українська</a></li>
+        </ul>
+    </li>
+}

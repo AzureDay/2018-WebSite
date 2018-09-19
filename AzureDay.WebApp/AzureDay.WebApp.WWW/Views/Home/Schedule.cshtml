@@ -1,7 +1,151 @@
-﻿@{
-    ViewData["Title"] = "About";
-}
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+﻿@using AzureDay.WebApp.Config
+@using AzureDay.WebApp.Database.Enums
+@using AzureDay.WebApp.Localization.Host.Views.Home
 
-<p>Use this area to provide additional information.</p>
+@model AzureDay.WebApp.WWW.Models.Home.ScheduleModel
+
+@{
+	ViewBag.Title = $"AzureDay {Configuration.Year} - {Schedule.Title}";
+}
+
+<style>
+	.boxedlayout {
+		max-width: 100% !important;
+		width: 100% !important;
+	}
+
+	.fixedmenu {
+		max-width: 100% !important;
+		width: 100% !important;
+	}
+</style>
+
+<div class="boxedcontent" style="margin-top: 79px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<img src="@Schedule.Img" alt="@Schedule.Title" class="img-responsive" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="titleborder center">
+					<div>
+						<h1 class="animated fadeInDownBig" style="text-transform: capitalize">@Schedule.Title AzureDay</h1>
+						<h2 class="animated fadeInDownBig">@Schedule.Date</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="boxedcontent">
+	<div class="container-fluid">
+		<div class="row">
+			@for (var i = 0; i < Model.Rooms.Count; i++)
+			{
+				<div class="col-md-2 col-sm-2 col-schedule">
+					<div class="box effect2 @($"myAreaContainer{Model.Rooms[i].ColorNumber}")">
+						@Model.Rooms[i].Title
+					</div>
+				</div>
+			}
+		</div>
+
+		@foreach (var timetables in Model.Timetables)
+		{
+			<div class="row">
+				@if (timetables.Count == 1)
+				{
+					if (timetables[0].Room.RoomType == RoomType.CoffeeRoom)
+					{
+						<div class="col-md-12 col-sm-12">
+							<div class="box">
+								<div class="mySlotTime">
+									@($"{timetables[0].TimeStartHours}:{timetables[0].TimeStartMinutes.ToString("D2")}") -
+									@($"{timetables[0].TimeEndHours}:{timetables[0].TimeEndMinutes.ToString("D2")}")
+								</div>
+								<div style="text-align: center;">
+									<i>@timetables[0].Topic.Title</i>
+								</div>
+							</div>
+						</div>
+					}
+					else
+					{
+						<div class="col-md-12 col-sm-12">
+							<div class="box effect6 myAreaBoxBorder1">
+								<div class="mySlotTime">
+									@($"{timetables[0].TimeStartHours}:{timetables[0].TimeStartMinutes.ToString("D2")}") -
+									@($"{timetables[0].TimeEndHours}:{timetables[0].TimeEndMinutes.ToString("D2")}")
+								</div>
+								
+								<div class="row">
+									@foreach (var speaker in timetables[0].Topic.Speakers)
+									{
+										<div class="col-sm-2 col-md-2">
+											<img class="img-responsible" style="margin-bottom: 10px;" src="@speaker.PhotoUrl" alt="@speaker.FullName" />
+											<div class="mySlotAuthor">
+												@speaker.FullName
+											</div>
+										</div>
+									}
+								</div>
+								<div class="row">
+									<div class="text-center col-sm-12 col-md-12">
+										<b>@timetables[0].Topic.Title</b><br /><br />
+										@if (timetables[0].Topic.Language != null && !string.IsNullOrEmpty(timetables[0].Topic.Language.Title))
+										{
+											@Html.Raw($"{Schedule.Language}: {timetables[0].Topic.Language.Title}")
+										}
+									</div>
+								</div>
+							</div>
+						</div>
+					}
+				}
+				else
+				{
+					for (var i = 0; i < timetables.Count; i++)
+					{
+						<div class="col-md-2 col-sm-2 col-schedule" style="padding: 0px 5px 0px 5px; @Html.Raw(timetables[i].HasLanguage ? string.Empty : "opacity: 0.5;")">
+							<div class="box effect2 @($"myAreaBoxBorder{timetables[i].Room.ColorNumber}")">
+								<div class="mySlotTime">
+									@($"{timetables[i].TimeStartHours}:{timetables[i].TimeStartMinutes.ToString("D2")}") -
+									@($"{timetables[i].TimeEndHours}:{timetables[i].TimeEndMinutes.ToString("D2")}")
+								</div>
+								
+								@if (timetables[i].Topic.Speakers.Any())
+								{
+									foreach (var speaker in timetables[i].Topic.Speakers)
+									{
+										var n = 12 / timetables[i].Topic.Speakers.Count;
+										<div class="col-xs-@n col-sm-@n col-md-@n">
+											<div class="text-center">
+												<img class="img-responsible" style="margin-bottom: 10px;" src="@speaker.PhotoUrl" alt="@speaker.FullName"/>
+											</div>
+
+											<div class="mySlotAuthor">
+												@speaker.FullName
+											</div>
+										</div>
+									}
+								}
+
+								<div>
+									<b>@timetables[i].Topic.Title</b><br/><br/>
+									@if (timetables[i].HasLanguage)
+									{
+										@Html.Raw($"{Schedule.Language}: {timetables[i].Topic.Language.Title}<br /><br />")
+									}
+									@Html.Raw(timetables[i].Topic.Description)
+								</div>
+							</div>
+						</div>
+					}
+				}
+			</div>
+		}
+	</div>
+</div>

@@ -1,7 +1,107 @@
-﻿@{
-    ViewData["Title"] = "About";
-}
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+﻿@using AzureDay.WebApp.Config
+@using AzureDay.WebApp.Localization.Host.Views.Home
 
-<p>Use this area to provide additional information.</p>
+@model AzureDay.WebApp.WWW.Models.Home.SpeakerModel
+
+@{
+	ViewBag.Title = $"AzureDay {Configuration.Year} - {Model.Speaker.FullName}";
+}
+
+<div class="boxedcontent" style="margin-top: 79px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="titleborder center">
+					<div>
+						<h1 class="animated fadeInDownBig">@Model.Speaker.FullName</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+				<img class="img-responsible" style="margin-bottom: 10px;" src="@Model.Speaker.PhotoUrl" alt="@Model.Speaker.FullName" />
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9" style="text-align: justify; font-size: 1.2em;">
+				@Html.Raw(Model.Speaker.Bio)<br />
+			</div>
+			<div class="social-icons" style="text-align: right; font-size: 2em; margin-right: 30px;">
+				@if (!string.IsNullOrEmpty(Model.Speaker.WebUrl))
+				{
+					<a href="@Model.Speaker.WebUrl" target="_blank"><i class="fa fa-globe"></i></a>
+				}
+				@if (!string.IsNullOrEmpty(Model.Speaker.FacebookUrl))
+				{
+					<a href="@Model.Speaker.FacebookUrl" target="_blank"><i class="fa fa-facebook"></i></a>
+				}
+				@if (!string.IsNullOrEmpty(Model.Speaker.LinkedInUrl))
+				{
+					<a href="@Model.Speaker.LinkedInUrl" target="_blank"><i class="fa fa-linkedin"></i></a>
+				}
+				@if (!string.IsNullOrEmpty(Model.Speaker.GoogleUrl))
+				{
+					<a href="@Model.Speaker.GoogleUrl" target="_blank"><i class="fa fa-google-plus"></i></a>
+				}
+				@if (!string.IsNullOrEmpty(Model.Speaker.YouTubeUrl))
+				{
+					<a href="@Model.Speaker.YouTubeUrl" target="_blank"><i class="fa fa-youtube"></i></a>
+				}
+				@if (!string.IsNullOrEmpty(Model.Speaker.TwitterUrl))
+				{
+					<a href="@Model.Speaker.TwitterUrl" target="_blank"><i class="fa fa-twitter"></i></a>
+				}
+				@if (!string.IsNullOrEmpty(Model.Speaker.MvpUrl))
+				{
+					<a href="@Model.Speaker.MvpUrl" target="_blank"><i class="fa fa-user-circle-o"></i></a>
+				}
+				@if (!string.IsNullOrEmpty(Model.Speaker.MsdnUrl))
+				{
+					<a href="@Model.Speaker.MsdnUrl" target="_blank"><i class="fa fa-list-alt"></i></a>
+				}
+				@if (!string.IsNullOrEmpty(Model.Speaker.GitHubUrl))
+				{
+					<a href="@Model.Speaker.GitHubUrl" target="_blank"><i class="fa fa-github"></i></a>
+				}
+			</div>
+
+		</div>
+		
+		@if (Model.Workshops.Any())
+		{
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="titleborder center">
+						<div>
+							<h1 class="animated fadeInDownBig" style="text-transform: capitalize">@Workshops.Title AzureDay</h1>
+							<h2 class="animated fadeInDownBig">@Workshops.Date</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			foreach (var workshop in Model.Workshops)
+			{
+				@Html.Partial("_Workshop", workshop)
+			}
+		}
+		
+		@if (Model.Topics.Any())
+		{
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="titleborder center">
+						<div>
+							<h1 class="animated fadeInDownBig" style="text-transform: capitalize">@Schedule.Title AzureDay</h1>
+							<h2 class="animated fadeInDownBig">@Schedule.Date</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			foreach (var topic in Model.Topics)
+			{
+				@Html.Partial("_Topic", topic)
+			}
+		}
+	</div>
+</div>

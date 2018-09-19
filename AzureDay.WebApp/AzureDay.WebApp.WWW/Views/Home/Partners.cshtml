@@ -1,7 +1,92 @@
-﻿@{
-    ViewData["Title"] = "About";
-}
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+﻿@using AzureDay.WebApp.Config
+@using AzureDay.WebApp.Database.Enums
+@using AzureDay.WebApp.Localization.Host.Views.Home
+@using PartnerType = AzureDay.WebApp.Database.Enums.PartnerType
 
-<p>Use this area to provide additional information.</p>
+@model AzureDay.WebApp.WWW.Models.Home.PartnersModel
+
+@{
+	ViewBag.Title = $"AzureDay {Configuration.Year} - {Partners.PartnersTitle}";
+}
+
+<div class="boxedcontent" style="margin-top: 79px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="titleborder center">
+					<div>
+						<h1 class="maintitle animated fadeInDownBig">@Partners.PartnersTitle</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		@foreach (var partnersKey in Model.PartnersCollection.Keys)
+		{
+			var css = string.Empty;
+			switch (partnersKey)
+			{
+				case PartnerType.VIP:
+					css = "fa-diamond";
+					break;
+				case PartnerType.Gold:
+					css = "fa-star";
+					break;
+				case PartnerType.Silver:
+					css = "fa-star";
+					break;
+				case PartnerType.Bronze:
+					css = "fa-star";
+					break;
+				case PartnerType.Raffle:
+					css = "fa-gift";
+					break;
+				case PartnerType.Info:
+					css = "fa-bullhorn";
+					break;
+				case PartnerType.Speaker:
+					css = "fa-commenting-o";
+					break;
+				case PartnerType.Tech:
+					css = "fa-cogs";
+					break;
+				case PartnerType.Workshop:
+					css = "fa-cogs";
+					break;
+			}
+
+			if (Model.PartnersCollection[partnersKey].Any())
+			{
+				<div class="row padding15">
+					<div class="col-md-12 text-center">
+						<div class="icon-box-top active">
+							@*<i class="fontawesome-icon medium circle-white center fa @css"></i>*@
+							<h3>@partnersKey.ToDisplayStringCategory()</h3>
+						</div>
+					</div>
+				</div>
+			}
+
+			foreach (var partner in Model.PartnersCollection[partnersKey])
+			{
+				<div class="row padding15">
+					<div class="col-md-2 text-center">
+						<div class="icon-box-top active">
+							<i class="fontawesome-icon medium circle-white center fa @css"></i>
+							<p>@partnersKey.ToDisplayStringPartner()</p>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<img src="@partner.LogoUrl" alt="@partner.Title" class="img-responsive" />
+					</div>
+					<div class="col-md-5 text-justify">
+						@partner.Description
+					</div>
+					<div class="col-md-2">
+						<a href="@partner.WebUrl" target="_blank" style="white-space: nowrap;">@partner.WebUrl</a>
+					</div>
+				</div>
+			}
+		}
+	</div>
+</div>

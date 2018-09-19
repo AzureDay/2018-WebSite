@@ -9,9 +9,9 @@ namespace AzureDay.WebApp.Database.Services
         {
             return new List<RoomEntity>
             {
-                new RoomEntity { Id = 1, Name = "First" },
-                new RoomEntity { Id = 2, Name = "Second" },
-                new RoomEntity { Id = 3, Name = "Third" }
+//                new RoomEntity { Id = 1, Name = "First" },
+//                new RoomEntity { Id = 2, Name = "Second" },
+//                new RoomEntity { Id = 3, Name = "Third" }
             };
         }
     }

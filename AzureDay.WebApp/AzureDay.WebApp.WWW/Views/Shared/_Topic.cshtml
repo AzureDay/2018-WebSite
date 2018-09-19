@@ -1,0 +1,33 @@
+@using AzureDay.WebApp.Localization.Host.Views.Home
+
+@model AzureDay.WebApp.Database.Entities.TopicEntity
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="box effect6 @($"myAreaBoxBorder{Model.Timetable.Room.ColorNumber}")">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                @foreach (var speaker in Model.Speakers)
+                {
+                    <div class="mySlotAuthor">
+                        @speaker.FullName
+                    </div>
+                }
+
+                <div style="text-align: center;">
+                    <div class="mySlotTime">
+                        @Model.Timetable.TimeStart - @Model.Timetable.TimeEnd
+                    </div>
+                    <b>@Model.Title</b><br/><br/>
+                    @if (Model.Language != null && !string.IsNullOrEmpty(Model.Language.Title))
+                    {
+                        @Html.Raw($"{Schedule.Language}: {Model.Language.Title}")
+                    }
+                </div>
+
+                <div style="text-align: justify;">
+                    @Html.Raw(Model.Description)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

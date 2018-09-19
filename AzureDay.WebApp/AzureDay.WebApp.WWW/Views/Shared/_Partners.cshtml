@@ -1,1 +1,73 @@
+@using AzureDay.WebApp.Localization.Host.Views.Home
+@using PartnerType = AzureDay.WebApp.Database.Enums.PartnerType
 @model List<AzureDay.WebApp.Database.Entities.PartnerEntity>
+
+<div class="container" style="margin-top: 79px;">
+    <div class="row text-center">
+        <div class="col-md-12">
+            <h1 class="maintitle">@_Partners.Partners01</h1>
+        </div>
+    </div>
+
+    <section class="infoarea whites">
+        <div class="container">
+            <div class="row">
+                @foreach (var partner in Model)
+                {
+                    <div class="col-md-4" style="padding-bottom: 30px;">
+
+                        <div class="infoareaicon" style="display: none;">
+                            @foreach (var type in Enum.GetValues(typeof(PartnerType)))
+                            {
+                                var partnerType = (PartnerType)type;
+
+                                var css = string.Empty;
+                                switch (partnerType)
+                                {
+                                    case PartnerType.VIP:
+                                        css = "fa-diamond";
+                                        break;
+                                    case PartnerType.Gold:
+                                        css = "fa-star";
+                                        break;
+                                    case PartnerType.Silver:
+                                        css = "fa-star";
+                                        break;
+                                    case PartnerType.Bronze:
+                                        css = "fa-star";
+                                        break;
+                                    case PartnerType.Raffle:
+                                        css = "fa-gift";
+                                        break;
+                                    case PartnerType.Info:
+                                        css = "fa-bullhorn";
+                                        break;
+                                    case PartnerType.Speaker:
+                                        css = "fa-commenting-o";
+                                        break;
+                                    case PartnerType.Tech:
+                                        css = "fa-cogs";
+                                        break;
+                                    case PartnerType.Workshop:
+                                        css = "fa-cogs";
+                                        break;
+                                }
+
+                                if (partner.PartnerType.HasFlag(partnerType))
+                                {
+                                    <i class="fa @css"></i>
+                                }
+                            }
+                        </div>
+
+                        <div class="infoareawrap" style="min-height: 312px;">
+                            <a href="@partner.WebUrl" target="_blank">
+                                <img style="margin: auto;" class="img-responsive" src="@partner.LogoUrl" alt="@partner.Title"/>
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</div>

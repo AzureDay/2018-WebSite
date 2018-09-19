@@ -1,0 +1,92 @@
+@using AzureDay.WebApp.Config
+@using AzureDay.WebApp.Localization.Host.Views.Shared
+@using AzureDay.WebApp.WWW.Models.Shared
+
+<footer id="colophon" class="site-footer " role="contentinfo">
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+
+				<!-- col 1 -->
+				<div class="col-md-3 footer-widget">
+					<aside id="text-2" class="widget widget_text">
+						<h1>@_Footer.Title</h1>
+						<div class="textwidget">
+							<p>
+								@_Footer.Subtitle1
+							</p>
+							<p>
+								@_Footer.Subtitle2
+							</p>
+						</div>
+					</aside>
+				</div>
+
+				<!-- col 2 -->
+				<div class="col-md-3 footer-widget">
+					<aside id="text-3" class="widget widget_text">
+						&nbsp;
+					</aside>
+				</div>
+
+				<!-- col 3 -->
+				<div class="col-md-3 footer-widget">
+					<aside id="text-4" class="widget widget_text">
+						<h1>@_Footer.Get_in_touch</h1>
+						<div class="textwidget">
+							<p>
+								<strong>Email: </strong><a href="mailto:info@azureday.net">info@azureday.net</a>
+							</p>
+							<ul class="social-icons list-soc">
+								<li><a href="https://www.facebook.com/azuredayua/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+							</ul>
+						</div>
+					</aside>
+				</div>
+
+				<!-- col 4 -->
+				<div class="col-md-3 footer-widget">
+					<aside id="text-5" class="widget widget_text">
+						<h1>@_Footer.Where_and_when</h1>
+						<div class="textwidget">
+							<p>
+								@_Footer.Date @{ Write(Configuration.Year); } @_Footer.Time
+							</p>
+							<p>
+								@_Footer.Address
+							</p>
+						</div>
+					</aside>
+				</div>
+				<!-- end col 4 -->
+
+			</div>
+		</div>
+	</div>
+
+	<div class="footerbottom">
+		<div class="container">
+			<div class="row">
+				<!-- col left -->
+				<div class="col-md-6">
+					<p id="back-top">
+						<a href="#top"><span><i class="fa fa-chevron-up"></i></span></a>
+					</p>
+					&copy; @{ Write(Configuration.Year); } All rights reserved.
+				</div>
+				<!-- end col left -->
+				<!-- col right -->
+				<div class="col-md-6 smallspacetop">
+					<div class="pull-right smaller">
+						<ul id="menu-footer" class="footermenu">
+							@await Html.PartialAsync("_MenuItems", new MenuItemsModel { ShowLanguages = false })
+						</ul>
+					</div>
+					<div class="clearfix">
+					</div>
+				</div>
+				<!-- end col right -->
+			</div>
+		</div>
+	</div>
+</footer>

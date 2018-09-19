@@ -8,4 +8,8 @@
       <Folder Include="Translation" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\AzureDay.WebApp.Localization\AzureDay.WebApp.Localization.csproj" />
+    </ItemGroup>
+
 </Project>
