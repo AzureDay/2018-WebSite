@@ -1,50 +1,52 @@
 ﻿using System.Diagnostics;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AzureDay.WebApp.WWW.Models;
 using AzureDay.WebApp.WWW.Models.Home;
+using Microsoft.AspNetCore.Rewrite.Internal;
 
 namespace AzureDay.WebApp.WWW.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             var model = new IndexModel();
             
             return View(model);
         }
 
-        public IActionResult Schedule()
+        public async Task<IActionResult> Schedule()
         {
             return View();
         }
         
-        public IActionResult Workshops()
+        public async Task<IActionResult> Workshops()
         {
             return View();
         }
         
-        public IActionResult Workshop(string id)
+        public async Task<IActionResult> Workshop(string id)
         {
             return View();
         }
         
-        public IActionResult Speakers()
+        public async Task<IActionResult> Speakers()
         {
             return View();
         }
         
-        public IActionResult Speaker(string id)
+        public async Task<IActionResult> Speaker(string id)
         {
             return View();
         }
         
-        public IActionResult Partners()
+        public async Task<IActionResult> Partners()
         {
             return View();
         }
 
-        public IActionResult Error()
+        public async Task<IActionResult> Error()
         {
             return View(new ErrorViewModel {RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier});
         }
