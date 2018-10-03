@@ -95,8 +95,33 @@ namespace AzureDay.WebApp.WWW
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    name: "Home",
+                    template: "{action}",
+                    defaults: new { controller = "Home", action = "Index" }
+                );
+
+                routes.MapRoute(
+                    name: "WorkshopEntity",
+                    template: "workshop/{id}",
+                    defaults: new { controller = "Home", action = "WorkshopEntity" }
+                );
+
+                routes.MapRoute(
+                    name: "SpeakerEntity",
+                    template: "speaker/{id}",
+                    defaults: new { controller = "Home", action = "SpeakerEntity" }
+                );
+
+                routes.MapRoute(
+                    name: "Language",
+                    template: "language/{culture}",
+                    defaults: new { controller = "Language", action = "Index" }
+                );
+
+                routes.MapRoute(
+                    name: "Default",
+                    template: "{controller}/{action}"
+                );
             });
             
             Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en");
