@@ -32,5 +32,7 @@ namespace AzureDay.WebApp.Database.Services
         }
 
         public RoomEntity CoffeeBreak { get { return Storage.Single(x => x.Id == 999); } }
+
+        public RoomEntity Workshop2 { get { return Storage.Single(x => x.Id == 102); } }
     }
 }
