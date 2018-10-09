@@ -10,7 +10,7 @@ namespace AzureDay.WebApp.Database.Services
         {
             return new List<CountryEntity>
             {
-                new CountryEntity {Id = 1, ImageUrl = "https://azureday2017ua.blob.core.windows.net/images/flags/ua.png", Title = Localization.App.Service.Country.Ukraine}
+                new CountryEntity {Id = 1, ImageUrl = "/images/flags/ua.png", Title = Localization.App.Service.Country.Ukraine}
             };
         }
 
