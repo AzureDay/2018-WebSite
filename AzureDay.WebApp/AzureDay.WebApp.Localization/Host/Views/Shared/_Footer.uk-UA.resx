@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Address" xml:space="preserve">
-    <value>Адреса: м. Київ, вул. Госпітальна, 12, President Hotel</value>
+    <value>Адреса: м. Київ, вул. вулиця, дім, Hotel</value>
   </data>
   <data name="Date" xml:space="preserve">
-    <value>8 та 9 вересня</value>
+    <value>9 та 10 листопада</value>
   </data>
   <data name="Get_in_touch" xml:space="preserve">
     <value>Зв'яжіться з нами:</value>

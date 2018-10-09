@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Img" xml:space="preserve">
-    <value>/Theme/img/_slides/2017/speakers-en.jpg</value>
+    <value>/Theme/img/_slides/2018/speakers-en.jpg</value>
   </data>
   <data name="MeetSpeakers" xml:space="preserve">
-    <value>Meet the speakers of our annual cloud conference AzureDAY 2017 Ukraine.</value>
+    <value>Meet the speakers of our annual cloud conference AzureDAY 2018 Ukraine.</value>
   </data>
   <data name="Title" xml:space="preserve">
     <value>AzureDay Speakers</value>
