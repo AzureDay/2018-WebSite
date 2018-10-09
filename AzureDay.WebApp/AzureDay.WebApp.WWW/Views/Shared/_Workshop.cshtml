@@ -1,0 +1,61 @@
+@using AzureDay.WebApp.Localization.Host.Views.Home
+
+@model AzureDay.WebApp.WWW.Models.Home.WorkshopModel
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="box effect6 @($"myAreaBoxBorder{Model.Workshop.Room.ColorNumber}")">
+        <div class="row">
+            @{
+                string css;
+                if (Model.ShowSpeakerInfo)
+                {
+                    css = "col-md-9 col-lg-9";
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <img class="img-responsible" style="margin-bottom: 10px;" src="@Model.Workshop.Speaker.PhotoUrl" alt="@Model.Workshop.Speaker.FullName" />
+                    </div>
+                }
+                else
+                {
+                    css = "col-md-12 col-lg-12";
+                }
+            }
+
+
+            <div class="col-xs-12 col-sm-12 @css">
+                <div class="mySlotAuthor">
+                    @Model.Workshop.Speaker.FullName
+                </div>
+
+                <div style="text-align: center;">
+                    <div class="mySlotTime">
+                        9:00 - 17:00
+                    </div>
+                    <b>@Model.Workshop.Title</b><br /><br />
+                    @if (Model.Workshop.Language != null && !string.IsNullOrEmpty(Model.Workshop.Language.Title))
+                    {
+                        @Html.Raw($"{Schedule.Language}: {Model.Workshop.Language.Title}")
+                    }
+                </div>
+
+                <div style="text-align: justify; margin-bottom: 10px;">
+                    <div style="margin-bottom: 10px; font-size: 1.3em; font-weight: bold;">
+                        @Workshops.TicketsLeft
+                        :
+                        @Model.TicketsLeft
+                        &nbsp;<i class="fa fa-ticket" aria-hidden="true"></i>
+                    </div>
+                    @if (Model.TicketsLeft > 0)
+                    {
+                        <div>
+                            <a class="btn btn-success" href="/profile/my?workshopid=@Model.Workshop.Id" role="button">@WorkshopEntity.Buy</a>
+                        </div>
+                    }
+                </div>
+
+                <div style="text-align: justify;">
+                    @Html.Raw(Model.Workshop.Description)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -101,15 +101,15 @@ namespace AzureDay.WebApp.WWW
                 );
 
                 routes.MapRoute(
-                    name: "WorkshopEntity",
+                    name: "Workshop",
                     template: "workshop/{id}",
-                    defaults: new { controller = "Home", action = "WorkshopEntity" }
+                    defaults: new { controller = "Home", action = "Workshop" }
                 );
 
                 routes.MapRoute(
-                    name: "SpeakerEntity",
+                    name: "Speaker",
                     template: "speaker/{id}",
-                    defaults: new { controller = "Home", action = "SpeakerEntity" }
+                    defaults: new { controller = "Home", action = "Speaker" }
                 );
 
                 routes.MapRoute(

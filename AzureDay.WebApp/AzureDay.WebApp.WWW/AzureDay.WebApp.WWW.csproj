@@ -23,6 +23,8 @@
 
     <ItemGroup>
       <Folder Include="Translation" />
+      <Folder Include="wwwroot\images\flags\" />
+      <Folder Include="wwwroot\images\avatars\" />
     </ItemGroup>
 
     <ItemGroup>

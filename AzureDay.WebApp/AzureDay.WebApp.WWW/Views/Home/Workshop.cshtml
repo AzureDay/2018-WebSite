@@ -1,7 +1,40 @@
-﻿@{
-    ViewData["Title"] = "About";
-}
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+﻿@using AzureDay.WebApp.Config
+@using AzureDay.WebApp.Localization.Host.Views.Home
 
-<p>Use this area to provide additional information.</p>
+@model AzureDay.WebApp.WWW.Models.Home.WorkshopModel
+
+@{
+    ViewBag.Title = $"AzureDay {Configuration.Year} - {Schedule.Title}";
+}
+
+<div class="boxedcontent" style="margin-top: 79px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <img src="@Workshops.Img" alt="@Workshops.Title" class="img-responsive" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="titleborder center">
+                    <div>
+                        <h1 class="animated fadeInDownBig" style="text-transform: capitalize">@Workshops.Title AzureDay</h1>
+                        <h2 class="animated fadeInDownBig">@Workshops.Date</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center; font-size: 1.2em; margin-bottom: 20px;">
+                @WorkshopEntity.About01 <br />
+                @WorkshopEntity.About01a
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 alert alert-danger" style="font-size: 1.3em;">
+                Обратите внимание, что лабораторные работы 8го сентября проходят в разных локациях. Все участники лабораторных работ могут найти детальные инструкции у себя в почте.
+            </div>
+        </div>
+
+        @Html.Partial("_Workshop", Model)
+
+    </div>
+</div>
