@@ -1,0 +1,32 @@
+<div id="modalWait" style="display: none;">
+    <div class="cssload-loader">
+        <div class="cssload-inner cssload-one"></div>
+        <div class="cssload-inner cssload-two"></div>
+        <div class="cssload-inner cssload-three"></div>
+    </div>
+</div>
+
+<script>
+    var modal = (function() {
+        var self = {};
+
+        var holder = $('#modalWait');
+
+        self.showModal = function() {
+            holder.dialog({
+                dialogClass: 'no-close',
+                modal: true,
+                resizable: false,
+                closeOnEscape: false,
+                draggable: false
+            });
+        }
+
+        self.hideDialog = function() {
+            holder.dialog('close');
+        }
+
+        return self;
+    })();
+</script>
+

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 
 namespace AzureDay.WebApp.WWW
 {
@@ -12,7 +13,13 @@ namespace AzureDay.WebApp.WWW
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
+                .ConfigureAppConfiguration((hostingContext, config) =>
+                    {
+                        var env = hostingContext.HostingEnvironment;
+                        config.AddJsonFile("appsettings.json")
+                            .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+                    })
+                    .UseStartup<Startup>()
                 .Build();
     }
 }
