@@ -6,6 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="5.0.1" />
         <PackageReference Include="LigerShark.WebOptimizer.Core" Version="1.0.215" />
         <PackageReference Include="Microsoft.ApplicationInsights" Version="2.8.0-beta1" />
         <PackageReference Include="Microsoft.ApplicationInsights.DependencyCollector" Version="2.8.0-beta1" />
