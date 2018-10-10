@@ -2,6 +2,8 @@
 using AzureDay.WebApp.Database;
 using AzureDay.WebApp.Database.Entities;
 using AzureDay.WebApp.Database.Enums;
+using AzureDay.WebApp.Notification;
+using AzureDay.WebApp.Notification.Email.Model;
 using AzureDay.WebApp.WWW.Infrastructure;
 using System;
 using System.Security.Cryptography;
@@ -74,17 +76,17 @@ namespace AzureDay.WebApp.WWW.Service
                 Token = Guid.NewGuid().ToString("N")
             };
 
-            /*var email = new ConfirmRegistrationMessage
+            var email = new ConfirmRegistrationMessage
             {
                 Email = attendee.EMail,
                 FullName = attendee.FullName,
                 Token = token.Token
-            };*/
+            };
 
             await Task.WhenAll(
                 DataFactory.AttendeeService.Value.InsertAsync(data),
-                AppFactory.QuickAuthTokenService.Value.AddQuickAuthTokenAsync(token)
-                //NotificationFactory.AttendeeNotificationService.Value.SendRegistrationConfirmationEmailAsync(email)
+                AppFactory.QuickAuthTokenService.Value.AddQuickAuthTokenAsync(token),
+                NotificationFactory.AttendeeNotificationService.Value.SendRegistrationConfirmationEmailAsync(email)
             );
         }
 
