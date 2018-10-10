@@ -1,4 +1,5 @@
 ﻿using System.Threading;
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
@@ -29,6 +30,8 @@ namespace AzureDay.WebApp.WWW
                 })
                 .AddAzureAdB2C(options => Configuration.Bind("AzureAdB2C", options))
                 .AddCookie();
+
+            services.AddAutoMapper();
 
             services.AddMvc();
             

@@ -118,18 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Audience01" xml:space="preserve">
-    <value>/Theme/img/_slides/2017/audience/013.jpg</value>
+    <value>/Theme/img/_slides/2018/audience/013.jpg</value>
   </data>
   <data name="Audience02" xml:space="preserve">
-    <value>/Theme/img/_slides/2017/audience/001.jpg</value>
+    <value>/Theme/img/_slides/2018/audience/001.jpg</value>
   </data>
   <data name="Date" xml:space="preserve">
-    <value>/Theme/img/_slides/2017/en/00-date-en.jpg</value>
+    <value>/Theme/img/_slides/2018/en/00-date-en.jpg</value>
   </data>
   <data name="Last_year" xml:space="preserve">
-    <value>/Theme/img/_slides/2017/en/01-2016.jpg</value>
+    <value>/Theme/img/_slides/2018/en/01-2016.jpg</value>
   </data>
   <data name="Tickets" xml:space="preserve">
-    <value>/Theme/img/_slides/2017/en/02-discounts-en.jpg</value>
+    <value>/Theme/img/_slides/2018/en/02-discounts-en.jpg</value>
   </data>
 </root>
