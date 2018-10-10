@@ -4,6 +4,7 @@ using System.Net.Mail;
 using SendGrid;
 using AzureDay.WebApp.Notification.Email.Model;
 using AzureDay.WebApp.Notification.Email.Ext;
+using AzureDay.WebApp.Notification.Email.Template;
 
 namespace AzureDay.WebApp.Notification.Email.Service
 {
@@ -21,7 +22,7 @@ namespace AzureDay.WebApp.Notification.Email.Service
             var template = new ConfirmRegistration();
             template.ConfirmationCode = model.Token;
 
-            var text = string.Empty; //template.TransformText();
+            var text = new ConfirmRegistrationTemplate().GetTemplate(template);
 
             var message = new SendGridMessage();
             message.To = new[] { new MailAddress(model.Email, model.FullName) };
@@ -37,7 +38,7 @@ namespace AzureDay.WebApp.Notification.Email.Service
         {
             var template = new ConfirmPayment();
 
-            var text = string.Empty; //template.TransformText();
+            var text = new ConfirmPaymentTemplate().GetTemplate(template);
 
             var message = new SendGridMessage();
             message.To = new[] { new MailAddress(model.Email, model.FullName) };
@@ -53,7 +54,7 @@ namespace AzureDay.WebApp.Notification.Email.Service
         {
             var template = new ErrorPayment();
 
-            var text = string.Empty; //template.TransformText();
+            var text = new ErrorPaymentTemplate().GetTemplate(template);
 
             var message = new SendGridMessage();
             message.To = new[] { new MailAddress(model.Email, model.FullName) };
@@ -70,7 +71,7 @@ namespace AzureDay.WebApp.Notification.Email.Service
             var template = new RestorePassword();
             template.ConfirmationCode = model.Token;
 
-            var text = string.Empty; //template.TransformText();
+            var text = new RestorePasswordTemplate().GetTemplate(template);
 
             var message = new SendGridMessage();
             message.To = new[] { new MailAddress(model.Email, model.FullName) };
