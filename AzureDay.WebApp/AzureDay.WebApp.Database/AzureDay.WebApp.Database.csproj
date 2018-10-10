@@ -9,6 +9,11 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="WindowsAzure.Storage" Version="7.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\AzureDay.WebApp.Config\AzureDay.WebApp.Config.csproj" />
       <ProjectReference Include="..\AzureDay.WebApp.Localization\AzureDay.WebApp.Localization.csproj" />
     </ItemGroup>
 
