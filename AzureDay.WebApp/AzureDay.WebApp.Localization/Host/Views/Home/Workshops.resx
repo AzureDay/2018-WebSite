@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About01" xml:space="preserve">
-    <value>During AzureDAY you can take part in practical workshops that are being held on 8th of September.</value>
+    <value>During AzureDAY you can take part in practical workshops that are being held on 9th of November.</value>
   </data>
   <data name="About01a" xml:space="preserve">
     <value>PLEASE NOTE that if you want to participate in any workshop, you need a dedicated workshop ticket.</value>
@@ -133,7 +133,7 @@
     <value>9th of November</value>
   </data>
   <data name="Img" xml:space="preserve">
-    <value>/Theme/img/_slides/2017/workshops-en.jpg</value>
+    <value>/Theme/img/_slides/2018/workshops-en.jpg</value>
   </data>
   <data name="Language" xml:space="preserve">
     <value>language</value>

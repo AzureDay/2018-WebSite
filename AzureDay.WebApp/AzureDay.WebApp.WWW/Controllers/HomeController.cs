@@ -19,10 +19,45 @@ namespace AzureDay.WebApp.WWW.Controllers
         private readonly Lazy<WorkshopService> _workshopService = new Lazy<WorkshopService>(() => new WorkshopService());
         private readonly Lazy<SpeakerService> _speakerService = new Lazy<SpeakerService>(() => new SpeakerService());
         private readonly Lazy<TopicService> _topicService = new Lazy<TopicService>(() => new TopicService());
+        private readonly Lazy<PartnerService> _partnerService = new Lazy<PartnerService>(() => new PartnerService());
 
         public async Task<IActionResult> Index()
         {
-            var model = new IndexModel();
+            var model = new IndexModel
+            {
+                Speakers = new SpeakersModel
+                {
+                    SpeakersCollections = new List<List<SpeakerEntity>>()
+                },
+                Partners = _partnerService.Value.GetAll().ToList()
+            };
+
+            var speakers = _speakerService.Value.GetAll();
+            var i = 0;
+            foreach (var speaker in speakers)
+            {
+                List<SpeakerEntity> list;
+                if (i == 0)
+                {
+                    list = new List<SpeakerEntity>();
+                    model.Speakers.SpeakersCollections.Add(list);
+                }
+                else
+                {
+                    list = model.Speakers.SpeakersCollections.Last();
+                }
+
+                list.Add(speaker);
+
+                if (i == 3)
+                {
+                    i = 0;
+                }
+                else
+                {
+                    i++;
+                }
+            }
 
             return View(model);
         }
@@ -180,7 +215,17 @@ namespace AzureDay.WebApp.WWW.Controllers
         
         public async Task<IActionResult> Partners()
         {
-            return View();
+            var model = new PartnersModel();
+
+            model.PartnersCollection = new Dictionary<PartnerType, List<PartnerEntity>>();
+
+            foreach (var partnerType in Enum.GetValues(typeof(PartnerType)))
+            {
+                var partners = _partnerService.Value.GetPartnersByType((PartnerType)partnerType).ToList();
+                model.PartnersCollection.Add((PartnerType)partnerType, partners);
+            }
+
+            return View(model);
         }
 
         public async Task<IActionResult> Error()

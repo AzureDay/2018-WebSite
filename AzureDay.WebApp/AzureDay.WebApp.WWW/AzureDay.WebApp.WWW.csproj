@@ -26,6 +26,9 @@
       <Folder Include="Translation" />
       <Folder Include="wwwroot\images\flags\" />
       <Folder Include="wwwroot\images\avatars\" />
+      <Folder Include="wwwroot\images\logos\" />
+      <Folder Include="wwwroot\Theme\img\_slides\2018\audience\" />
+      <Folder Include="wwwroot\Theme\img\_slides\2018\en\" />
     </ItemGroup>
 
     <ItemGroup>
