@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using AzureDay.WebApp.Config;
+using AzureDay.WebApp.Database.Entities;
 using AzureDay.WebApp.Database.Enums;
 using AzureDay.WebApp.Database.Services;
+using AzureDay.WebApp.PaymentGateway.Core;
 using AzureDay.WebApp.WWW.Infrastructure;
 using AzureDay.WebApp.WWW.Models.Account;
 using AzureDay.WebApp.WWW.Models.Home;
@@ -131,5 +134,247 @@ namespace AzureDay.WebApp.WWW.Controllers
         {
             return View();
         }
+        
+        private PayFormModel GetPaymentForm(List<Ticket> tickets)
+		{
+			if (tickets == null)
+			{
+				throw new ArgumentNullException(nameof(tickets));
+			}
+
+			if (!tickets.Any())
+			{
+				throw new ArgumentException(nameof(tickets));
+			}
+
+			KaznacheyPaymentSystem kaznachey;
+			int paySystemId;
+			if (string.IsNullOrEmpty(tickets[0].PaymentType))
+			{
+				kaznachey = new KaznacheyPaymentSystem(Configuration.KaznacheyMerchantId, Configuration.KaznacheyMerchantSecreet);
+				paySystemId = kaznachey.GetMerchantInformation().PaySystems[0].Id;
+			}
+			else
+			{
+				switch (tickets[0].PaymentType.ToLowerInvariant())
+				{
+					case "kaznachey":
+						kaznachey = new KaznacheyPaymentSystem(Configuration.KaznacheyMerchantId, Configuration.KaznacheyMerchantSecreet);
+						paySystemId = kaznachey.GetMerchantInformation().PaySystems[0].Id;
+						break;
+					case "liqpay":
+						kaznachey = new KaznacheyPaymentSystem(Configuration.KaznacheyMerchantId, Configuration.KaznacheyMerchantSecreet);
+						paySystemId = 1021;
+						break;
+					default:
+						kaznachey = new KaznacheyPaymentSystem(Configuration.KaznacheyMerchantId, Configuration.KaznacheyMerchantSecreet);
+						paySystemId = kaznachey.GetMerchantInformation().PaySystems[0].Id;
+						break;
+				}
+			}
+
+			var paymentRequest = new PaymentRequest(paySystemId);
+			paymentRequest.Language = "RU";
+			paymentRequest.Currency = "UAH";
+			paymentRequest.PaymentDetail = new PaymentDetails
+			{
+				EMail = tickets[0].Attendee.EMail,
+				MerchantInternalUserId = tickets[0].Attendee.EMail,
+				MerchantInternalPaymentId = $"{tickets[0].Attendee.EMail}-{string.Join("-", tickets.Select(x => x.TicketType.ToString()))}",
+				BuyerFirstname = tickets[0].Attendee.FirstName,
+				BuyerLastname = tickets[0].Attendee.LastName,
+				ReturnUrl = $"{Configuration.Host}/profile/my",
+				StatusUrl = $"{Configuration.Host}/api/tickets/paymentconfirm"
+			};
+			paymentRequest.Products = new List<Product>
+			{
+				new Product
+				{
+					ProductId = string.Join("-", tickets.Select(x => x.TicketType.ToString())),
+					ProductItemsNum = 1,
+					ProductName = $"{tickets[0].Attendee.FirstName} {tickets[0].Attendee.LastName} билет на AzureDay {Configuration.Year} ({string.Join("-", tickets.Select(x => x.TicketType.ToString()))})",
+					ProductPrice = (decimal) tickets.Sum(x => x.Price)
+				}
+			};
+
+			var form = kaznachey.CreatePayment(paymentRequest).ExternalFormHtml;
+
+			var model = new PayFormModel
+			{
+				Form = form
+			};
+			return model;
+		}
+
+		[Authorize]
+		[HttpPost]
+		public async Task<ActionResult> Pay([FromBody]PayModel model)
+		{
+			if (!model.HasConferenceTicket && (!model.HasWorkshopTicket || model.DdlWorkshop == 0))
+			{
+				throw new ArgumentException(nameof(model));
+			}
+
+			var tickets = new List<Ticket>();
+
+			if (model.HasConferenceTicket)
+			{
+				tickets.Add(new Ticket
+				{
+					TicketType = TicketType.Regular,
+					PaymentType = model.PaymentType,
+					Price = (double)AppFactory.TicketService.Value.GetTicketPrice(TicketType.Regular)
+				});
+			}
+
+			if (model.HasWorkshopTicket && model.DdlWorkshop > 0)
+			{
+				tickets.Add(new Ticket
+				{
+					TicketType = TicketType.Workshop,
+					PaymentType = model.PaymentType,
+					WorkshopId = model.DdlWorkshop,
+					Price = (double)AppFactory.TicketService.Value.GetTicketPrice(TicketType.Workshop)
+				});
+			}
+
+			if (!tickets.Any())
+			{
+				throw new ArgumentException(nameof(model));
+			}
+
+			var coupon = await AppFactory.CouponService.Value.GetValidCouponByCodeAsync(model.PromoCode);
+
+			decimal ticketTotalPrice = tickets.Count > 1 ?
+				AppFactory.TicketService.Value.GetTicketPrice(TicketType.Regular | TicketType.Workshop) :
+				AppFactory.TicketService.Value.GetTicketPrice(tickets[0].TicketType);
+			ticketTotalPrice = AppFactory.CouponService.Value.GetPriceWithCoupon(ticketTotalPrice, coupon);
+
+			await AppFactory.CouponService.Value.UseCouponByCodeAsync(model.PromoCode);
+
+			if (tickets.Count > 1)
+			{
+				tickets[0].Price = (double)ticketTotalPrice / 2;
+				tickets[0].Coupon = coupon;
+				tickets[0].IsPayed = tickets[0].Price <= 0;
+
+				tickets[1].Price = (double)ticketTotalPrice / 2;
+				tickets[1].Coupon = coupon;
+				tickets[1].IsPayed = tickets[1].Price <= 0;
+			}
+			else
+			{
+				tickets[0].Price = (double) ticketTotalPrice;
+				tickets[0].Coupon = coupon;
+				tickets[0].IsPayed = tickets[0].Price <= 0;
+			}
+
+			var isPayed = true;
+
+			foreach (var ticket in tickets)
+			{
+				if (ticket.Attendee == null)
+				{
+					var email = User.Identity.Name;
+					ticket.Attendee = await AppFactory.AttendeeService.Value.GetAttendeeByEmailAsync(email);
+				}
+
+				await AppFactory.TicketService.Value.AddTicketAsync(ticket);
+
+				isPayed = isPayed && ticket.IsPayed;
+			}
+
+			if (isPayed)
+			{
+				return RedirectToAction("Profile");
+			}
+			else
+			{
+				var payForm = GetPaymentForm(tickets);
+
+				return View("PayForm", payForm);
+			}
+		}
+
+		[Authorize]
+		public async Task<ActionResult> PayAgain()
+		{
+			var email = User.Identity.Name;
+
+			var attendee = await AppFactory.AttendeeService.Value.GetAttendeeByEmailAsync(email);
+			var tickets = await AppFactory.TicketService.Value.GetTicketsByEmailAsync(email);
+
+			foreach (var ticket in tickets)
+			{
+				ticket.Attendee = attendee;
+			}
+
+			var model = GetPaymentForm(tickets);
+
+			return View("PayForm", model);
+		}
+
+		[Authorize]
+		public async Task<ActionResult> DeleteTicket(string token)
+		{
+			var email = User.Identity.Name;
+			TicketType ticketType;
+			if (!Enum.TryParse(token, true, out ticketType))
+			{
+				throw new ArgumentException();
+			}
+
+			var tickets = await AppFactory.TicketService.Value.GetTicketsByEmailAsync(email);
+			var ticketToDelete = tickets.Single(x => x.TicketType == ticketType);
+			var ticketToRemain = tickets.SingleOrDefault(x => x.TicketType != ticketType);
+
+			var couponCode = ticketToDelete.Coupon == null ?
+				string.Empty :
+				ticketToDelete.Coupon.Code;
+
+			var tasks = new List<Task>
+			{
+				AppFactory.TicketService.Value.DeleteTicketAsync(email, ticketToDelete.TicketType)
+			};
+
+			if (ticketToRemain == null)
+			{
+				tasks.Add(AppFactory.CouponService.Value.RestoreCouponByCodeAsync(couponCode));
+			}
+			else
+			{
+				var price = AppFactory.TicketService.Value.GetTicketPrice(ticketToRemain.TicketType);
+
+				if (ticketToRemain.Coupon != null)
+				{
+					price = AppFactory.CouponService.Value.GetPriceWithCoupon(price, ticketToRemain.Coupon);
+				}
+
+				tasks.Add(AppFactory.TicketService.Value.UpdateTicketPriceAsync(email, ticketToRemain.TicketType, price));
+			}
+
+			await Task.WhenAll(tasks);
+
+			return RedirectToAction("Profile");
+		}
+
+/*		[Authorize]
+		public async Task<ActionResult> PersonalSchedule()
+		{
+			var model = new ScheduleModel();
+
+			model.Rooms = _roomService.Value
+				.GetRooms()
+				.Where(x => x.RoomType == RoomType.LectureRoom)
+				.ToList();
+
+			model.Timetables = _timetableService.Value.GetTimetable()
+				.GroupBy(
+					t => t.TimeStart,
+					(key, timetables) => timetables.OrderBy(t => t.Room.ColorNumber).ToList())
+				.ToList();
+
+			return View(model);
+		}*/
     }
 }

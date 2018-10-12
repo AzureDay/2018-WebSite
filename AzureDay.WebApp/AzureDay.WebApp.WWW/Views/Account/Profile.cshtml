@@ -2,6 +2,7 @@
 @using AzureDay.WebApp.Config
 @using AzureDay.WebApp.Localization.Host.Views.Home
 @using AzureDay.WebApp.Localization.Host.Views.Profile
+@using AzureDay.WebApp.WWW.Models.Home
 @{
     ViewData["Title"] = "Profile";
 }
@@ -41,9 +42,9 @@
 
 				<div id="divTicket" class="col-md-6">
 					<h2>@My.MyTicket</h2>
-@*
+
 					<div>
-						<form id="formPay" method="POST" action="/profile/pay">
+						<form id="formPay" method="POST" action="/account/pay">
 							@if (Model.PayedConferenceTicket == null)
 							{
 								<div class="input-group myInputGroupdivider">
@@ -96,9 +97,9 @@
 													<h5>AzureDay @Configuration.Year</h5>
 													<div class="wow-pricing-cost" style="padding: 15px;">
 														<p>@My.ThankYouWait</p>
-														<p>@My.PayNow <a href="/Profile/PayAgain/@Model.PayedConferenceTicket.TicketType">@My.ByLink</a>.
+														<p>@My.PayNow <a href="/account/PayAgain/@Model.PayedConferenceTicket.TicketType">@My.ByLink</a>.
 														</p>
-														<p>@My.DropPayment01 <a href="/Profile/DeleteTicket/@Model.PayedConferenceTicket.TicketType">@My.ByLink</a>. @My.DropPayment01a</p>
+														<p>@My.DropPayment01 <a href="/account/DeleteTicket/@Model.PayedConferenceTicket.TicketType">@My.ByLink</a>. @My.DropPayment01a</p>
 														<p>@My.Questions01 <a href="mailto:pay@azureday.net">pay@azureday.net</a> @My.Questions01a</p>
 													</div>
 												</div>
@@ -173,9 +174,9 @@
 													<div class="wow-pricing-cost" style="padding: 15px;">
 														<p>@My.ThankYouWait</p>
 														<p>
-															@My.PayNow <a href="/Profile/PayAgain/@Model.PayedWorkshopTicket.TicketType">@My.ByLink</a>.
+															@My.PayNow <a href="/account/PayAgain/@Model.PayedWorkshopTicket.TicketType">@My.ByLink</a>.
 														</p>
-														<p>@My.DropPayment01 <a href="/Profile/DeleteTicket/@Model.PayedWorkshopTicket.TicketType">@My.ByLink</a>. @My.DropPayment01a</p>
+														<p>@My.DropPayment01 <a href="/account/DeleteTicket/@Model.PayedWorkshopTicket.TicketType">@My.ByLink</a>. @My.DropPayment01a</p>
 														<p>@My.Questions01 <a href="mailto:pay@azureday.net">pay@azureday.net</a> @My.Questions01a</p>
 													</div>
 												</div>
@@ -213,7 +214,6 @@
 							}
 						</form>
 					</div>
-*@
 				</div>
 			</div>
 		</div>
@@ -254,7 +254,7 @@
 						@{ Write((Model.PayedWorkshopTicket == null).ToString().ToLowerInvariant()); }),
 					selectedWorkshop: ko.observable($.QueryString['workshopid']),
 					workshops: [
-						//Html.Raw(string.Join(",", Model.Workshops.Select(x => $"{{ id:'{x.Workshop.Id}', title:'{x.Workshop.Title} ({My.TicketsLeft} {x.TicketsLeft})' }}").ToList()))
+						@Html.Raw(string.Join(",", ((IEnumerable<WorkshopModel>)Model.Workshops).Select(x => $"{{ id:'{x.Workshop.Id}', title:'{x.Workshop.Title} ({My.TicketsLeft} {x.TicketsLeft})' }}").ToList()))
 					],
 					promoCode: ko.observable(),
 					currentPrice: ko.observable()
