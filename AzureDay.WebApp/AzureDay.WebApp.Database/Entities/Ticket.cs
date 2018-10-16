@@ -4,6 +4,7 @@ namespace AzureDay.WebApp.Database.Entities
 {
     public sealed class Ticket
     {
+        public string AttendeeEmail;
         public Attendee Attendee { get; set; }
 
         public bool IsPayed { get; set; }

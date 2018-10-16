@@ -35,6 +35,7 @@
       <ProjectReference Include="..\AzureDay.WebApp.Config\AzureDay.WebApp.Config.csproj" />
       <ProjectReference Include="..\AzureDay.WebApp.Database\AzureDay.WebApp.Database.csproj" />
       <ProjectReference Include="..\AzureDay.WebApp.Localization\AzureDay.WebApp.Localization.csproj" />
+      <ProjectReference Include="..\AzureDay.WebApp.Notification\AzureDay.WebApp.Notification.csproj" />
       <ProjectReference Include="..\AzureDay.WebApp.PaymentGateway\AzureDay.WebApp.PaymentGateway.csproj" />
     </ItemGroup>
 

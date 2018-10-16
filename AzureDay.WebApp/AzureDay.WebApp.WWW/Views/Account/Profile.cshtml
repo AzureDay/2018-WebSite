@@ -1,24 +1,381 @@
 @using System.Security.Claims
+@using AzureDay.WebApp.Config
+@using AzureDay.WebApp.Localization.Host.Views.Home
+@using AzureDay.WebApp.Localization.Host.Views.Profile
+@using AzureDay.WebApp.WWW.Models.Home
 @{
-    ViewData["Title"] = "Profile";
+	ViewBag.Title = $"AzureDay {Configuration.Year} - {My.PersonalCabinet}";
 }
-<h2>@ViewData["Title"]</h2>
 
-<table>
-    <tr>
-        <td>Full name</td>
-        <td>@User.GetFullName()</td>
-    </tr>
-    <tr>
-        <td>Email</td>
-        <td>@User.GetEmail()</td>
-    </tr>
-    <tr>
-        <td>Job</td>
-        <td>@User.GetJobTitle() &#64; @User.GetCompany() </td>
-    </tr>
-    <tr>
-        <td>From</td>
-        <td>@User.GetCity() / @User.GetCountry() </td>
-    </tr>
-</table>
+<div class="boxedcontent" style="margin-top: 79px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+
+				<div>
+					&nbsp;
+				</div>
+
+				<h1>@My.PersonalCabinet <span class='colortext'>AzureDay @Configuration.Year</span></h1>
+
+				<div id="divProfile" class="col-md-6">
+					<h2>@My.MyProfile</h2>
+					<form method="POST" data-bind="submit: showModal">
+
+						<div class="input-group myInputGroupdivider">
+							<span class="input-group-addon" style="width: 150px;">Email</span>
+							<input class="form-control" name="email" readonly="readonly" disabled="disabled" value="@User.GetEmail()" style="width: 250px;"/>
+						</div>
+
+						<div class="input-group myInputGroupdivider">
+							<span class="input-group-addon" style="width: 150px;">Full name</span>
+							<input class="form-control" name="firstName" readonly="readonly" disabled="disabled" value="@User.GetFullName()" style="width: 250px;"/>
+						</div>
+						<div class="input-group myInputGroupdivider">
+							<span class="input-group-addon" style="width: 150px;">Job</span>
+							<input class="form-control" name="company" readonly="readonly" disabled="disabled" value="@User.GetJobTitle() &#64; @User.GetCompany()" style="width: 250px;"/>
+						</div>
+						<div class="input-group myInputGroupdivider">
+							<span class="input-group-addon" style="width: 150px;">From</span>
+							<input class="form-control" name="company" readonly="readonly" disabled="disabled" value="@User.GetCity() / @User.GetCountry()" style="width: 250px;"/>
+						</div>
+						
+						@*
+						<tr>
+							<td>Full name</td>
+							<td>@User.GetFullName()</td>
+						</tr>
+						<tr>
+							<td>Email</td>
+							<td>@User.GetEmail()</td>
+						</tr>
+						<tr>
+							<td>Job</td>
+							<td>@User.GetJobTitle() &#64; @User.GetCompany() </td>
+						</tr>
+						<tr>
+							<td>From</td>
+							<td>@User.GetCity() / @User.GetCountry() </td>
+						</tr>
+
+						<button class="btn btn-primary" type="submit" data-bind="enable: isModelValid() && isPasswordValid() && isPasswordLengthValid()">@My.Save</button>
+
+						<div style="width: 400px; margin-top: 15px; display: none;" class="alert alert-warning" data-bind="style: { display: isPasswordValid() ? 'none' : 'block' }">@My.isPasswordValid</div>
+
+						<div style="width: 400px; margin-top: 15px; display: none;" class="alert alert-warning" data-bind="style: { display: isPasswordLengthValid() ? 'none' : 'block' }">@My.isPasswordLengthValid</div>
+
+						<div style="width: 400px; margin-top: 15px; display: none;" class="alert alert-warning" data-bind="style: { display: isModelValid() ? 'none' : 'block' }">@My.isModelValid</div>
+						*@
+
+					</form>
+				</div>
+
+				<div id="divTicket" class="col-md-6">
+					<h2>@My.MyTicket</h2>
+
+					<div>
+						<form id="formPay" method="POST" action="/account/pay">
+							@if (Model.PayedConferenceTicket == null)
+							{
+								<div class="input-group myInputGroupdivider">
+									<span class="input-group-addon" style="width: 150px;">@My.Ticket01</span>
+									<input id="cbConferenceTicket" type="checkbox" class="form-control" style="width: 50px;" data-bind="checked: isConferenceTicket"/>
+									<input type="hidden" name="hasConferenceTicket" />
+								</div>
+							}
+							else
+							{
+								if (Model.PayedConferenceTicket.IsPayed)
+								{
+									<div>
+										<div class="wow-pricing-table col-md-12">
+											<div class="wow-pricing featured wow-column-">
+												<div class="wow-pricing-header" style="padding-bottom: 0px;">
+													<h5>AzureDay @Configuration.Year</h5>
+													<div class="wow-pricing-cost">
+														<img id="imgGravatar1" style="display: none; padding-bottom: 10px;"/>
+														<p style="font-weight: bold;">@($"{Model.FirstName} {Model.LastName}")</p>
+														<p>@Model.Company</p>
+														<p>&nbsp;</p>
+													</div>
+												</div>
+												<div class="wow-pricing-content">
+													<ul>
+														<li>
+															@My.Attendee (@Model.PayedConferenceTicket.TicketType.ToString())<br/>
+															@Schedule.Date
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									if (Model.PayedWorkshopTicket == null)
+									{
+										<div>
+											<p>@My.HowToUseTicket</p>
+										</div>
+									}
+								}
+								else
+								{
+									<div>
+										<div class="wow-pricing-table col-md-12">
+											<div class="wow-pricing wow-column-">
+												<div class="wow-pricing-header" style="padding-bottom: 0px;">
+													<h5>AzureDay @Configuration.Year</h5>
+													<div class="wow-pricing-cost" style="padding: 15px;">
+														<p>@My.ThankYouWait</p>
+														<p>@My.PayNow <a href="/Account/PayAgain?token=@Model.PayedConferenceTicket.TicketType">@My.ByLink</a>.
+														</p>
+														<p>@My.DropPayment01 <a href="/Account/DeleteTicket?token=@Model.PayedConferenceTicket.TicketType">@My.ByLink</a>. @My.DropPayment01a</p>
+														<p>@My.Questions01 <a href="mailto:pay@azureday.net">pay@azureday.net</a> @My.Questions01a</p>
+													</div>
+												</div>
+												<div class="wow-pricing-content">
+													<ul>
+														<li>
+															@My.Attendee (@Model.PayedConferenceTicket.TicketType.ToString())<br />
+															@Schedule.Date
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								}
+							}
+
+							@if (Model.PayedWorkshopTicket == null)
+							{
+								<div class="input-group myInputGroupdivider">
+									<span class="input-group-addon" style="width: 150px;">@My.Ticket02</span>
+									<input id="cbWorkshopTicket" type="checkbox" class="form-control"style="width: 50px;" data-bind="checked: isWorkshopTicket" />
+									<input type="hidden" name="hasWorkshopTicket"/>
+								</div>
+								<div class="input-group myInputGroupdivider" data-bind="visible: isWorkshopTicket">
+									<span class="input-group-addon" style="width: 150px;">@My.Lab01</span>
+									<select class="form-control" name="ddlWorkshop" data-bind="options: workshops, optionsValue: 'id', optionsText: 'title', value: selectedWorkshop" style="width: 250px;"></select>
+								</div>
+							}
+							else
+							{
+								if (Model.PayedWorkshopTicket.IsPayed)
+								{
+									<div>
+										<div class="wow-pricing-table col-md-12">
+											<div class="wow-pricing featured wow-column-">
+												<div class="wow-pricing-header" style="padding-bottom: 0px;">
+													<h5>AzureDay @Configuration.Year</h5>
+													<div class="wow-pricing-cost">
+														<img id="imgGravatar2" style="display: none; padding-bottom: 10px;" />
+														<p style="font-weight: bold;">@($"{Model.FirstName} {Model.LastName}")</p>
+														<p>@Model.Company</p>
+														<p>&nbsp;</p>
+													</div>
+												</div>
+												<div class="wow-pricing-content">
+													<ul>
+														<li>
+															@My.Attendee (@Model.PayedWorkshopTicket.TicketType.ToString())<br/>
+															@Workshops.Date<br/>
+															@Model.PayedWorkshop.Title
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 alert alert-danger" style="font-size: 1.3em;">
+											Обратите внимание, что лабораторные работы 8го сентября проходят в разных локациях. Все участники лабораторных работ могут найти детальные инструкции у себя в почте.
+										</div>
+									</div>
+									<div>
+										<p>@My.HowToUseTicket</p>
+									</div>
+								}
+								else
+								{
+									<div>
+										<div class="wow-pricing-table col-md-12">
+											<div class="wow-pricing wow-column-">
+												<div class="wow-pricing-header" style="padding-bottom: 0px;">
+													<h5>AzureDay @Configuration.Year</h5>
+													<div class="wow-pricing-cost" style="padding: 15px;">
+														<p>@My.ThankYouWait</p>
+														<p>
+															@My.PayNow <a href="/Account/PayAgain/@Model.PayedWorkshopTicket.TicketType">@My.ByLink</a>.
+														</p>
+														<p>@My.DropPayment01 <a href="/Account/DeleteTicket/@Model.PayedWorkshopTicket.TicketType">@My.ByLink</a>. @My.DropPayment01a</p>
+														<p>@My.Questions01 <a href="mailto:pay@azureday.net">pay@azureday.net</a> @My.Questions01a</p>
+													</div>
+												</div>
+												<div class="wow-pricing-content">
+													<ul>
+														<li>
+															@My.Attendee (@Model.PayedWorkshopTicket.TicketType.ToString())<br />
+															@Schedule.Date
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								}
+							}
+								
+							@if (Model.PayedConferenceTicket == null || Model.PayedWorkshopTicket == null)
+							{
+								<div>
+									<div class="input-group myInputGroupdivider">
+										<span class="input-group-addon" style="width: 150px;">@My.TicketCode</span>
+										<input class="form-control" name="promoCode" placeholder="@My.TicketCode" data-bind="textInput: promoCode" style="width: 250px;"/>
+									</div>
+									<div class="input-group myInputGroupdivider">
+										<span class="input-group-addon" style="width: 150px;">@My.TicketPrice</span>
+										<input class="form-control" readonly="readonly" disabled="disabled" data-bind="value: currentPrice" style="width: 250px;"/>
+									</div>
+
+									<input id="paymentType" name="paymentType" type="hidden"/>
+
+									<a href="#" id="btnPayKaznachey" class="btn btn-primary">@My.PayByCard</a>
+									<a href="#" id="btnPayLiqPay" class="btn btn-primary">@My.PayViaLiqPay</a>
+								</div>
+							}
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	@Html.Partial("_ModalWait")
+</div>
+
+@section Scripts
+{
+	<script src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.2.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			(function($) {
+				$.QueryString = (function(paramsArray) {
+					var params = {};
+
+					for (var i = 0; i < paramsArray.length; ++i) {
+						var param = paramsArray[i].split('=', 2);
+
+						if (param.length !== 2) {
+							continue;
+						}
+
+						params[param[0]] = decodeURIComponent(param[1].replace(/\+/g, " "));
+					}
+
+					return params;
+				})(window.location.search.toLowerCase().substr(1).split('&'));
+			})(jQuery);
+
+			(function ticket() {
+				var ticketModel = {
+					isConferenceTicket: ko.observable(
+						@{ Write((Model.PayedConferenceTicket == null).ToString().ToLowerInvariant()); }),
+					isWorkshopTicket: ko.observable(
+						@{ Write((Model.PayedWorkshopTicket == null).ToString().ToLowerInvariant()); }),
+					selectedWorkshop: ko.observable($.QueryString['workshopid']),
+					workshops: [
+						@Html.Raw(string.Join(",", ((List<WorkshopModel>)Model.Workshops).Select(x => $"{{ id:'{x.Workshop.Id}', title:'{x.Workshop.Title} ({My.TicketsLeft} {x.TicketsLeft})' }}")))
+					],
+					promoCode: ko.observable(),
+					currentPrice: ko.observable()
+				};
+
+				function calculateNewPrice(conferenceTicket, workshopId, promoCode) {
+					$.get('/api/tickets/price' +
+						'?conferenceTicket=' +
+						conferenceTicket +
+						'&workshopId=' +
+						workshopId +
+						'&promoCode=' +
+						promoCode,
+						function(data) {
+							ticketModel.currentPrice(data + ' @My.Currency');
+						});
+				}
+
+				ticketModel.isAnyTicketSelected = ko.computed(function() {
+					return ticketModel.isConferenceTicket() ||
+						(ticketModel.isWorkshopTicket() && ticketModel.selectedWorkshop() > 0);
+				});
+
+				ticketModel.promoCode.subscribe(function(newPromoCode) {
+					ticketModel.currentPrice(null);
+					var workshopId = ticketModel.isWorkshopTicket() ? ticketModel.selectedWorkshop() : 0;
+					calculateNewPrice(ticketModel.isConferenceTicket(), workshopId, newPromoCode);
+				});
+
+				ticketModel.isConferenceTicket.subscribe(function(newConferenceTicket) {
+					ticketModel.currentPrice(null);
+					var workshopId = ticketModel.isWorkshopTicket() ? ticketModel.selectedWorkshop() : 0;
+					calculateNewPrice(newConferenceTicket, workshopId, ticketModel.promoCode());
+				});
+
+				ticketModel.isWorkshopTicket.subscribe(function(newWorkshopTicket) {
+					ticketModel.currentPrice(null);
+					var workshopId = newWorkshopTicket ? ticketModel.selectedWorkshop() : 0;
+					calculateNewPrice(ticketModel.isConferenceTicket(), workshopId, ticketModel.promoCode());
+				});
+
+				ticketModel.selectedWorkshop.subscribe(function(newSelectedWorkshop) {
+					ticketModel.currentPrice(null);
+					var workshopId = ticketModel.isWorkshopTicket() ? newSelectedWorkshop : 0;
+					calculateNewPrice(ticketModel.isConferenceTicket(), workshopId, ticketModel.promoCode());
+				});
+
+				ko.applyBindings(ticketModel, document.getElementById('divTicket'));
+
+				var workshopId = ticketModel.isWorkshopTicket() ? ticketModel.selectedWorkshop() : 0;
+				calculateNewPrice(ticketModel.isConferenceTicket(), workshopId, ticketModel.promoCode());
+			})();
+
+			$('#btnPayKaznachey').click(function() {
+				$('#paymentType').val('Kaznachey');
+				$('[name="hasConferenceTicket"]').val($('#cbConferenceTicket').is(":checked"));
+				$('[name="hasWorkshopTicket"]').val($('#cbWorkshopTicket').is(":checked"));
+				setTimeout(function() {
+					modal.showModal();
+				});
+				$('#formPay').submit();
+			});
+
+			$('#btnPayLiqPay').click(function() {
+				$('#paymentType').val('LiqPay');
+				$('[name="hasConferenceTicket"]').val($('#cbConferenceTicket').is(":checked"));
+				$('[name="hasWorkshopTicket"]').val($('#cbWorkshopTicket').is(":checked"));
+				setTimeout(function() {
+					modal.showModal();
+				});
+				$('#formPay').submit();
+			});
+		});
+
+		function renderGravatarProfile(profile) {
+			if (!profile || !profile.entry || !profile.entry[0]) {
+				return;
+			}
+
+			var avatarUrl = profile.entry[0].thumbnailUrl;
+
+			var img1 = $('#imgGravatar1');
+			img1.attr('src', avatarUrl);
+			img1.show();
+
+			var img2 = $('#imgGravatar2');
+			img2.attr('src', avatarUrl);
+			img2.show();
+		}
+	</script>
+
+	<script src="@($"https://www.gravatar.com/{@User.GetEmail().GetHashCode()}.json?callback=renderGravatarProfile")"></script>
+}

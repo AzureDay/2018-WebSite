@@ -29,8 +29,8 @@ namespace AzureDay.WebApp.Config
 
 		#region azure storage
 
-		public static string AzureStorageAccountName => GetConfigVariable("AzureStorageAccountName");
-		public static string AzureStorageAccountKey => GetConfigVariable("AzureStorageAccountKey");
+		public static string AzureStorageAccountName => _config["AzureStorageAccountName"];
+		public static string AzureStorageAccountKey => _config["AzureStorageAccountKey"];
 
 		#endregion
 
