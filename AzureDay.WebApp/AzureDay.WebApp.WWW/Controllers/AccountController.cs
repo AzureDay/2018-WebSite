@@ -183,7 +183,7 @@ namespace AzureDay.WebApp.WWW.Controllers
 				MerchantInternalPaymentId = $"{tickets[0].Attendee.EMail}-{string.Join("-", tickets.Select(x => x.TicketType.ToString()))}",
 				BuyerFirstname = tickets[0].Attendee.FirstName,
 				BuyerLastname = tickets[0].Attendee.LastName,
-				ReturnUrl = $"{Configuration.Host}/profile/my",
+				ReturnUrl = $"{Configuration.Host}/account/profile",
 				StatusUrl = $"{Configuration.Host}/api/tickets/paymentconfirm"
 			};
 			paymentRequest.Products = new List<Product>
@@ -208,7 +208,8 @@ namespace AzureDay.WebApp.WWW.Controllers
 
 		[Authorize]
 		[HttpPost]
-		public async Task<ActionResult> Pay([FromBody]PayModel model)
+		[Consumes("application/x-www-form-urlencoded")]
+		public async Task<ActionResult> Pay([FromForm]PayModel model)
 		{
 			if (!model.HasConferenceTicket && (!model.HasWorkshopTicket || model.DdlWorkshop == 0))
 			{
@@ -275,8 +276,14 @@ namespace AzureDay.WebApp.WWW.Controllers
 			{
 				if (ticket.Attendee == null)
 				{
-					var email = User.Identity.Name;
-					ticket.Attendee = await AppFactory.AttendeeService.Value.GetAttendeeByEmailAsync(email);
+					var email = User.GetEmail();
+					ticket.Attendee = new Attendee
+					{
+						FirstName = User.GetFirstName(),
+						LastName = User.GetLastName(),
+						EMail = email
+					};
+					ticket.AttendeeEmail = email;
 				}
 
 				await AppFactory.TicketService.Value.AddTicketAsync(ticket);
@@ -299,9 +306,14 @@ namespace AzureDay.WebApp.WWW.Controllers
 		[Authorize]
 		public async Task<ActionResult> PayAgain()
 		{
-			var email = User.Identity.Name;
+			var email = User.GetEmail();
 
-			var attendee = await AppFactory.AttendeeService.Value.GetAttendeeByEmailAsync(email);
+			var attendee = new Attendee
+			{
+				FirstName = User.GetFirstName(),
+				LastName = User.GetLastName(),
+				EMail = email
+			};
 			var tickets = await AppFactory.TicketService.Value.GetTicketsByEmailAsync(email);
 
 			foreach (var ticket in tickets)
@@ -317,7 +329,7 @@ namespace AzureDay.WebApp.WWW.Controllers
 		[Authorize]
 		public async Task<ActionResult> DeleteTicket(string token)
 		{
-			var email = User.Identity.Name;
+			var email = User.GetEmail();
 			TicketType ticketType;
 			if (!Enum.TryParse(token, true, out ticketType))
 			{

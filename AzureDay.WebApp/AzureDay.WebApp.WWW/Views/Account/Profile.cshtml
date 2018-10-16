@@ -4,9 +4,9 @@
 @using AzureDay.WebApp.Localization.Host.Views.Profile
 @using AzureDay.WebApp.WWW.Models.Home
 @{
-    ViewData["Title"] = "Profile";
+	ViewBag.Title = $"AzureDay {Configuration.Year} - {My.PersonalCabinet}";
 }
-<h2>@ViewData["Title"]</h2>
+
 <div class="boxedcontent" style="margin-top: 79px;">
 	<div class="container">
 		<div class="row">
@@ -20,7 +20,27 @@
 
 				<div id="divProfile" class="col-md-6">
 					<h2>@My.MyProfile</h2>
-					<table>
+					<form method="POST" data-bind="submit: showModal">
+
+						<div class="input-group myInputGroupdivider">
+							<span class="input-group-addon" style="width: 150px;">Email</span>
+							<input class="form-control" name="email" readonly="readonly" disabled="disabled" value="@User.GetEmail()" style="width: 250px;"/>
+						</div>
+
+						<div class="input-group myInputGroupdivider">
+							<span class="input-group-addon" style="width: 150px;">Full name</span>
+							<input class="form-control" name="firstName" readonly="readonly" disabled="disabled" value="@User.GetFullName()" style="width: 250px;"/>
+						</div>
+						<div class="input-group myInputGroupdivider">
+							<span class="input-group-addon" style="width: 150px;">Job</span>
+							<input class="form-control" name="company" readonly="readonly" disabled="disabled" value="@User.GetJobTitle() &#64; @User.GetCompany()" style="width: 250px;"/>
+						</div>
+						<div class="input-group myInputGroupdivider">
+							<span class="input-group-addon" style="width: 150px;">From</span>
+							<input class="form-control" name="company" readonly="readonly" disabled="disabled" value="@User.GetCity() / @User.GetCountry()" style="width: 250px;"/>
+						</div>
+						
+						@*
 						<tr>
 							<td>Full name</td>
 							<td>@User.GetFullName()</td>
@@ -37,7 +57,17 @@
 							<td>From</td>
 							<td>@User.GetCity() / @User.GetCountry() </td>
 						</tr>
-					</table>
+
+						<button class="btn btn-primary" type="submit" data-bind="enable: isModelValid() && isPasswordValid() && isPasswordLengthValid()">@My.Save</button>
+
+						<div style="width: 400px; margin-top: 15px; display: none;" class="alert alert-warning" data-bind="style: { display: isPasswordValid() ? 'none' : 'block' }">@My.isPasswordValid</div>
+
+						<div style="width: 400px; margin-top: 15px; display: none;" class="alert alert-warning" data-bind="style: { display: isPasswordLengthValid() ? 'none' : 'block' }">@My.isPasswordLengthValid</div>
+
+						<div style="width: 400px; margin-top: 15px; display: none;" class="alert alert-warning" data-bind="style: { display: isModelValid() ? 'none' : 'block' }">@My.isModelValid</div>
+						*@
+
+					</form>
 				</div>
 
 				<div id="divTicket" class="col-md-6">
@@ -97,9 +127,9 @@
 													<h5>AzureDay @Configuration.Year</h5>
 													<div class="wow-pricing-cost" style="padding: 15px;">
 														<p>@My.ThankYouWait</p>
-														<p>@My.PayNow <a href="/account/PayAgain/@Model.PayedConferenceTicket.TicketType">@My.ByLink</a>.
+														<p>@My.PayNow <a href="/Account/PayAgain?token=@Model.PayedConferenceTicket.TicketType">@My.ByLink</a>.
 														</p>
-														<p>@My.DropPayment01 <a href="/account/DeleteTicket/@Model.PayedConferenceTicket.TicketType">@My.ByLink</a>. @My.DropPayment01a</p>
+														<p>@My.DropPayment01 <a href="/Account/DeleteTicket?token=@Model.PayedConferenceTicket.TicketType">@My.ByLink</a>. @My.DropPayment01a</p>
 														<p>@My.Questions01 <a href="mailto:pay@azureday.net">pay@azureday.net</a> @My.Questions01a</p>
 													</div>
 												</div>
@@ -174,9 +204,9 @@
 													<div class="wow-pricing-cost" style="padding: 15px;">
 														<p>@My.ThankYouWait</p>
 														<p>
-															@My.PayNow <a href="/account/PayAgain/@Model.PayedWorkshopTicket.TicketType">@My.ByLink</a>.
+															@My.PayNow <a href="/Account/PayAgain/@Model.PayedWorkshopTicket.TicketType">@My.ByLink</a>.
 														</p>
-														<p>@My.DropPayment01 <a href="/account/DeleteTicket/@Model.PayedWorkshopTicket.TicketType">@My.ByLink</a>. @My.DropPayment01a</p>
+														<p>@My.DropPayment01 <a href="/Account/DeleteTicket/@Model.PayedWorkshopTicket.TicketType">@My.ByLink</a>. @My.DropPayment01a</p>
 														<p>@My.Questions01 <a href="mailto:pay@azureday.net">pay@azureday.net</a> @My.Questions01a</p>
 													</div>
 												</div>
@@ -214,17 +244,18 @@
 							}
 						</form>
 					</div>
+
 				</div>
 			</div>
 		</div>
 	</div>
-	
+
 	@Html.Partial("_ModalWait")
 </div>
 
 @section Scripts
 {
-	<script src="~/cdn/knockout/js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.2.js"></script>
 
 	<script>
 		$(document).ready(function() {
@@ -254,7 +285,7 @@
 						@{ Write((Model.PayedWorkshopTicket == null).ToString().ToLowerInvariant()); }),
 					selectedWorkshop: ko.observable($.QueryString['workshopid']),
 					workshops: [
-						@Html.Raw(string.Join(",", ((IEnumerable<WorkshopModel>)Model.Workshops).Select(x => $"{{ id:'{x.Workshop.Id}', title:'{x.Workshop.Title} ({My.TicketsLeft} {x.TicketsLeft})' }}").ToList()))
+						@Html.Raw(string.Join(",", ((List<WorkshopModel>)Model.Workshops).Select(x => $"{{ id:'{x.Workshop.Id}', title:'{x.Workshop.Title} ({My.TicketsLeft} {x.TicketsLeft})' }}")))
 					],
 					promoCode: ko.observable(),
 					currentPrice: ko.observable()
@@ -346,5 +377,5 @@
 		}
 	</script>
 
-	@*<script src="@($"https://www.gravatar.com/{Model.EmailHash.ToLower()}.json?callback=renderGravatarProfile")"></script>*@
+	<script src="@($"https://www.gravatar.com/{@User.GetEmail().GetHashCode()}.json?callback=renderGravatarProfile")"></script>
 }

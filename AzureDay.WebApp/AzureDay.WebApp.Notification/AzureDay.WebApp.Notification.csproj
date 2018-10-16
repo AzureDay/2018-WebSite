@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\AzureDay.WebApp.Config\AzureDay.WebApp.Config.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Sendgrid" Version="9.10.0" />
+      <PackageReference Include="SendGrid.SmtpApi" Version="1.3.3" />
+      <PackageReference Include="System.CodeDom" Version="4.5.0" />
+    </ItemGroup>
+
+</Project>
