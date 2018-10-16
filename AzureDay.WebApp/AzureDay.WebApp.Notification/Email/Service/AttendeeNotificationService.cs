@@ -17,23 +17,6 @@ namespace TeamSpark.AzureDay.WebSite.Notification.Email.Service
 			await sendgrid.SendEmailAsync(message);
 		}
 
-		public async Task SendRegistrationConfirmationEmailAsync(ConfirmRegistrationMessage model)
-		{
-			var template = new ConfirmRegistration();
-			template.ConfirmationCode = model.Token;
-
-			var text = template.TransformText();
-
-			var message = new SendGridMessage();
-			message.AddTo(model.Email, model.FullName);
-			message.Subject = $"Подтверждение регистрации на AZUREday {Configuration.Year}";
-			message.HtmlContent = text;
-			message.From = new EmailAddress(Configuration.SendGridFromEmail, Configuration.SendGridFromName);
-			message.ReplyTo = new EmailAddress(Configuration.SendGridFromEmail, Configuration.SendGridFromName);
-
-			await SendEmail(message);
-		}
-
 		public async Task SendPaymentConfirmationEmailAsync(ConfirmPaymentModel model)
 		{
 			var template = new ConfirmPayment();
@@ -59,23 +42,6 @@ namespace TeamSpark.AzureDay.WebSite.Notification.Email.Service
 			var message = new SendGridMessage();
 			message.AddTo(model.Email, model.FullName);
 			message.Subject = $"Ошибка оплаты билета на AZUREday {Configuration.Year}";
-			message.HtmlContent = text;
-			message.From = new EmailAddress(Configuration.SendGridFromEmail, Configuration.SendGridFromName);
-			message.ReplyTo = new EmailAddress(Configuration.SendGridFromEmail, Configuration.SendGridFromName);
-
-			await SendEmail(message);
-		}
-
-		public async Task SendRestorePasswordEmailAsync(RestorePasswordMessage model)
-		{
-			var template = new RestorePassword();
-			template.ConfirmationCode = model.Token;
-
-			var text = template.TransformText();
-
-			var message = new SendGridMessage();
-			message.AddTo(model.Email, model.FullName);
-			message.Subject = $"Восстановление пароля на AZUREday {Configuration.Year}";
 			message.HtmlContent = text;
 			message.From = new EmailAddress(Configuration.SendGridFromEmail, Configuration.SendGridFromName);
 			message.ReplyTo = new EmailAddress(Configuration.SendGridFromEmail, Configuration.SendGridFromName);
