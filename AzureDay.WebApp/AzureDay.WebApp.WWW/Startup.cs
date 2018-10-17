@@ -119,11 +119,11 @@ namespace AzureDay.WebApp.WWW
                     defaults: new { controller = "Home", action = "Speaker" }
                 );
 
-                routes.MapRoute(
-                    name: "Language",
-                    template: "language/{culture}",
-                    defaults: new { controller = "Language", action = "Index" }
-                );
+//                routes.MapRoute(
+//                    name: "Language",
+//                    template: "language/{culture}",
+//                    defaults: new { controller = "Language", action = "Index" }
+//                );
 
                 routes.MapRoute(
                     name: "Default",
