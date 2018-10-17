@@ -1,4 +1,3 @@
-﻿
 using AzureDay.WebApp.Config;
 
 namespace TeamSpark.AzureDay.WebSite.Notification.Email.Template
