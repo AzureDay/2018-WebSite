@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using AutoMapper;
+using AzureDay.WebApp.Database;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
@@ -22,6 +23,7 @@ namespace AzureDay.WebApp.WWW
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            Config.Configuration.SetConfiguration(Configuration);
             services
                 .AddAuthentication(sharedOptions =>
                 {
@@ -32,6 +34,8 @@ namespace AzureDay.WebApp.WWW
                 .AddCookie();
 
             services.AddAutoMapper();
+            
+            DataFactory.InitializeAsync().GetAwaiter().GetResult();
 
             services.AddMvc();
             

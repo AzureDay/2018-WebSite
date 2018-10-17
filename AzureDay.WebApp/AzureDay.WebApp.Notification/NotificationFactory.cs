@@ -1,10 +1,10 @@
-﻿using AzureDay.WebApp.Notification.Email.Service;
-using System;
+﻿using System;
+using TeamSpark.AzureDay.WebSite.Notification.Email.Service;
 
-namespace AzureDay.WebApp.Notification
+namespace TeamSpark.AzureDay.WebSite.Notification
 {
-    public static class NotificationFactory
-    {
-        public static readonly Lazy<AttendeeNotificationService> AttendeeNotificationService = new Lazy<AttendeeNotificationService>(() => new AttendeeNotificationService());
-    }
+	public static class NotificationFactory
+	{
+		public static readonly Lazy<AttendeeNotificationService> AttendeeNotificationService = new Lazy<AttendeeNotificationService>(() => new AttendeeNotificationService());
+	}
 }

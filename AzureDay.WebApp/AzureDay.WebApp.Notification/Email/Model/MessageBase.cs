@@ -1,8 +1,8 @@
-﻿namespace AzureDay.WebApp.Notification.Email.Model
+﻿namespace TeamSpark.AzureDay.WebSite.Notification.Email.Model
 {
-    public abstract class MessageBase
-    {
-        public string Email { get; set; }
-        public string FullName { get; set; }
-    }
+	public abstract class MessageBase
+	{
+		public string Email { get; set; }
+		public string FullName { get; set; }
+	}
 }

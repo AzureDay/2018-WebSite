@@ -1,10 +1,10 @@
-﻿using AzureDay.WebApp.Config;
+using AzureDay.WebApp.Config;
 
-namespace AzureDay.WebApp.Notification.Email.Ext
+namespace TeamSpark.AzureDay.WebSite.Notification.Email.Template
 {
-    public partial class ConfirmPayment
-    {
-        public string Year => Configuration.Year;
-        public string Host => Configuration.Host;
-    }
+	public partial class ConfirmPayment
+	{
+		public string Year => Configuration.Year;
+		public string Host => Configuration.Host;
+	}
 }

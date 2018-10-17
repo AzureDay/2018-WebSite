@@ -8,13 +8,13 @@
 
 @if (User.Identity.IsAuthenticated)
 {
-    <li><a style="font-weight: bold; color: #B9B900; font-size: 1.2em;" href="/profile/my">@_MenuItems.Profile</a></li>
-    <li><a href="/profile/logout">@_MenuItems.Logout</a></li>
+    <li><a style="font-weight: bold; color: #B9B900; font-size: 1.2em;" href="/account/profile">@_MenuItems.Profile</a></li>
+    <li><a href="/account/signout">@_MenuItems.Logout</a></li>
 }
 else
 {
-    <li><a style="font-weight: bold; color: #B9B900; font-size: 1.2em;" href="/profile/registration">@_MenuItems.Buy_Tickets</a></li>
-    <li><a href="/profile/login">@_MenuItems.Login</a></li>
+    <li><a style="font-weight: bold; color: #B9B900; font-size: 1.2em;" href="/account/signin">@_MenuItems.Buy_Tickets</a></li>
+    <li><a href="/account/signin">@_MenuItems.Login</a></li>
 }
 
 @if (Model.ShowLanguages)

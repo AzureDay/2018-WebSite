@@ -6,7 +6,7 @@ namespace AzureDay.WebApp.Database.Entities.Table
     public sealed class Ticket : TableEntity
     {
         [IgnoreProperty]
-        public string AttendeeEMail
+        public string AttendeeEmail
         {
             get => RowKey;
             set => RowKey = value;

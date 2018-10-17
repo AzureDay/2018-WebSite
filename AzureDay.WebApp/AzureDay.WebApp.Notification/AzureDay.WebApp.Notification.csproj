@@ -19,4 +19,28 @@
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Email\Template\ConfirmPayment.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ConfirmPayment.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Email\Template\ErrorPayment.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ErrorPayment.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Email\Template\ConfirmPayment.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ConfirmPayment.cs</LastGenOutput>
+    </None>
+    <None Update="Email\Template\ErrorPayment.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ErrorPayment.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
 </Project>

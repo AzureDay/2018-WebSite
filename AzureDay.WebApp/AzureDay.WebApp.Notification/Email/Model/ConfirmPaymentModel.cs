@@ -1,6 +1,6 @@
-﻿namespace AzureDay.WebApp.Notification.Email.Model
+﻿namespace TeamSpark.AzureDay.WebSite.Notification.Email.Model
 {
-    public sealed class ConfirmPaymentModel : MessageBase
-    {
-    }
+	public sealed class ConfirmPaymentModel : MessageBase
+	{
+	}
 }
