@@ -29,7 +29,6 @@ namespace AzureDay.WebApp.WWW.Infrastructure
             return mapper;
         });
 
-        public static readonly Lazy<QuickAuthTokenService> QuickAuthTokenService = new Lazy<QuickAuthTokenService>(() => new QuickAuthTokenService());
         public static readonly Lazy<CouponService> CouponService = new Lazy<CouponService>(() => new CouponService());
         public static readonly Lazy<TicketService> TicketService = new Lazy<TicketService>(() => new TicketService());
     }

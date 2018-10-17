@@ -369,24 +369,5 @@ namespace AzureDay.WebApp.WWW.Controllers
 
 			return RedirectToAction("Profile");
 		}
-
-/*		[Authorize]
-		public async Task<ActionResult> PersonalSchedule()
-		{
-			var model = new ScheduleModel();
-
-			model.Rooms = _roomService.Value
-				.GetRooms()
-				.Where(x => x.RoomType == RoomType.LectureRoom)
-				.ToList();
-
-			model.Timetables = _timetableService.Value.GetTimetable()
-				.GroupBy(
-					t => t.TimeStart,
-					(key, timetables) => timetables.OrderBy(t => t.Room.ColorNumber).ToList())
-				.ToList();
-
-			return View(model);
-		}*/
     }
 }
