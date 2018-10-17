@@ -3,7 +3,6 @@ using AzureDay.WebApp.Database;
 using AzureDay.WebApp.Database.Entities;
 using AzureDay.WebApp.Database.Enums;
 using AzureDay.WebApp.Notification;
-using AzureDay.WebApp.Notification.Email.Model;
 using AzureDay.WebApp.WWW.Infrastructure;
 using System;
 using System.Security.Cryptography;
