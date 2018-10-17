@@ -2097,11 +2097,11 @@ body {font-size: 13px;
 	font-family:"Open Sans", Arial, Helvetica, sans-serif;}
 	 body {background: url(img/bg/bg12.png); }
 	
-	.boxedlayout .fixedmenu  {width:90%;margin:0px auto;}
+	.boxedlayout .fixedmenu  {width:1200px; margin:0px auto;}
 	.boxedcontent {z-index: 1;position: relative;margin-top:0px;}
 	/*.boxedlayout .boxedcontent {margin-top:79px;}*/
 	.container {width: 95.25%; max-width: 100%;}
-	.boxedlayout{max-width: 90%;margin:0px auto;}
+	.boxedlayout{max-width: 1200px;margin:0px auto;}
 	.fixedmenu.tiny {top: 0px !important;}
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .maintitle {	
 	font-family:"Open Sans", Arial, Helvetica, sans-serif !important;

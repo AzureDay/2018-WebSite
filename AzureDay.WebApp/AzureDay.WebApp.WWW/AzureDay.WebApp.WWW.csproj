@@ -8,13 +8,13 @@
     <ItemGroup>
         <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="5.0.1" />
         <PackageReference Include="LigerShark.WebOptimizer.Core" Version="1.0.215" />
-        <PackageReference Include="Microsoft.ApplicationInsights" Version="2.8.0" />
-        <PackageReference Include="Microsoft.ApplicationInsights.DependencyCollector" Version="2.8.0" />
-        <PackageReference Include="Microsoft.ApplicationInsights.PerfCounterCollector" Version="2.8.0" />
-        <PackageReference Include="Microsoft.ApplicationInsights.Web" Version="2.8.0" />
-        <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.4" PrivateAssets="All" />
-        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.5" PrivateAssets="All" />
+        <PackageReference Include="Microsoft.ApplicationInsights" Version="2.8.0-beta1" />
+        <PackageReference Include="Microsoft.ApplicationInsights.DependencyCollector" Version="2.8.0-beta1" />
+        <PackageReference Include="Microsoft.ApplicationInsights.PerfCounterCollector" Version="2.8.0-beta1" />
+        <PackageReference Include="Microsoft.ApplicationInsights.Web" Version="2.8.0-beta1" />
+        <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" PrivateAssets="All" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" PrivateAssets="All" />
     </ItemGroup>
 
     <ItemGroup>
@@ -23,7 +23,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Translation" />
       <Folder Include="wwwroot\images\flags\" />
       <Folder Include="wwwroot\images\avatars\" />
       <Folder Include="wwwroot\images\logos\" />

@@ -1,7 +1,9 @@
 /*.boxedlayout, .boxedlayout .fixedmenu {width:100%;max-width: 100%;}
 */
 	.boxedlayout, .boxedlayout .fixedmenu {
-		width: 80%;
-		max-width: 1160px;
+		/*
+			width: 80%;
+			max-width: 1160px;
+		*/
 	}
 .container {max-width: 1160px;}
