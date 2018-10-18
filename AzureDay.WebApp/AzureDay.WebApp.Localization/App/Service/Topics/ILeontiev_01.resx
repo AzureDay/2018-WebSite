@@ -118,11 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Description" xml:space="preserve">
-    <value>- talk about different blockchain systems which are available on Azure Marketplace.
-- deep dive into decentralized application architecture.
-- sharing the experience about real project.</value>
+    <value />
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Blockchain as a Service on Azure</value>
+    <value>State of the Art of Azure IoT Arhitecture of how to not fuckup the project. How to choose right cloud services stack for complicated scenario.</value>
   </data>
 </root>

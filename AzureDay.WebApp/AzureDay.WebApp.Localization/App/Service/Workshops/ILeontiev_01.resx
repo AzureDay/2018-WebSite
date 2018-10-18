@@ -131,6 +131,6 @@
 По завершению лабораторной работы у вас будет собственный контейнер который будет запущен как локально, так и в облаке управляемый оркестратором.</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Azure Container Service - from zero to hero</value>
+    <value>Azure Container Service - from zero to hero.</value>
   </data>
 </root>

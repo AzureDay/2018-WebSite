@@ -10,14 +10,14 @@ namespace AzureDay.WebApp.Database.Services
         {
             return new List<LanguageEntity>
             {
-                new LanguageEntity { Id = "ua", Title = Localization.App.Service.Language.Ukrainian, FlagUrl = "" },
+                new LanguageEntity { Id = "ua", Title = Localization.App.Service.Language.Ukrainian, FlagUrl = "/images/flags/ua.png" },
                 new LanguageEntity { Id = "en", Title = Localization.App.Service.Language.English, FlagUrl = "" },
-                new LanguageEntity { Id = "ru", Title = Localization.App.Service.Language.Russian, FlagUrl = "" }
+                new LanguageEntity { Id = "ru", Title = Localization.App.Service.Language.Russian, FlagUrl = "/images/flags/ru.png" }
             };
         }
 
         public LanguageEntity Ukrainian { get { return Storage.Single(x => x.Id == "ua"); } }
-        public LanguageEntity Russian { get { return Storage.Single(x => x.Id == "en"); } }
-        public LanguageEntity English { get { return Storage.Single(x => x.Id == "ru"); } }
+        public LanguageEntity Russian { get { return Storage.Single(x => x.Id == "ru"); } }
+        public LanguageEntity English { get { return Storage.Single(x => x.Id == "en"); } }
     }
 }

@@ -12,7 +12,14 @@ namespace AzureDay.WebApp.Database.Services
         protected override List<SpeakerEntity> PopulateStorage()
         {
             _speakers.Add(ABoyko());
-            _speakers.Add(DIvanov());
+            _speakers.Add(ILeontiev());
+            _speakers.Add(VTsykunov());
+            _speakers.Add(SBielskyi());
+            _speakers.Add(EAuberix());
+            _speakers.Add(SLebedenko());
+            _speakers.Add(ASurkov());
+            _speakers.Add(SSultanov());
+            _speakers.Add(EPolonychko());
 
             return _speakers;
         }
@@ -41,16 +48,64 @@ namespace AzureDay.WebApp.Database.Services
             };
         }
 
-        public SpeakerEntity DIvanov()
+        public SpeakerEntity ILeontiev()
         {
             return new SpeakerEntity
             {
-                Id = "DIvanov",
-                FirstName = Localization.App.Service.Speaker.DIvanov.FirstName,
-                LastName = Localization.App.Service.Speaker.DIvanov.LastName,
-                Bio = Localization.App.Service.Speaker.DIvanov.Bio.Replace(Environment.NewLine, "<br/>"),
+                Id = "ILeontiev",
+                FirstName = Localization.App.Service.Speaker.ILeontiev.FirstName,
+                LastName = Localization.App.Service.Speaker.ILeontiev.LastName,
+                Bio = Localization.App.Service.Speaker.ILeontiev.Bio.Replace(Environment.NewLine, "<br/>"),
                 Country = _countryService.Ukraine,
-                PhotoUrl = "/images/avatars/DIvanov.jpg",
+                PhotoUrl = "/images/avatars/ILeontyev.jpg",
+                FacebookUrl = "",
+                GitHubUrl = "",
+                GoogleUrl = "",
+                LinkedInUrl = "https://www.linkedin.com/in/leontievihor/",
+                MsdnUrl = "",
+                MvpUrl = "",
+                TwitterUrl = "",
+                YouTubeUrl = "",
+                WebUrl = "",
+                CompanyName = "Lead Architect",
+                JobTitle = "Viseo group"
+            };
+        }
+
+        public SpeakerEntity VTsykunov()
+        {
+            return new SpeakerEntity
+            {
+                Id = "VTsykunov",
+                FirstName = Localization.App.Service.Speaker.VTsykunov.FirstName,
+                LastName = Localization.App.Service.Speaker.VTsykunov.LastName,
+                Bio = Localization.App.Service.Speaker.VTsykunov.Bio.Replace(Environment.NewLine, "<br/>"),
+                Country = _countryService.Ukraine,
+                PhotoUrl = "/images/avatars/VTsykunov.jpg",
+                FacebookUrl = "https://www.facebook.com/vtsykunov",
+                GitHubUrl = "",
+                GoogleUrl = "",
+                LinkedInUrl = "",
+                MsdnUrl = "",
+                MvpUrl = "",
+                TwitterUrl = "",
+                YouTubeUrl = "",
+                WebUrl = "",
+                CompanyName = "",
+                JobTitle = ""
+            };
+        }
+
+        public SpeakerEntity SBielskyi()
+        {
+            return new SpeakerEntity
+            {
+                Id = "SBielskyi",
+                FirstName = Localization.App.Service.Speaker.SBielskyi.FirstName,
+                LastName = Localization.App.Service.Speaker.SBielskyi.LastName,
+                Bio = Localization.App.Service.Speaker.SBielskyi.Bio.Replace(Environment.NewLine, "<br/>"),
+                Country = _countryService.Ukraine,
+                PhotoUrl = "/images/avatars/SergiiBielskyi.jpg",
                 FacebookUrl = "",
                 GitHubUrl = "",
                 GoogleUrl = "",
@@ -60,8 +115,128 @@ namespace AzureDay.WebApp.Database.Services
                 TwitterUrl = "",
                 YouTubeUrl = "",
                 WebUrl = "",
-                CompanyName = "Developex",
-                JobTitle = "Developer"
+                CompanyName = "",
+                JobTitle = ""
+            };
+        }
+
+        public SpeakerEntity EAuberix()
+        {
+            return new SpeakerEntity
+            {
+                Id = "EAuberix",
+                FirstName = Localization.App.Service.Speaker.EAuberix.FirstName,
+                LastName = Localization.App.Service.Speaker.EAuberix.LastName,
+                Bio = Localization.App.Service.Speaker.EAuberix.Bio.Replace(Environment.NewLine, "<br/>"),
+                Country = _countryService.France,
+                PhotoUrl = "/images/avatars/EAuberix.jpg",
+                FacebookUrl = "",
+                GitHubUrl = "",
+                GoogleUrl = "",
+                LinkedInUrl = "",
+                MsdnUrl = "",
+                MvpUrl = "",
+                TwitterUrl = "https://twitter.com/FollowEstelle",
+                YouTubeUrl = "",
+                WebUrl = "",
+                CompanyName = "",
+                JobTitle = ""
+            };
+        }
+
+        public SpeakerEntity SLebedenko()
+        {
+            return new SpeakerEntity
+            {
+                Id = "SLebedenko",
+                FirstName = Localization.App.Service.Speaker.SLebedenko.FirstName,
+                LastName = Localization.App.Service.Speaker.SLebedenko.LastName,
+                Bio = Localization.App.Service.Speaker.SLebedenko.Bio.Replace(Environment.NewLine, "<br/>"),
+                Country = _countryService.Ukraine,
+                PhotoUrl = "/images/avatars/LebedenkoStas.jpg",
+                FacebookUrl = "",
+                GitHubUrl = "",
+                GoogleUrl = "",
+                LinkedInUrl = "",
+                MsdnUrl = "",
+                MvpUrl = "",
+                TwitterUrl = "",
+                YouTubeUrl = "",
+                WebUrl = "",
+                CompanyName = "Sigma Software",
+                JobTitle = ""
+            };
+        }
+
+        public SpeakerEntity ASurkov()
+        {
+            return new SpeakerEntity
+            {
+                Id = "ASurkov",
+                FirstName = Localization.App.Service.Speaker.ASurkov.FirstName,
+                LastName = Localization.App.Service.Speaker.ASurkov.LastName,
+                Bio = Localization.App.Service.Speaker.ASurkov.Bio.Replace(Environment.NewLine, "<br/>"),
+                Country = _countryService.Russia,
+                PhotoUrl = "/images/avatars/ASurkov.jpg",
+                FacebookUrl = "https://www.facebook.com/AOSurkov",
+                GitHubUrl = "",
+                GoogleUrl = "",
+                LinkedInUrl = "",
+                MsdnUrl = "",
+                MvpUrl = "https://mvp.microsoft.com/ru-ru/PublicProfile/5002197",
+                TwitterUrl = "https://twitter.com/AOSurkov",
+                YouTubeUrl = "",
+                WebUrl = "",
+                CompanyName = "",
+                JobTitle = ""
+            };
+        }
+
+        public SpeakerEntity SSultanov()
+        {
+            return new SpeakerEntity
+            {
+                Id = "SSultanov",
+                FirstName = Localization.App.Service.Speaker.SSultanov.FirstName,
+                LastName = Localization.App.Service.Speaker.SSultanov.LastName,
+                Bio = Localization.App.Service.Speaker.SSultanov.Bio.Replace(Environment.NewLine, "<br/>"),
+                Country = _countryService.Ukraine,
+                PhotoUrl = "/images/avatars/StasSultanov.jpg",
+                FacebookUrl = "",
+                GitHubUrl = "",
+                GoogleUrl = "",
+                LinkedInUrl = "",
+                MsdnUrl = "",
+                MvpUrl = "",
+                TwitterUrl = "",
+                YouTubeUrl = "",
+                WebUrl = "",
+                CompanyName = "",
+                JobTitle = ""
+            };
+        }
+
+        public SpeakerEntity EPolonychko()
+        {
+            return new SpeakerEntity
+            {
+                Id = "EPolonychko",
+                FirstName = Localization.App.Service.Speaker.EPolonychko.FirstName,
+                LastName = Localization.App.Service.Speaker.EPolonychko.LastName,
+                Bio = Localization.App.Service.Speaker.EPolonychko.Bio.Replace(Environment.NewLine, "<br/>"),
+                Country = _countryService.Ukraine,
+                PhotoUrl = "/images/avatars/EPolonychko.jpg",
+                FacebookUrl = "https://www.facebook.com/mydjeki",
+                GitHubUrl = "",
+                GoogleUrl = "",
+                LinkedInUrl = "",
+                MsdnUrl = "",
+                MvpUrl = "",
+                TwitterUrl = "",
+                YouTubeUrl = "",
+                WebUrl = "",
+                CompanyName = "",
+                JobTitle = ""
             };
         }
     }

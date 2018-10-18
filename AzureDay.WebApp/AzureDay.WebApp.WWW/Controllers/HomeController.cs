@@ -72,7 +72,7 @@ namespace AzureDay.WebApp.WWW.Controllers
                 .ToList();
 
             model.Timetables = _timetableService.Value
-                .GetAll()
+                .GetTimetable()
                 .GroupBy(
                     t => t.TimeStart,
                     (key, timetables) => timetables.OrderBy(t => t.Room.ColorNumber).ToList())
