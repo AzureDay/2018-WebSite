@@ -10,10 +10,14 @@ namespace AzureDay.WebApp.Database.Services
         {
             return new List<CountryEntity>
             {
-                new CountryEntity {Id = 1, ImageUrl = "/images/flags/ua.png", Title = Localization.App.Service.Country.Ukraine}
+                new CountryEntity {Id = 1, ImageUrl = "/images/flags/ua.png", Title = Localization.App.Service.Country.Ukraine},
+                new CountryEntity {Id = 2, ImageUrl = "/images/flags/ru.png", Title = Localization.App.Service.Country.Russia},
+                new CountryEntity {Id = 4, ImageUrl = "/images/flags/fr.png", Title = Localization.App.Service.Country.France},
             };
         }
 
         public CountryEntity Ukraine { get { return Storage.Single(x => x.Id == 1); } }
+        public CountryEntity Russia { get { return Storage.Single(x => x.Id == 2); } }
+        public CountryEntity France { get { return Storage.Single(x => x.Id == 4); } }
     }
 }
