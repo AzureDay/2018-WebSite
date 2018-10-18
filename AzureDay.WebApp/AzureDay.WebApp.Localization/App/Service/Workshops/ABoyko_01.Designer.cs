@@ -22,14 +22,14 @@ namespace AzureDay.WebApp.Localization.App.Service.Workshops {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class ILeontiev_01 {
+    public class ABoyko_01 {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ILeontiev_01() {
+        internal ABoyko_01() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Workshops {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Workshops.ILeontiev_01", typeof(ILeontiev_01).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Workshops.ABoyko_01", typeof(ABoyko_01).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,14 +61,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Workshops {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to В течении лабораторной работы мы будем разбираться что такое Docker и &quot;с чем его едят&quot;.
-        ///
-        ///Мы создадим базовый контейнер и научимся его публиковать в публичный/приватный репозиторий. Разберемся с построением собственных образов и каким образом компоновать несколько контейнеров и как правильно настраивать &quot;общение&quot; между ними.
-        ///
-        ///К концу дня вы: 
-        ///- Поймете что такое Docker и насколько это удобный инструмент.
-        ///- Сможете сами создавать свои контейнеры.
-        ///- Научитесь работать с публичными/приватными репозитория [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Unfortunately, there are still a lot of projects where engineers deploy their apps using &quot;Right click -&gt; Deploy -&gt; Productio&quot; approach. This is sad, but true. At some point we can face this just because no one knows how to configure a build server, how to automate deployment process. And, for some reason, a lot of engineers believe that it is some super complicated stuff. During my speech I will talk about general approaches for automating build, deployments and managing releases. After short talk we will g [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Description {
             get {
@@ -77,7 +70,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Workshops {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Azure Container Service - from zero to hero..
+        ///   Looks up a localized string similar to Build, deploy and manage your releases like a boss.
         /// </summary>
         public static string Title {
             get {

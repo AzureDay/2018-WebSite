@@ -4,4 +4,100 @@
         <TargetFramework>netcoreapp2.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Compile Update="App\Service\Speaker\SBielskyi.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SBielskyi.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Speaker\SLebedenko.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SLebedenko.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Speaker\SSultanov.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SSultanov.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Topics\SBielskyi_01.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SBielskyi_01.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Topics\SLebedenko_01.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SLebedenko_01.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Topics\SSultanov_01.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SSultanov_01.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Topics\VTsykunov_01.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>VTsykunov_01.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Workshops\ABoyko_01.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ABoyko_01.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Workshops\ILeontiev_01.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ILeontiev_01.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Workshops\VTsykunov_01.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>VTsykunov_01.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="App\Service\Speaker\SBielskyi.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>SBielskyi.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Speaker\SLebedenko.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>SLebedenko.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Speaker\SSultanov.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>SSultanov.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Topics\SBielskyi_01.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>SBielskyi_01.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Topics\SLebedenko_01.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>SLebedenko_01.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Topics\SSultanov_01.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>SSultanov_01.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Topics\VTsykunov_01.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>VTsykunov_01.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Workshops\ABoyko_01.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>ABoyko_01.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Workshops\ILeontiev_01.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>ILeontiev_01.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Workshops\VTsykunov_01.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>VTsykunov_01.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
 </Project>

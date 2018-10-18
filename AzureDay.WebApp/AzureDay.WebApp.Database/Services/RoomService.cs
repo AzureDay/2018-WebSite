@@ -13,8 +13,8 @@ namespace AzureDay.WebApp.Database.Services
                 new RoomEntity {Id = 1, ColorNumber = 1, RoomType = Enums.RoomType.LectureRoom, Title = Localization.App.Service.Room.WebDev },
                 new RoomEntity {Id = 2, ColorNumber = 2, RoomType = Enums.RoomType.LectureRoom, Title = Localization.App.Service.Room.IoT },
                 new RoomEntity {Id = 3, ColorNumber = 3, RoomType = Enums.RoomType.LectureRoom, Title = Localization.App.Service.Room.AInML },
-                new RoomEntity {Id = 4, ColorNumber = 4, RoomType = Enums.RoomType.LectureRoom, Title = Localization.App.Service.Room.DevOps },
-                new RoomEntity {Id = 5, ColorNumber = 5, RoomType = Enums.RoomType.LectureRoom, Title = Localization.App.Service.Room.ITPro },
+                //new RoomEntity {Id = 4, ColorNumber = 4, RoomType = Enums.RoomType.LectureRoom, Title = Localization.App.Service.Room.DevOps },
+                //new RoomEntity {Id = 5, ColorNumber = 5, RoomType = Enums.RoomType.LectureRoom, Title = Localization.App.Service.Room.ITPro },
 
                 new RoomEntity {Id = 101, ColorNumber = 1, RoomType = Enums.RoomType.WorkshopRoom, Title = Localization.App.Service.Room.Workshop1 },
                 new RoomEntity {Id = 102, ColorNumber = 2, RoomType = Enums.RoomType.WorkshopRoom, Title = Localization.App.Service.Room.Workshop2 },
@@ -33,6 +33,14 @@ namespace AzureDay.WebApp.Database.Services
 
         public RoomEntity CoffeeBreak { get { return Storage.Single(x => x.Id == 999); } }
 
+        public RoomEntity Room1 { get { return Storage.Single(x => x.Id == 1); } }
+        public RoomEntity Room2 { get { return Storage.Single(x => x.Id == 2); } }
+        public RoomEntity Room3 { get { return Storage.Single(x => x.Id == 3); } }
+        //public RoomEntity Room4 { get { return Storage.Single(x => x.Id == 4); } }
+        //public RoomEntity Room5 { get { return Storage.Single(x => x.Id == 5); } }
+
+        public RoomEntity Workshop1 { get { return Storage.Single(x => x.Id == 101); } }
         public RoomEntity Workshop2 { get { return Storage.Single(x => x.Id == 102); } }
+        public RoomEntity Workshop3 { get { return Storage.Single(x => x.Id == 103); } }
     }
 }

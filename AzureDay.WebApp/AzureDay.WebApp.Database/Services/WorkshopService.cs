@@ -18,13 +18,33 @@ namespace AzureDay.WebApp.Database.Services
             {
                 new WorkshopEntity
                 {
+                    Id = 1,
+                    Language = _languageService.Russian,
+                    Room = _roomService.Workshop1,
+                    Speaker = _speakerService.ILeontiev(),
+                    MaxTickets = 0,
+					Title = Localization.App.Service.Workshops.ILeontiev_01.Title,
+                    Description = Localization.App.Service.Workshops.ILeontiev_01.Description.Replace(Environment.NewLine, "<br/>")
+                },
+                new WorkshopEntity
+                {
                     Id = 2,
                     Language = _languageService.Russian,
                     Room = _roomService.Workshop2,
-                    Speaker = _speakerService.DIvanov(),
-                    MaxTickets = 0, // ok
-					Title = Localization.App.Service.Workshops.DIvanov_01.Title,
-                    Description = Localization.App.Service.Workshops.DIvanov_01.Description.Replace(Environment.NewLine, "<br/>")
+                    Speaker = _speakerService.ABoyko(),
+                    MaxTickets = 0,
+                    Title = Localization.App.Service.Workshops.ABoyko_01.Title,
+                    Description = Localization.App.Service.Workshops.ABoyko_01.Description.Replace(Environment.NewLine, "<br/>")
+                },
+                new WorkshopEntity
+                {
+                    Id = 3,
+                    Language = _languageService.Russian,
+                    Room = _roomService.Workshop3,
+                    Speaker = _speakerService.VTsykunov(),
+                    MaxTickets = 0,
+                    Title = Localization.App.Service.Workshops.VTsykunov_01.Title,
+                    Description = Localization.App.Service.Workshops.VTsykunov_01.Description.Replace(Environment.NewLine, "<br/>")
                 }
             });
 

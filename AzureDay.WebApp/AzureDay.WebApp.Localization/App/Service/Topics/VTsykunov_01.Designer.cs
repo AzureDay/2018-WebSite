@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AzureDay.WebApp.Localization.App.Service.Workshops {
+namespace AzureDay.WebApp.Localization.App.Service.Topics {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace AzureDay.WebApp.Localization.App.Service.Workshops {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class ILeontiev_01 {
+    public class VTsykunov_01 {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ILeontiev_01() {
+        internal VTsykunov_01() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Workshops {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Workshops.ILeontiev_01", typeof(ILeontiev_01).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Topics.VTsykunov_01", typeof(VTsykunov_01).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,14 +61,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Workshops {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to В течении лабораторной работы мы будем разбираться что такое Docker и &quot;с чем его едят&quot;.
-        ///
-        ///Мы создадим базовый контейнер и научимся его публиковать в публичный/приватный репозиторий. Разберемся с построением собственных образов и каким образом компоновать несколько контейнеров и как правильно настраивать &quot;общение&quot; между ними.
-        ///
-        ///К концу дня вы: 
-        ///- Поймете что такое Docker и насколько это удобный инструмент.
-        ///- Сможете сами создавать свои контейнеры.
-        ///- Научитесь работать с публичными/приватными репозитория [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Artificial Intelligence is at the core of Microsoft’s business strategy today. In this presentation you going to learn about recent updates to the Microsoft AI platform in three pieces: our Azure services, our infrastructure, and our tools. We are going to show how any developer can start leveraging AI in the modern applications and services running on premises, on edge, cloud or hybrid..
         /// </summary>
         public static string Description {
             get {
@@ -77,7 +70,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Workshops {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Azure Container Service - from zero to hero..
+        ///   Looks up a localized string similar to Microsoft AI Platform Update..
         /// </summary>
         public static string Title {
             get {
