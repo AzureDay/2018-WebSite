@@ -5,6 +5,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Update="App\Service\Speaker\EWasilewski.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>EWasilewski.resx</DependentUpon>
+      </Compile>
       <Compile Update="App\Service\Speaker\SBielskyi.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
@@ -35,6 +40,11 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>SSultanov_01.resx</DependentUpon>
       </Compile>
+      <Compile Update="App\Service\Topics\VBezmaly_01.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>VBezmaly_01.resx</DependentUpon>
+      </Compile>
       <Compile Update="App\Service\Topics\VTsykunov_01.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
@@ -58,6 +68,10 @@
     </ItemGroup>
 
     <ItemGroup>
+      <EmbeddedResource Update="App\Service\Speaker\EWasilewski.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>EWasilewski.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Speaker\SBielskyi.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>SBielskyi.Designer.cs</LastGenOutput>
@@ -81,6 +95,10 @@
       <EmbeddedResource Update="App\Service\Topics\SSultanov_01.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>SSultanov_01.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Topics\VBezmaly_01.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>VBezmaly_01.Designer.cs</LastGenOutput>
       </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Topics\VTsykunov_01.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>

@@ -118,19 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Bio" xml:space="preserve">
-    <value>Microsoft Security Trusted Advisor
-MVP Security 2006 - 2016
-Windows Insider MVP 2016-2017
-Kaspersky Lab Certified Trainer
-Kaspersky Lab Certified Consultant
-и еще порядка 60 сертификатов
-Автор порядка 600 печатных публикаций в области ИБ (Россия, Белоруссия, Украина, Чехия, Израиль, Бразилия)
-Автор книг пятитомник "Сказки о безопасности", "Цифровая гигиена"</value>
+    <value>Author of more than 250 articles published in Ukraine and Russia. He is a Microsoft Most Valuable Professional in the field of Consumer Security, Microsoft Security Trusted Advisor. Kaspersky Certified Consultant. Kaspersky Certified Trainer. Experience in IT almost 40 years with about 25 years of experience in IS.</value>
   </data>
   <data name="FirstName" xml:space="preserve">
-    <value>Владимир</value>
+    <value>Vladimir</value>
   </data>
   <data name="LastName" xml:space="preserve">
-    <value>Безмалый</value>
+    <value>Bezmaly</value>
   </data>
 </root>
