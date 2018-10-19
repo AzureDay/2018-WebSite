@@ -118,9 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Description" xml:space="preserve">
-    <value>Azure giving us powerful set of tools to keep our infrastructure safe and secure. One of security approach is password management. During my session I'll try to show you how we can use several Azure services to keep our passwords safe.</value>
+    <value />
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Passwordless Azure infrastructure</value>
+    <value>TBA</value>
   </data>
 </root>
