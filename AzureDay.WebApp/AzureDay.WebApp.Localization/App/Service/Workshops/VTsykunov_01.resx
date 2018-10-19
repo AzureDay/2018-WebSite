@@ -118,9 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Description" xml:space="preserve">
-    <value>There is no chance how we can surprise anyone right now with usage of Docker containers. We use them in every project for everything from dev to prod environment. But recently we faced quite an issue with our tests automation. We have one enormous solution that consists of huge amount of independent modules (microservices). Our single build agent has 8 cores and 32 gigs of RAM under the bonnet, but it’s not enough anymore. Currently we can wait for more than an hour for all tests to pass. We started thinking about how to improve those numbers. During my session I will share our concept of running multiple environments simultaneously in a cloud and executing all the tests in parallel. The key differentiator here is that not only application itself runs inside Docker containers, but test assemblies do that too. Another interesting challenge we faced (and overcame) was about combining all the tests results in one single report. As a result we were able to maintain more or less the same infrastructure cost, but reduce dev team idle time from 60 minutes to 10 minutes per pull request.</value>
+    <value>Join us on workshop for fun-filled, hands-on hacking where you will learn how to build AI ML solutions, gather and analyze high scale data in the Cloud. During this time of immersive, structured, hands-on hacking you will get better understanding how to leverage Azure Machine Learning, Cognitive Services and other Microsoft Artificial Intelligence offerings to turn your company data into intelligent insights. However, don’t worry if you’re not familiar with these development platforms, just come and enjoy the hacking!</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Speed up application testing with Azure Container Instances.</value>
+    <value>Get started with AI and Deep Learning.</value>
   </data>
 </root>
