@@ -84,7 +84,7 @@
 								<div class="row">
 									@foreach (var speaker in timetables[0].Topic.Speakers)
 									{
-										<div class="col-sm-2 col-md-2">
+										<div class="col-sm-4 col-md-4">
 											<img class="img-responsible" style="margin-bottom: 10px;" src="@speaker.PhotoUrl" alt="@speaker.FullName" />
 											<div class="mySlotAuthor">
 												@speaker.FullName
@@ -109,7 +109,7 @@
 				{
 					for (var i = 0; i < timetables.Count; i++)
 					{
-						<div class="col-md-2 col-sm-2 col-schedule" style="padding: 0px 5px 0px 5px; @Html.Raw(timetables[i].HasLanguage ? string.Empty : "opacity: 0.5;")">
+						<div class="col-md-4 col-sm-4 col-schedule" style="padding: 0px 5px 0px 5px; @Html.Raw(timetables[i].HasLanguage ? string.Empty : "opacity: 0.5;")">
 							<div class="box effect2 @($"myAreaBoxBorder{timetables[i].Room.ColorNumber}")">
 								<div class="mySlotTime">
 									@($"{timetables[i].TimeStartHours}:{timetables[i].TimeStartMinutes.ToString("D2")}") -
