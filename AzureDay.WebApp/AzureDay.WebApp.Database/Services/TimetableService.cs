@@ -30,7 +30,7 @@ namespace AzureDay.WebApp.Database.Services
                 new TimetableEntity { TimeStart = "10:30", TimeEnd = "11:30", Room = _roomService.Room1, Topic = _topicService.ABoyko_01 },
                 new TimetableEntity { TimeStart = "12:00", TimeEnd = "13:00", Room = _roomService.Room1, Topic = _topicService.ASurkov_01 },
                 new TimetableEntity { TimeStart = "13:15", TimeEnd = "14:15", Room = _roomService.Room1, Topic = _topicService.SSultanov_01 },
-                //new TimetableEntity { TimeStart = "14:45", TimeEnd = "15:45", Room = _roomService.Room1, Topic = _topicService. },
+                new TimetableEntity { TimeStart = "14:45", TimeEnd = "15:45", Room = _roomService.Room1, Topic = _topicService.EWasilewski_01 },
                 //new TimetableEntity { TimeStart = "16:00", TimeEnd = "17:00", Room = _roomService.Room1, Topic = _topicService. },
                 //new TimetableEntity { TimeStart = "17:30", TimeEnd = "18:30", Room = _roomService.Room1, Topic = _topicService. }
             });
@@ -40,7 +40,7 @@ namespace AzureDay.WebApp.Database.Services
                 new TimetableEntity { TimeStart = "10:30", TimeEnd = "11:30", Room = _roomService.Room2, Topic = _topicService.SBielskyi_01 },
                 new TimetableEntity { TimeStart = "12:00", TimeEnd = "13:00", Room = _roomService.Room2, Topic = _topicService.ILeontiev_01 },
                 new TimetableEntity { TimeStart = "13:15", TimeEnd = "14:15", Room = _roomService.Room2, Topic = _topicService.EAuberix_01 },
-                //new TimetableEntity { TimeStart = "14:45", TimeEnd = "15:45", Room = _roomService.Room2, Topic = _topicService. },
+                new TimetableEntity { TimeStart = "14:45", TimeEnd = "15:45", Room = _roomService.Room2, Topic = _topicService.AVidishchev_01 },
                 //new TimetableEntity { TimeStart = "16:00", TimeEnd = "17:00", Room = _roomService.Room2, Topic = _topicService. },
                 //new TimetableEntity { TimeStart = "17:30", TimeEnd = "18:30", Room = _roomService.Room2, Topic = _topicService. }
             });
@@ -50,7 +50,7 @@ namespace AzureDay.WebApp.Database.Services
                 new TimetableEntity { TimeStart = "10:30", TimeEnd = "11:30", Room = _roomService.Room3, Topic = _topicService.SLebedenko_01 },
                 new TimetableEntity { TimeStart = "12:00", TimeEnd = "13:00", Room = _roomService.Room3, Topic = _topicService.EPolonychko_01 },
                 new TimetableEntity { TimeStart = "13:15", TimeEnd = "14:15", Room = _roomService.Room3, Topic = _topicService.VTsykunov_01 },
-                //new TimetableEntity { TimeStart = "14:45", TimeEnd = "15:45", Room = _roomService.Room3, Topic = _topicService. },
+                new TimetableEntity { TimeStart = "14:45", TimeEnd = "15:45", Room = _roomService.Room3, Topic = _topicService.VBezmaly_01 },
                 //new TimetableEntity { TimeStart = "16:00", TimeEnd = "17:00", Room = _roomService.Room3, Topic = _topicService. },
                 //new TimetableEntity { TimeStart = "17:30", TimeEnd = "18:30", Room = _roomService.Room3, Topic = _topicService. }
             });
