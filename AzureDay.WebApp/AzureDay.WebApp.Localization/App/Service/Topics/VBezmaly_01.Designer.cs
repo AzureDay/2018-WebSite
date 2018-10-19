@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AzureDay.WebApp.Localization.App.Service.Speaker {
+namespace AzureDay.WebApp.Localization.App.Service.Topics {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace AzureDay.WebApp.Localization.App.Service.Speaker {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class EWasilewski {
+    public class VBezmaly_01 {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal EWasilewski() {
+        internal VBezmaly_01() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Speaker {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Speaker.EWasilewski", typeof(EWasilewski).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Topics.VBezmaly_01", typeof(VBezmaly_01).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,29 +61,20 @@ namespace AzureDay.WebApp.Localization.App.Service.Speaker {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Senior Azure Infrastructure Architect @ Bystronic Laser AG, Microsoft Azure MVP, Leader of Microsoft Azure User Group Poland, Speaker, Trainer, Consultant, Youtuber..
+        ///   Looks up a localized string similar to .
         /// </summary>
-        public static string Bio {
+        public static string Description {
             get {
-                return ResourceManager.GetString("Bio", resourceCulture);
+                return ResourceManager.GetString("Description", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Emil.
+        ///   Looks up a localized string similar to TBA.
         /// </summary>
-        public static string FirstName {
+        public static string Title {
             get {
-                return ResourceManager.GetString("FirstName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Wasilewski.
-        /// </summary>
-        public static string LastName {
-            get {
-                return ResourceManager.GetString("LastName", resourceCulture);
+                return ResourceManager.GetString("Title", resourceCulture);
             }
         }
     }

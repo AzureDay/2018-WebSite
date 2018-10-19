@@ -19,7 +19,10 @@ namespace AzureDay.WebApp.Database.Services
             _speakers.Add(SLebedenko());
             _speakers.Add(ASurkov());
             _speakers.Add(SSultanov());
-            _speakers.Add(EPolonychko());
+            _speakers.Add(EPolonychko()); 
+            _speakers.Add(EWasilewski());
+            _speakers.Add(AVidishchev());
+            _speakers.Add(VBezmaly());
 
             return _speakers;
         }
@@ -237,6 +240,78 @@ namespace AzureDay.WebApp.Database.Services
                 WebUrl = "",
                 CompanyName = "",
                 JobTitle = ""
+            };
+        }
+     
+        public SpeakerEntity EWasilewski()
+        {
+            return new SpeakerEntity
+            {
+                Id = "EWasilewski",
+                FirstName = Localization.App.Service.Speaker.EWasilewski.FirstName,
+                LastName = Localization.App.Service.Speaker.EWasilewski.LastName,
+                Bio = Localization.App.Service.Speaker.EWasilewski.Bio.Replace(Environment.NewLine, "<br/>"),
+                Country = _countryService.Poland,
+                PhotoUrl = "/images/avatars/EmilWasilewski.jpg",
+                FacebookUrl = "",
+                GitHubUrl = "",
+                GoogleUrl = "",
+                LinkedInUrl = "http://www.linkedin.com/in/emilwasilewski",
+                MsdnUrl = "",
+                MvpUrl = "",
+                TwitterUrl = "https://twitter.com/WasilewskiEmil",
+                YouTubeUrl = "",
+                WebUrl = "",
+                CompanyName = "Bystronic Group",
+                JobTitle = "Senior Azure Infrastructure Architect"
+            };
+        }
+
+        public SpeakerEntity AVidishchev()
+        {
+            return new SpeakerEntity
+            {
+                Id = "AVidishchev",
+                FirstName = Localization.App.Service.Speaker.AVidishchev.FirstName,
+                LastName = Localization.App.Service.Speaker.AVidishchev.LastName,
+                Bio = Localization.App.Service.Speaker.AVidishchev.Bio.Replace(Environment.NewLine, "<br/>"),
+                Country = _countryService.Ukraine,
+                PhotoUrl = "/images/avatars/AVidishchev.jpg",
+                FacebookUrl = "https://www.facebook.com/anton.vidishchev",
+                GitHubUrl = "",
+                GoogleUrl = "",
+                LinkedInUrl = "https://www.linkedin.com/in/antonvidishchev",
+                MsdnUrl = "",
+                MvpUrl = "",
+                TwitterUrl = "",
+                YouTubeUrl = "",
+                WebUrl = "",
+                CompanyName = "SoftServe",
+                JobTitle = "Azure Architect"
+            };
+        }
+
+        public SpeakerEntity VBezmaly()
+        {
+            return new SpeakerEntity
+            {
+                Id = "VBezmaly",
+                FirstName = Localization.App.Service.Speaker.VBezmaly.FirstName,
+                LastName = Localization.App.Service.Speaker.VBezmaly.LastName,
+                Bio = Localization.App.Service.Speaker.VBezmaly.Bio.Replace(Environment.NewLine, "<br/>"),
+                Country = _countryService.Ukraine,
+                PhotoUrl = "/images/avatars/VBezmaly.jpg",
+                FacebookUrl = "https://www.facebook.com/vlad.bezmaly",
+                GitHubUrl = "",
+                GoogleUrl = "",
+                LinkedInUrl = "",
+                MsdnUrl = "",
+                MvpUrl = "",
+                TwitterUrl = "",
+                YouTubeUrl = "",
+                WebUrl = "",
+                CompanyName = "Kaspersky Lab",
+                JobTitle = "Kaspersky Certified Trainer"
             };
         }
     }

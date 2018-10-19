@@ -106,6 +106,30 @@ namespace AzureDay.WebApp.Database.Services
                     Title = Localization.App.Service.Topics.VTsykunov_01.Title,
                     Description = Localization.App.Service.Topics.VTsykunov_01.Description.Replace(Environment.NewLine, "<br/>")
                 },
+                new TopicEntity
+                {
+                    Id = 10,
+                    Language = _languageService.English,
+                    Speakers = new List<SpeakerEntity> {_speakerService.EWasilewski() },
+                    Title = Localization.App.Service.Topics.EWasilewski_01.Title,
+                    Description = Localization.App.Service.Topics.EWasilewski_01.Description.Replace(Environment.NewLine, "<br/>")
+                },
+                new TopicEntity
+                {
+                    Id = 11,
+                    Language = _languageService.Ukrainian,
+                    Speakers = new List<SpeakerEntity> {_speakerService.AVidishchev() },
+                    Title = Localization.App.Service.Topics.AVidishchev_01.Title,
+                    Description = Localization.App.Service.Topics.AVidishchev_01.Description.Replace(Environment.NewLine, "<br/>")
+                },
+                new TopicEntity
+                {
+                    Id = 12,
+                    Language = _languageService.Ukrainian,
+                    Speakers = new List<SpeakerEntity> {_speakerService.VBezmaly() },
+                    Title = Localization.App.Service.Topics.VBezmaly_01.Title,
+                    Description = Localization.App.Service.Topics.VBezmaly_01.Description.Replace(Environment.NewLine, "<br/>")
+                },
             };
         }
 
@@ -123,5 +147,8 @@ namespace AzureDay.WebApp.Database.Services
         public TopicEntity SSultanov_01 { get { return Storage.Single(x => x.Id == 7); } }
         public TopicEntity EPolonychko_01 { get { return Storage.Single(x => x.Id == 8); } }
         public TopicEntity VTsykunov_01 { get { return Storage.Single(x => x.Id == 9); } }
+        public TopicEntity EWasilewski_01 { get { return Storage.Single(x => x.Id == 10); } }
+        public TopicEntity AVidishchev_01 { get { return Storage.Single(x => x.Id == 11); } }
+        public TopicEntity VBezmaly_01 { get { return Storage.Single(x => x.Id == 12); } }
     }
 }
