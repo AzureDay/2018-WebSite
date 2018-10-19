@@ -6,7 +6,23 @@ namespace Microsoft.AspNetCore.Authentication
     {
         public const string PolicyAuthenticationProperty = "Policy";
 
-        public string ClientId => Configuration.ADB2C_ClientId;
+        private string _clientId;
+        public string ClientId
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_clientId))
+                {
+                    _clientId = Configuration.ADB2C_ClientId;
+                    if (string.IsNullOrWhiteSpace(_clientId))
+                    {
+                        _clientId = "4206e3b6-911c-4421-bf23-3b5d8652568d";
+                    }
+                }
+
+                return _clientId;
+            }
+        }
 
         public string Instance { get; set; }
 
