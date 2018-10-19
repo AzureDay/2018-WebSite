@@ -1,10 +1,12 @@
-﻿namespace Microsoft.AspNetCore.Authentication
+﻿using AzureDay.WebApp.Config;
+
+namespace Microsoft.AspNetCore.Authentication
 {
     public class AzureAdB2COptions
     {
         public const string PolicyAuthenticationProperty = "Policy";
 
-        public string ClientId { get; set; }
+        public string ClientId => Configuration.ADB2C_ClientId;
 
         public string Instance { get; set; }
 

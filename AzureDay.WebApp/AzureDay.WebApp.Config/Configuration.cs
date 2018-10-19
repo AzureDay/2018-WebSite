@@ -63,6 +63,12 @@ namespace AzureDay.WebApp.Config
 
 		#endregion
 
+		#region ad b2c
+
+		public static string ADB2C_ClientId => GetConfigVariable("ADB2C.ClientId");
+
+		#endregion
+
 		private static string GetConfigVariable(string name)
 		{
 			var value = Environment.GetEnvironmentVariable(name);
