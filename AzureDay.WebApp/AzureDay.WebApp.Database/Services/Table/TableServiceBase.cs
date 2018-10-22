@@ -87,13 +87,6 @@ namespace AzureDay.WebApp.Database.Services.Table
             return (await Table.ExecuteQuerySegmentedAsync(query, null)).Results;
         }
 
-        public async Task InsertAsync(T entity)
-        {
-            var operation = TableOperation.Insert(entity);
-
-            await Table.ExecuteAsync(operation);
-        }
-
         public async Task InsertOrReplaceAsync(T entity)
         {
             var operation = TableOperation.InsertOrReplace(entity);

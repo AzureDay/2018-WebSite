@@ -11,17 +11,11 @@ namespace AzureDay.WebApp.WWW.Infrastructure
         {
             var config = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<Attendee, Database.Entities.Table.Attendee>();
-                cfg.CreateMap<Database.Entities.Table.Attendee, Attendee>();
+                cfg.CreateMap<Coupon, Database.Entities.Table.CouponTableEntity>();
+                cfg.CreateMap<Database.Entities.Table.CouponTableEntity, Coupon>();
 
-                cfg.CreateMap<QuickAuthToken, Database.Entities.Table.QuickAuthToken>();
-                cfg.CreateMap<Database.Entities.Table.QuickAuthToken, QuickAuthToken>();
-
-                cfg.CreateMap<Coupon, Database.Entities.Table.Coupon>();
-                cfg.CreateMap<Database.Entities.Table.Coupon, Coupon>();
-
-                cfg.CreateMap<Ticket, Database.Entities.Table.Ticket>();
-                cfg.CreateMap<Database.Entities.Table.Ticket, Ticket>();
+                cfg.CreateMap<Ticket, Database.Entities.Table.TicketTableEntity>();
+                cfg.CreateMap<Database.Entities.Table.TicketTableEntity, Ticket>();
             });
 
             var mapper = config.CreateMapper();

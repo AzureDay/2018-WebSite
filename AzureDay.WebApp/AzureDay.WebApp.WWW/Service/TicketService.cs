@@ -85,21 +85,6 @@ namespace AzureDay.WebApp.WWW.Service
             return tickets;
         }
 
-        public async Task<List<Ticket>> GetWorkshopTicketsAsync(int workshopId)
-        {
-            var filter = new Dictionary<string, object>
-            {
-                {nameof(Database.Entities.Table.Ticket.PartitionKey), TicketType.Workshop.ToString()},
-                {nameof(Database.Entities.Table.Ticket.WorkshopId), workshopId}
-            };
-
-            var data = (await DataFactory.TicketService.Value.GetByFilterAsync(filter))
-                .Select(AppFactory.Mapper.Value.Map<Ticket>)
-                .ToList();
-
-            return data;
-        }
-
         public async Task<List<Ticket>> GetWorkshopsTicketsAsync()
         {
             var data = (await DataFactory.TicketService.Value.GetByPartitionKeyAsync(TicketType.Workshop.ToString()))
