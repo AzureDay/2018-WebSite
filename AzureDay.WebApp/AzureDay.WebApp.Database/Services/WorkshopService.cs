@@ -22,7 +22,7 @@ namespace AzureDay.WebApp.Database.Services
                     Language = _languageService.Russian,
                     Room = _roomService.Workshop1,
                     Speaker = _speakerService.ILeontiev(),
-                    MaxTickets = 0,
+                    MaxTickets = 20,
 					Title = Localization.App.Service.Workshops.ILeontiev_01.Title,
                     Description = Localization.App.Service.Workshops.ILeontiev_01.Description.Replace(Environment.NewLine, "<br/>")
                 },
@@ -32,7 +32,7 @@ namespace AzureDay.WebApp.Database.Services
                     Language = _languageService.Russian,
                     Room = _roomService.Workshop2,
                     Speaker = _speakerService.ABoyko(),
-                    MaxTickets = 0,
+                    MaxTickets = 20,
                     Title = Localization.App.Service.Workshops.ABoyko_01.Title,
                     Description = Localization.App.Service.Workshops.ABoyko_01.Description.Replace(Environment.NewLine, "<br/>")
                 },
@@ -42,7 +42,7 @@ namespace AzureDay.WebApp.Database.Services
                     Language = _languageService.Russian,
                     Room = _roomService.Workshop3,
                     Speaker = _speakerService.VTsykunov(),
-                    MaxTickets = 0,
+                    MaxTickets = 20,
                     Title = Localization.App.Service.Workshops.VTsykunov_01.Title,
                     Description = Localization.App.Service.Workshops.VTsykunov_01.Description.Replace(Environment.NewLine, "<br/>")
                 }
