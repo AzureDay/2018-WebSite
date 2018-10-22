@@ -2,7 +2,7 @@
 
 namespace AzureDay.WebApp.Database.Services.Table
 {
-    public class CouponService : TableServiceBase<Coupon>
+    public class CouponService : TableServiceBase<CouponTableEntity>
     {
         protected override string TableName
         {

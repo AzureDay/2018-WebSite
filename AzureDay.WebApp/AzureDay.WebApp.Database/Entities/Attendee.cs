@@ -2,6 +2,8 @@
 {
     public sealed class Attendee
     {
+        public string Id { get; set; }
+
         public string EMail { get; set; }
 
         public string FirstName { get; set; }

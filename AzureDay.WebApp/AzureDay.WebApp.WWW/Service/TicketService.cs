@@ -29,7 +29,7 @@ namespace AzureDay.WebApp.WWW.Service
 
         public async Task AddTicketAsync(Ticket ticket)
         {
-            var data = AppFactory.Mapper.Value.Map<Database.Entities.Table.Ticket>(ticket);
+            var data = AppFactory.Mapper.Value.Map<Database.Entities.Table.TicketTableEntity>(ticket);
 
             await DataFactory.TicketService.Value.InsertOrReplaceAsync(data);
         }
@@ -67,9 +67,9 @@ namespace AzureDay.WebApp.WWW.Service
             await DataFactory.TicketService.Value.DeleteAsync(data);
         }
 
-        public async Task<List<Ticket>> GetTicketsByEmailAsync(string email)
+        public async Task<List<Ticket>> GetTicketsByUserId(string id)
         {
-            var filter = new Dictionary<string, object> { { "RowKey", email } };
+            var filter = new Dictionary<string, object> { { "RowKey", id } };
 
             var data = await DataFactory.TicketService.Value.GetByFilterAsync(filter);
 
@@ -83,21 +83,6 @@ namespace AzureDay.WebApp.WWW.Service
                 .ToList();
 
             return tickets;
-        }
-
-        public async Task<List<Ticket>> GetWorkshopTicketsAsync(int workshopId)
-        {
-            var filter = new Dictionary<string, object>
-            {
-                {nameof(Database.Entities.Table.Ticket.PartitionKey), TicketType.Workshop.ToString()},
-                {nameof(Database.Entities.Table.Ticket.WorkshopId), workshopId}
-            };
-
-            var data = (await DataFactory.TicketService.Value.GetByFilterAsync(filter))
-                .Select(AppFactory.Mapper.Value.Map<Ticket>)
-                .ToList();
-
-            return data;
         }
 
         public async Task<List<Ticket>> GetWorkshopsTicketsAsync()

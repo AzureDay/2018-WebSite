@@ -3,10 +3,10 @@ using Microsoft.WindowsAzure.Storage.Table;
 
 namespace AzureDay.WebApp.Database.Entities.Table
 {
-    public sealed class Ticket : TableEntity
+    public sealed class TicketTableEntity : TableEntity
     {
         [IgnoreProperty]
-        public string AttendeeEmail
+        public string AttendeeId
         {
             get => RowKey;
             set => RowKey = value;
@@ -35,7 +35,7 @@ namespace AzureDay.WebApp.Database.Entities.Table
 
         public string PaymentType { get; set; }
 
-        public Ticket()
+        public TicketTableEntity()
         {
         }
     }
