@@ -15,7 +15,7 @@ namespace AzureDay.WebApp.Config
 		#region general
 
 		public static string Year => "2018";
-		public static string Host => "https://azureday.net";
+		public static string Host => GetConfigVariable("Host");
 
 		#endregion
 
@@ -58,8 +58,8 @@ namespace AzureDay.WebApp.Config
 
 		#region tickets
 
-		public static decimal TicketRegular => 1200;
-		public static decimal TicketWorkshop => 2500;
+		public static decimal TicketRegular => 750;
+		public static decimal TicketWorkshop => 1750;
 
 		#endregion
 
