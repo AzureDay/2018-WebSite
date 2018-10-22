@@ -15,7 +15,7 @@ namespace AzureDay.WebApp.Config
 		#region general
 
 		public static string Year => "2018";
-		public static string Host => "https://azureday.net";
+		public static string Host => GetConfigVariable("Host");
 
 		#endregion
 
