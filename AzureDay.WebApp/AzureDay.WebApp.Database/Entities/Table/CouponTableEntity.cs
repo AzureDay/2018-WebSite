@@ -4,7 +4,7 @@ using Microsoft.WindowsAzure.Storage.Table;
 
 namespace AzureDay.WebApp.Database.Entities.Table
 {
-    public sealed class Coupon : TableEntity
+    public sealed class CouponTableEntity : TableEntity
     {
         [IgnoreProperty]
         public string Code
@@ -37,7 +37,7 @@ namespace AzureDay.WebApp.Database.Entities.Table
 
         public int CouponsCount { get; set; }
 
-        public Coupon()
+        public CouponTableEntity()
         {
             PartitionKey = Configuration.Year;
         }

@@ -29,7 +29,7 @@ namespace AzureDay.WebApp.WWW.Service
 
         public async Task AddTicketAsync(Ticket ticket)
         {
-            var data = AppFactory.Mapper.Value.Map<Database.Entities.Table.Ticket>(ticket);
+            var data = AppFactory.Mapper.Value.Map<Database.Entities.Table.TicketTableEntity>(ticket);
 
             await DataFactory.TicketService.Value.InsertOrReplaceAsync(data);
         }

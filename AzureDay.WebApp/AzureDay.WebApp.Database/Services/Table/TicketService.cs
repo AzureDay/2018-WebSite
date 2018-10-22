@@ -2,7 +2,7 @@
 
 namespace AzureDay.WebApp.Database.Services.Table
 {
-    public class TicketService : TableServiceBase<Ticket>
+    public class TicketService : TableServiceBase<TicketTableEntity>
     {
         protected override string TableName
         {
