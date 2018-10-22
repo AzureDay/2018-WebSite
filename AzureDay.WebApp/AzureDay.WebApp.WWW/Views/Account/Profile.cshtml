@@ -20,8 +20,6 @@
 
 				<div id="divProfile" class="col-md-6">
 					<h2>@My.MyProfile</h2>
-					<form method="POST" data-bind="submit: showModal">
-
 						<div class="input-group myInputGroupdivider">
 							<span class="input-group-addon" style="width: 150px;">Email</span>
 							<input class="form-control" name="email" readonly="readonly" disabled="disabled" value="@User.GetEmail()" style="width: 250px;"/>
@@ -39,35 +37,6 @@
 							<span class="input-group-addon" style="width: 150px;">From</span>
 							<input class="form-control" name="company" readonly="readonly" disabled="disabled" value="@User.GetCity() / @User.GetCountry()" style="width: 250px;"/>
 						</div>
-						
-						@*
-						<tr>
-							<td>Full name</td>
-							<td>@User.GetFullName()</td>
-						</tr>
-						<tr>
-							<td>Email</td>
-							<td>@User.GetEmail()</td>
-						</tr>
-						<tr>
-							<td>Job</td>
-							<td>@User.GetJobTitle() &#64; @User.GetCompany() </td>
-						</tr>
-						<tr>
-							<td>From</td>
-							<td>@User.GetCity() / @User.GetCountry() </td>
-						</tr>
-
-						<button class="btn btn-primary" type="submit" data-bind="enable: isModelValid() && isPasswordValid() && isPasswordLengthValid()">@My.Save</button>
-
-						<div style="width: 400px; margin-top: 15px; display: none;" class="alert alert-warning" data-bind="style: { display: isPasswordValid() ? 'none' : 'block' }">@My.isPasswordValid</div>
-
-						<div style="width: 400px; margin-top: 15px; display: none;" class="alert alert-warning" data-bind="style: { display: isPasswordLengthValid() ? 'none' : 'block' }">@My.isPasswordLengthValid</div>
-
-						<div style="width: 400px; margin-top: 15px; display: none;" class="alert alert-warning" data-bind="style: { display: isModelValid() ? 'none' : 'block' }">@My.isModelValid</div>
-						*@
-
-					</form>
 				</div>
 
 				<div id="divTicket" class="col-md-6">
