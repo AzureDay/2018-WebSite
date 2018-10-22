@@ -58,8 +58,8 @@ namespace AzureDay.WebApp.Config
 
 		#region tickets
 
-		public static decimal TicketRegular => 1200;
-		public static decimal TicketWorkshop => 2500;
+		public static decimal TicketRegular => 750;
+		public static decimal TicketWorkshop => 1750;
 
 		#endregion
 
