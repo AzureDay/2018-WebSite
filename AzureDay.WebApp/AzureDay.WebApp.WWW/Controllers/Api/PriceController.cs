@@ -45,7 +45,7 @@ namespace AzureDay.WebApp.WWW.Controllers.Api
 		public async Task<string> PaymentConfirm([FromBody]PaymentResponse response)
 		{
 			var email = response.MerchantInternalUserId;
-			var tickets = await AppFactory.TicketService.Value.GetTicketsByEmailAsync(email);
+			var tickets = await AppFactory.TicketService.Value.GetTicketsByUserId(email);
 
 			if (tickets != null && tickets.Any())
 			{

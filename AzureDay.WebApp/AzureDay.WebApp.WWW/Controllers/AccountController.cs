@@ -53,7 +53,7 @@ namespace AzureDay.WebApp.WWW.Controllers
         [Authorize]
         public async Task<IActionResult> Profile()
         {
-            var ticketsTask = AppFactory.TicketService.Value.GetTicketsByEmailAsync(User.GetEmail());
+            var ticketsTask = AppFactory.TicketService.Value.GetTicketsByUserId(User.GetEmail());
             var workshopTicketsTask = AppFactory.TicketService.Value.GetWorkshopsTicketsAsync();
 
             await Task.WhenAll(ticketsTask, workshopTicketsTask);
@@ -276,14 +276,13 @@ namespace AzureDay.WebApp.WWW.Controllers
 			{
 				if (ticket.Attendee == null)
 				{
-					var email = User.GetEmail();
 					ticket.Attendee = new Attendee
 					{
 						FirstName = User.GetFirstName(),
 						LastName = User.GetLastName(),
-						EMail = email
+						EMail = User.GetEmail(),
+						Id = User.GetUserId()
 					};
-					ticket.AttendeeEmail = email;
 				}
 
 				await AppFactory.TicketService.Value.AddTicketAsync(ticket);
@@ -314,7 +313,7 @@ namespace AzureDay.WebApp.WWW.Controllers
 				LastName = User.GetLastName(),
 				EMail = email
 			};
-			var tickets = await AppFactory.TicketService.Value.GetTicketsByEmailAsync(email);
+			var tickets = await AppFactory.TicketService.Value.GetTicketsByUserId(email);
 
 			foreach (var ticket in tickets)
 			{
@@ -336,7 +335,7 @@ namespace AzureDay.WebApp.WWW.Controllers
 				throw new ArgumentException();
 			}
 
-			var tickets = await AppFactory.TicketService.Value.GetTicketsByEmailAsync(email);
+			var tickets = await AppFactory.TicketService.Value.GetTicketsByUserId(email);
 			var ticketToDelete = tickets.Single(x => x.TicketType == ticketType);
 			var ticketToRemain = tickets.SingleOrDefault(x => x.TicketType != ticketType);
 

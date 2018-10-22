@@ -67,9 +67,9 @@ namespace AzureDay.WebApp.WWW.Service
             await DataFactory.TicketService.Value.DeleteAsync(data);
         }
 
-        public async Task<List<Ticket>> GetTicketsByEmailAsync(string email)
+        public async Task<List<Ticket>> GetTicketsByUserId(string id)
         {
-            var filter = new Dictionary<string, object> { { "RowKey", email } };
+            var filter = new Dictionary<string, object> { { "RowKey", id } };
 
             var data = await DataFactory.TicketService.Value.GetByFilterAsync(filter);
 
