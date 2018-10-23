@@ -53,7 +53,7 @@ namespace AzureDay.WebApp.WWW.Controllers
         [Authorize]
         public async Task<IActionResult> Profile()
         {
-            var ticketsTask = AppFactory.TicketService.Value.GetTicketsByUserId(User.GetEmail());
+            var ticketsTask = AppFactory.TicketService.Value.GetTicketsByUserId(User.GetUserId());
             var workshopTicketsTask = AppFactory.TicketService.Value.GetWorkshopsTicketsAsync();
 
             await Task.WhenAll(ticketsTask, workshopTicketsTask);
@@ -179,8 +179,8 @@ namespace AzureDay.WebApp.WWW.Controllers
 			paymentRequest.PaymentDetail = new PaymentDetails
 			{
 				EMail = tickets[0].Attendee.EMail,
-				MerchantInternalUserId = tickets[0].Attendee.EMail,
-				MerchantInternalPaymentId = $"{tickets[0].Attendee.EMail}-{string.Join("-", tickets.Select(x => x.TicketType.ToString()))}",
+				MerchantInternalUserId = $"{tickets[0].Attendee.Id}_{tickets[0].Attendee.EMail}",
+				MerchantInternalPaymentId = $"{tickets[0].Attendee.Id}-{string.Join("-", tickets.Select(x => x.TicketType.ToString()))}",
 				BuyerFirstname = tickets[0].Attendee.FirstName,
 				BuyerLastname = tickets[0].Attendee.LastName,
 				ReturnUrl = $"{Configuration.Host}/account/profile",
@@ -313,7 +313,7 @@ namespace AzureDay.WebApp.WWW.Controllers
 				LastName = User.GetLastName(),
 				EMail = email
 			};
-			var tickets = await AppFactory.TicketService.Value.GetTicketsByUserId(email);
+			var tickets = await AppFactory.TicketService.Value.GetTicketsByUserId(User.GetUserId());
 
 			foreach (var ticket in tickets)
 			{
@@ -335,7 +335,7 @@ namespace AzureDay.WebApp.WWW.Controllers
 				throw new ArgumentException();
 			}
 
-			var tickets = await AppFactory.TicketService.Value.GetTicketsByUserId(email);
+			var tickets = await AppFactory.TicketService.Value.GetTicketsByUserId(User.GetUserId());
 			var ticketToDelete = tickets.Single(x => x.TicketType == ticketType);
 			var ticketToRemain = tickets.SingleOrDefault(x => x.TicketType != ticketType);
 
@@ -345,7 +345,7 @@ namespace AzureDay.WebApp.WWW.Controllers
 
 			var tasks = new List<Task>
 			{
-				AppFactory.TicketService.Value.DeleteTicketAsync(email, ticketToDelete.TicketType)
+				AppFactory.TicketService.Value.DeleteTicketAsync(User.GetUserId(), ticketToDelete.TicketType)
 			};
 
 			if (ticketToRemain == null)
@@ -361,7 +361,7 @@ namespace AzureDay.WebApp.WWW.Controllers
 					price = AppFactory.CouponService.Value.GetPriceWithCoupon(price, ticketToRemain.Coupon);
 				}
 
-				tasks.Add(AppFactory.TicketService.Value.UpdateTicketPriceAsync(email, ticketToRemain.TicketType, price));
+				tasks.Add(AppFactory.TicketService.Value.UpdateTicketPriceAsync(User.GetUserId(), ticketToRemain.TicketType, price));
 			}
 
 			await Task.WhenAll(tasks);

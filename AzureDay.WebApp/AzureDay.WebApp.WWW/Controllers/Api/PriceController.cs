@@ -44,8 +44,14 @@ namespace AzureDay.WebApp.WWW.Controllers.Api
 		[Route("api/tickets/paymentconfirm")]
 		public async Task<string> PaymentConfirm([FromBody]PaymentResponse response)
 		{
-			var email = response.MerchantInternalUserId;
-			var tickets = await AppFactory.TicketService.Value.GetTicketsByUserId(email);
+			var splited = response.MerchantInternalUserId.Split("_");
+			if (splited.Length != 2)
+			{
+				return string.Empty;
+			}
+			var id = splited[0];
+			var email = splited[1];
+			var tickets = await AppFactory.TicketService.Value.GetTicketsByUserId(id);
 
 			if (tickets != null && tickets.Any())
 			{
@@ -103,7 +109,7 @@ namespace AzureDay.WebApp.WWW.Controllers.Api
 					{
 						foreach (var ticket in tickets)
 						{
-							tasks.Add(AppFactory.TicketService.Value.SetTicketsPayedAsync(email, ticket.TicketType));
+							tasks.Add(AppFactory.TicketService.Value.SetTicketsPayedAsync(id, ticket.TicketType));
 						}
 						tasks.Add(NotificationFactory.AttendeeNotificationService.Value.SendPaymentConfirmationEmailAsync(message));
 					}
@@ -113,7 +119,7 @@ namespace AzureDay.WebApp.WWW.Controllers.Api
 						{
 							if ((decimal)tickets[0].Price <= orderSum)
 							{
-								tasks.Add(AppFactory.TicketService.Value.SetTicketsPayedAsync(email, tickets[0].TicketType));
+								tasks.Add(AppFactory.TicketService.Value.SetTicketsPayedAsync(id, tickets[0].TicketType));
 								tasks.Add(NotificationFactory.AttendeeNotificationService.Value.SendPaymentConfirmationEmailAsync(message));
 
 								orderSum -= (decimal)tickets[0].Price;
@@ -121,19 +127,19 @@ namespace AzureDay.WebApp.WWW.Controllers.Api
 
 							if ((decimal)tickets[1].Price <= orderSum)
 							{
-								tasks.Add(AppFactory.TicketService.Value.SetTicketsPayedAsync(email, tickets[1].TicketType));
+								tasks.Add(AppFactory.TicketService.Value.SetTicketsPayedAsync(id, tickets[1].TicketType));
 							}
 							else
 							{
 								var newPrice = (decimal)tickets[1].Price - orderSum;
-								tasks.Add(AppFactory.TicketService.Value.UpdateTicketPriceAsync(email, tickets[1].TicketType, newPrice));
+								tasks.Add(AppFactory.TicketService.Value.UpdateTicketPriceAsync(id, tickets[1].TicketType, newPrice));
 							}
 						}
 						else
 						{
 							if ((decimal)tickets[0].Price <= orderSum)
 							{
-								tasks.Add(AppFactory.TicketService.Value.SetTicketsPayedAsync(email, tickets[0].TicketType));
+								tasks.Add(AppFactory.TicketService.Value.SetTicketsPayedAsync(id, tickets[0].TicketType));
 								tasks.Add(NotificationFactory.AttendeeNotificationService.Value.SendPaymentConfirmationEmailAsync(message));
 							}
 						}

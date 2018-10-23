@@ -34,9 +34,9 @@ namespace AzureDay.WebApp.WWW.Service
             await DataFactory.TicketService.Value.InsertOrReplaceAsync(data);
         }
 
-        public async Task SetTicketsPayedAsync(string email, TicketType ticketType)
+        public async Task SetTicketsPayedAsync(string id, TicketType ticketType)
         {
-            var data = await DataFactory.TicketService.Value.GetByKeysAsync(ticketType.ToString(), email);
+            var data = await DataFactory.TicketService.Value.GetByKeysAsync(ticketType.ToString(), id);
 
             if (data == null)
             {
@@ -47,9 +47,9 @@ namespace AzureDay.WebApp.WWW.Service
             await DataFactory.TicketService.Value.ReplaceAsync(data);
         }
 
-        public async Task UpdateTicketPriceAsync(string email, TicketType ticketType, decimal newPrice)
+        public async Task UpdateTicketPriceAsync(string id, TicketType ticketType, decimal newPrice)
         {
-            var data = await DataFactory.TicketService.Value.GetByKeysAsync(ticketType.ToString(), email);
+            var data = await DataFactory.TicketService.Value.GetByKeysAsync(ticketType.ToString(), id);
 
             if (data == null)
             {
@@ -60,9 +60,9 @@ namespace AzureDay.WebApp.WWW.Service
             await DataFactory.TicketService.Value.ReplaceAsync(data);
         }
 
-        public async Task DeleteTicketAsync(string email, TicketType ticketType)
+        public async Task DeleteTicketAsync(string id, TicketType ticketType)
         {
-            var data = await DataFactory.TicketService.Value.GetByKeysAsync(ticketType.ToString(), email);
+            var data = await DataFactory.TicketService.Value.GetByKeysAsync(ticketType.ToString(), id);
 
             await DataFactory.TicketService.Value.DeleteAsync(data);
         }
