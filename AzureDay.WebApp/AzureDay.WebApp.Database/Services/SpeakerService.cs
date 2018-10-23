@@ -23,6 +23,7 @@ namespace AzureDay.WebApp.Database.Services
             _speakers.Add(EWasilewski());
             _speakers.Add(AVidishchev());
             _speakers.Add(VBezmaly());
+            _speakers.Add(OKrakovetskyi());
 
             return _speakers;
         }
@@ -312,6 +313,30 @@ namespace AzureDay.WebApp.Database.Services
                 WebUrl = "",
                 CompanyName = "Kaspersky Lab",
                 JobTitle = "Kaspersky Certified Trainer"
+            };
+        }
+
+        public SpeakerEntity OKrakovetskyi()
+        {
+            return new SpeakerEntity
+            {
+                Id = "OKrakovetskyi",
+                FirstName = Localization.App.Service.Speaker.OKrakovetskyi.FirstName,
+                LastName = Localization.App.Service.Speaker.OKrakovetskyi.LastName,
+                Bio = Localization.App.Service.Speaker.OKrakovetskyi.Bio.Replace(Environment.NewLine, "<br/>"),
+                Country = _countryService.Ukraine,
+                PhotoUrl = "/images/avatars/OKrakovetskyi.jpg",
+                FacebookUrl = "https://www.facebook.com/alex.krakovetskiy",
+                GitHubUrl = "",
+                GoogleUrl = "",
+                LinkedInUrl = "https://www.linkedin.com/in/krakovetskiy/",
+                MsdnUrl = "",
+                MvpUrl = "",
+                TwitterUrl = "https://twitter.com/msugvnua",
+                YouTubeUrl = "",
+                WebUrl = "",
+                CompanyName = "DevRain Solutions",
+                JobTitle = "CEO"
             };
         }
     }
