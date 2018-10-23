@@ -176,9 +176,9 @@
                                                     <div class="wow-pricing-cost" style="padding: 15px;">
                                                         <p>@My.ThankYouWait</p>
                                                         <p>
-                                                            @My.PayNow <a href="/Account/PayAgain/@Model.PayedWorkshopTicket.TicketType">@My.ByLink</a>.
+                                                            @My.PayNow <a href="/Account/PayAgain?token=@Model.PayedWorkshopTicket.TicketType">@My.ByLink</a>.
                                                         </p>
-                                                        <p>@My.DropPayment01 <a href="/Account/DeleteTicket/@Model.PayedWorkshopTicket.TicketType">@My.ByLink</a>. @My.DropPayment01a</p>
+                                                        <p>@My.DropPayment01 <a href="/Account/DeleteTicket?token=@Model.PayedWorkshopTicket.TicketType">@My.ByLink</a>. @My.DropPayment01a</p>
                                                         <p>@My.Questions01 <a href="mailto:pay@azureday.net">pay@azureday.net</a> @My.Questions01a</p>
                                                     </div>
                                                 </div>
