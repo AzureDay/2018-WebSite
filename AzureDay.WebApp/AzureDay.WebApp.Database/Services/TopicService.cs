@@ -16,6 +16,11 @@ namespace AzureDay.WebApp.Database.Services
             {
                 new TopicEntity
                 {
+                    Id = 0,
+                    Title = Localization.App.Service.Topics._Dummy.Title
+                },
+                new TopicEntity
+                {
                     Id = -101,
                     Title = Localization.App.Service.Topics.Food.Registration.Title
                 },
@@ -31,8 +36,13 @@ namespace AzureDay.WebApp.Database.Services
                 },
                 new TopicEntity
                 {
-                    Id = -104,
-                    Title = Localization.App.Service.Topics.Food.Afterparty.Title
+                    Id = -99,
+                    Title = Localization.App.Service.Topics.Special.Keynote.Title
+                },
+                new TopicEntity
+                {
+                    Id = -98,
+                    Title = Localization.App.Service.Topics.Special.Endnote.Title
                 },
                 new TopicEntity
                 {
@@ -117,7 +127,7 @@ namespace AzureDay.WebApp.Database.Services
                 new TopicEntity
                 {
                     Id = 11,
-                    Language = _languageService.Ukrainian,
+                    Language = _languageService.Russian,
                     Speakers = new List<SpeakerEntity> {_speakerService.AVidishchev() },
                     Title = Localization.App.Service.Topics.AVidishchev_01.Title,
                     Description = Localization.App.Service.Topics.AVidishchev_01.Description.Replace(Environment.NewLine, "<br/>")
@@ -125,7 +135,7 @@ namespace AzureDay.WebApp.Database.Services
                 new TopicEntity
                 {
                     Id = 12,
-                    Language = _languageService.Ukrainian,
+                    Language = _languageService.Russian,
                     Speakers = new List<SpeakerEntity> {_speakerService.VBezmaly() },
                     Title = Localization.App.Service.Topics.VBezmaly_01.Title,
                     Description = Localization.App.Service.Topics.VBezmaly_01.Description.Replace(Environment.NewLine, "<br/>")
@@ -141,11 +151,15 @@ namespace AzureDay.WebApp.Database.Services
             };
         }
 
+        public TopicEntity Dummy { get { return Storage.Single(x => x.Id == 0); } }
+        
         public TopicEntity Registration { get { return Storage.Single(x => x.Id == -101); } }
         public TopicEntity CoffeeBreak { get { return Storage.Single(x => x.Id == -102); } }
         public TopicEntity Lunch { get { return Storage.Single(x => x.Id == -103); } }
-        public TopicEntity Afterparty { get { return Storage.Single(x => x.Id == -104); } }
 
+        public TopicEntity Keynote { get { return Storage.Single(x => x.Id == -99); } }
+        public TopicEntity Endnote { get { return Storage.Single(x => x.Id == -98); } }
+        
         public TopicEntity SBielskyi_01 { get { return Storage.Single(x => x.Id == 1); } }
         public TopicEntity ILeontiev_01 { get { return Storage.Single(x => x.Id == 2); } }
         public TopicEntity EAuberix_01 { get { return Storage.Single(x => x.Id == 3); } }

@@ -44,7 +44,7 @@
                         @Model.TicketsLeft
                         &nbsp;<i class="fa fa-ticket" aria-hidden="true"></i>
                     </div>
-                    @if (Model.TicketsLeft > 0)
+                    @if (false) // Model.TicketsLeft > 0
                     {
                         <div>
                             <a class="btn btn-success" href="/profile/my?workshopid=@Model.Workshop.Id" role="button">@WorkshopEntity.Buy</a>

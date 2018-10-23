@@ -66,6 +66,19 @@ namespace AzureDay.WebApp.WWW.Service
 
             await DataFactory.TicketService.Value.DeleteAsync(data);
         }
+        
+        public async Task<List<Ticket>> GetWorkshopTicketsAsync(int workshopId)
+        {
+            var filter = new Dictionary<string, object>
+            {
+                {nameof(Database.Entities.Table.TicketTableEntity.PartitionKey), TicketType.Workshop.ToString()},
+                {nameof(Database.Entities.Table.TicketTableEntity.WorkshopId), workshopId}
+            };
+            var data = (await DataFactory.TicketService.Value.GetByFilterAsync(filter))
+                .Select(AppFactory.Mapper.Value.Map<Ticket>)
+                .ToList();
+            return data;
+        }
 
         public async Task<List<Ticket>> GetTicketsByUserId(string id)
         {
