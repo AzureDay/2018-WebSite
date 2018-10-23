@@ -9,6 +9,7 @@ using AzureDay.WebApp.WWW.Models.Home;
 using AzureDay.WebApp.Database.Services;
 using AzureDay.WebApp.Database.Enums;
 using AzureDay.WebApp.Database.Entities;
+using AzureDay.WebApp.WWW.Infrastructure;
 
 namespace AzureDay.WebApp.WWW.Controllers
 {
@@ -89,11 +90,11 @@ namespace AzureDay.WebApp.WWW.Controllers
             };
 
             var workshops = _workshopService.Value.GetAll();
-            //var workshopTickets = await AppFactory.TicketService.Value.GetWorkshopsTicketsAsync();
+            var workshopTickets = await AppFactory.TicketService.Value.GetWorkshopsTicketsAsync();
 
             foreach (var workshop in workshops)
             {
-                var ticketsLeft = 0;// workshop.MaxTickets - workshopTickets.Count(x => x.WorkshopId == workshop.Id);
+                var ticketsLeft = workshop.MaxTickets - workshopTickets.Count(x => x.WorkshopId == workshop.Id);
                 if (ticketsLeft < 0)
                 {
                     ticketsLeft = 0;
@@ -124,7 +125,7 @@ namespace AzureDay.WebApp.WWW.Controllers
                 return RedirectToAction("Workshops");
             }
 
-            model.TicketsLeft = 0; // model.Workshop.MaxTickets - (await AppFactory.TicketService.Value.GetWorkshopTicketsAsync(id)).Count;
+            model.TicketsLeft = model.Workshop.MaxTickets - (await AppFactory.TicketService.Value.GetWorkshopTicketsAsync(id)).Count;
             if (model.TicketsLeft < 0)
             {
                 model.TicketsLeft = 0;
@@ -190,7 +191,7 @@ namespace AzureDay.WebApp.WWW.Controllers
 
             foreach (var workshop in workshops)
             {
-                var ticketsLeft = 0; // workshop.MaxTickets - (await AppFactory.TicketService.Value.GetWorkshopTicketsAsync(workshop.Id)).Count;
+                var ticketsLeft = workshop.MaxTickets - (await AppFactory.TicketService.Value.GetWorkshopTicketsAsync(workshop.Id)).Count;
                 if (ticketsLeft < 0)
                 {
                     ticketsLeft = 0;
