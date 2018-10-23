@@ -130,6 +130,14 @@ namespace AzureDay.WebApp.Database.Services
                     Title = Localization.App.Service.Topics.VBezmaly_01.Title,
                     Description = Localization.App.Service.Topics.VBezmaly_01.Description.Replace(Environment.NewLine, "<br/>")
                 },
+                new TopicEntity
+                {
+                    Id = 13,
+                    Language = _languageService.Ukrainian,
+                    Speakers = new List<SpeakerEntity> {_speakerService.OKrakovetskyi() },
+                    Title = Localization.App.Service.Topics.OKrakovetskyi_02.Title,
+                    Description = Localization.App.Service.Topics.OKrakovetskyi_02.Description.Replace(Environment.NewLine, "<br/>")
+                },
             };
         }
 
@@ -150,5 +158,6 @@ namespace AzureDay.WebApp.Database.Services
         public TopicEntity EWasilewski_01 { get { return Storage.Single(x => x.Id == 10); } }
         public TopicEntity AVidishchev_01 { get { return Storage.Single(x => x.Id == 11); } }
         public TopicEntity VBezmaly_01 { get { return Storage.Single(x => x.Id == 12); } }
+        public TopicEntity OKrakovetskyi_02 { get { return Storage.Single(x => x.Id == 13); } }
     }
 }

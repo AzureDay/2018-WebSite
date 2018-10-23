@@ -118,9 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Description" xml:space="preserve">
-    <value>In this topic, we will speak about Microsoft Cognitive Services, LUIS and Azure Machine Learning tool allowing to add artificial intelligence component to your software.</value>
+    <value />
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Microsoft and AI: how Azure services will help your apps to become smart</value>
+    <value>Light Side of Microsoft: AI and research projects you never heard before</value>
   </data>
 </root>

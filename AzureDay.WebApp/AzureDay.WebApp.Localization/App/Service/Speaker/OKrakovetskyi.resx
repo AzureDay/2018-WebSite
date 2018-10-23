@@ -118,8 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Bio" xml:space="preserve">
-    <value>I am CEO of DevRain Solutions, IT company from Ukraine. We specialize in web, cloud and mobile solutions (.NET, Xamarin, iOS, Android). In 2013 my company got "Lead partner in creating mobile solutions on Windows Phone 8 platform" award from Microsoft Ukraine.
-I am a Microsoft Regional Director during last 8 years and Microsoft Most Valuable Professional during last 6 years. Also I was nominated as Telerik Developer Expert for several years and got "The Best Professional in Software Architecture" Ukrainian IT award.</value>
+    <value>I am CEO of DevRain Solutions, IT company from Ukraine. We specialize in web, cloud and mobile solutions (.NET, Xamarin, iOS, Android). In 2013 my company got 'Lead partner in creating mobile solutions on Windows Phone 8 platform' award from Microsoft Ukraine. I am a Microsoft Regional Director during last 8 years and Microsoft Most Valuable Professional during last 6 years. Also I was nominated as Telerik Developer Expert for several years and got 'The Best Professional in Software Architecture' Ukrainian IT award.</value>
   </data>
   <data name="FirstName" xml:space="preserve">
     <value>Oleksandr</value>
