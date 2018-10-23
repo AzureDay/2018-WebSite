@@ -66,8 +66,8 @@
                                                     <h5>AzureDay @Configuration.Year</h5>
                                                     <div class="wow-pricing-cost">
                                                         <img id="imgGravatar1" style="display: none; padding-bottom: 10px;"/>
-                                                        <p style="font-weight: bold;">@($"{Model.FirstName} {Model.LastName}")</p>
-                                                        <p>@Model.Company</p>
+                                                        <p style="font-weight: bold;">@($"{User.GetFirstName()} {User.GetLastName()}")</p>
+                                                        <p>@User.GetCompany()</p>
                                                         <p>&nbsp;</p>
                                                     </div>
                                                 </div>
@@ -142,8 +142,8 @@
                                                     <h5>AzureDay @Configuration.Year</h5>
                                                     <div class="wow-pricing-cost">
                                                         <img id="imgGravatar2" style="display: none; padding-bottom: 10px;" />
-                                                        <p style="font-weight: bold;">@($"{Model.FirstName} {Model.LastName}")</p>
-                                                        <p>@Model.Company</p>
+                                                        <p style="font-weight: bold;">@($"{User.GetFirstName()} {User.GetLastName()}")</p>
+                                                        <p>@User.GetCompany()</p>
                                                         <p>&nbsp;</p>
                                                     </div>
                                                 </div>
@@ -159,7 +159,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12 alert alert-danger" style="font-size: 1.3em;">
-                                            Обратите внимание, что лабораторные работы 8го сентября проходят в разных локациях. Все участники лабораторных работ могут найти детальные инструкции у себя в почте.
+                                            Обратите внимание, что лабораторные работы 9го ноября проходят в разных локациях. Все участники лабораторных работ могут найти детальные инструкции у себя в почте.
                                         </div>
                                     </div>
                                     <div>
