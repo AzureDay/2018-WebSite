@@ -213,7 +213,7 @@ namespace AzureDay.WebApp.WWW.Controllers
 		{
 			if (!model.HasConferenceTicket && (!model.HasWorkshopTicket || model.DdlWorkshop == 0))
 			{
-				throw new ArgumentException(nameof(model));
+				return RedirectToAction("Profile");
 			}
 
 			var tickets = new List<Ticket>();
