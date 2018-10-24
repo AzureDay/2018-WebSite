@@ -34,7 +34,7 @@ namespace AzureDay.WebApp.WWW.Controllers
         [HttpGet]
         public IActionResult SignIn()
         {
-            var redirectUrl = Url.Action(nameof(HomeController.Index), "Home");
+            var redirectUrl = Url.Action(nameof(Profile), "Account");
             return Challenge(
                 new AuthenticationProperties {RedirectUri = redirectUrl},
                 OpenIdConnectDefaults.AuthenticationScheme);
