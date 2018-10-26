@@ -61,7 +61,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Topics {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Artificial Intelligence is at the core of Microsoft’s business strategy today. In this presentation you going to learn about recent updates to the Microsoft AI platform in three pieces: our Azure services, our infrastructure, and our tools. We are going to show how any developer can start leveraging AI in the modern applications and services running on premises, on edge, cloud or hybrid..
+        ///   Looks up a localized string similar to Artificial Intelligence is at the core of Microsoft’s business strategy today. In this presentation you are going to learn about recent updates to the Microsoft AI platform in three pieces: our Azure services, our infrastructure, and our tools. We are going to show how any developer can start leveraging AI in the modern applications and services running on premises, on edge, cloud or hybrid..
         /// </summary>
         public static string Description {
             get {

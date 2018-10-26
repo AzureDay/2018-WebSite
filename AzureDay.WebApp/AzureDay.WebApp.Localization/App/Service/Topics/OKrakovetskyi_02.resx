@@ -118,9 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Description" xml:space="preserve">
-    <value />
+    <value>How are innovations and new technologies born? Usually it's a complicated process of fails and wins. Most of the innovations were started in research labs and most of them would not survive. Microsoft Research, Microsoft AI Labs and other initiatives definitely have tools and projects worth trying and learning. In my presentation we will talk about interesting research projects and labs connected with AI, computer vision, machine learning and open research data.</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Light Side of Microsoft: AI and research projects you never heard before</value>
+    <value>Light Side of Microsoft: AI and research projects you never heard of before</value>
   </data>
 </root>

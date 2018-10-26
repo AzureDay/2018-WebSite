@@ -118,7 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Description" xml:space="preserve">
-    <value>История создания и внедрения IoT концентратора благодаря которому можно построить решение по управлению телеметрией, используя современные облачные технологии Azure. В презентации будет представлена архитектура построения программного обеспечения для трех промышленных компаний, которые внедрили IoT у себя в компании тем самым уменьшили затраты на логистику и использование ресурсов.</value>
+    <value>A story of creation and implementation of IOT concentrator that allows us to build a solution that is managing telemetry with the help of cutting-edge Azure technology. In this presentation I will introduce the architecture of software of three industrial companies that have implemented IOT in its operation and that way were able to reduce logistics and resource costs.</value>
+    <comment>История создания и внедрения IoT концентратора благодаря которому можно построить решение по управлению телеметрией, используя современные облачные технологии Azure. В презентации будет представлена архитектура построения программного обеспечения для трех промышленных компаний, которые внедрили IoT у себя в компании тем самым уменьшили затраты на логистику и использование ресурсов.</comment>
   </data>
   <data name="Title" xml:space="preserve">
     <value>Case studies to build IoT solution for factories.</value>

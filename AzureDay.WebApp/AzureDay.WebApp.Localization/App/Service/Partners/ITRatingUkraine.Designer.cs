@@ -22,14 +22,14 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class DevArt {
+    public class ITRatingUkraine {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal DevArt() {
+        internal ITRatingUkraine() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Partners.DevArt", typeof(DevArt).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Partners.ITRatingUkraine", typeof(ITRatingUkraine).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Founded in 1997, Devart is currently one of the leading developers of database management software, ALM solutions and data providers for most popular database servers..
+        ///   Looks up a localized string similar to IТ рейтинг Украины – первый сервис, направленный на систематизацию информации о существующих в Украине ИT-компаниях разных сфер деятельности.  В течении определенных промежутков времени (ежеквартально и ежегодно), на сайте публикуется рейтинг представленных компаний, который подсчитывается независимо и максимально объективно. Рейтинг складывается на основе целого ряда важных показателей, таких как портфолио компаний, успешность проектов (PR, ТИЦ), публикуемых статьях и кейсах. Таким образом вы получаете отк [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Description {
             get {
@@ -70,7 +70,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DevArt.
+        ///   Looks up a localized string similar to IT рейтинг UA.
         /// </summary>
         public static string Title {
             get {

@@ -118,9 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Description" xml:space="preserve">
-    <value>Artificial Intelligence is at the core of Microsoft’s business strategy today. In this presentation you are going to learn about recent updates to the Microsoft AI platform in three pieces: our Azure services, our infrastructure, and our tools. We are going to show how any developer can start leveraging AI in the modern applications and services running on premises, on edge, cloud or hybrid.</value>
+    <value>BrainBasket Foundation is a non-profit organization that helps Ukrainians to get educated in the field IT. BrainBasket was founded in 2014 with the vision of uniting the efforts of all IT industry players to facilitate training of 100 000 programmers by 2020.</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Microsoft AI Platform Update.</value>
+    <value>BrainBasket Foundation</value>
   </data>
 </root>
