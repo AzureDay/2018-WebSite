@@ -5,6 +5,66 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Update="App\Service\Partners\Beetroot.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Beetroot.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Partners\Bodo.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Bodo.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Partners\BrainBasket.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>BrainBasket.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Partners\BrainTV.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>BrainTV.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Partners\DevArt.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>DevArt.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Partners\Dou.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Dou.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Partners\ITClusterKonotop.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ITClusterKonotop.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Partners\ITRatingUkraine.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ITRatingUkraine.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Partners\KyivITCluster.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>KyivITCluster.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Partners\Luxoft.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Luxoft.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Partners\ScrumUkraine.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ScrumUkraine.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Partners\WeeklyIT.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>WeeklyIT.resx</DependentUpon>
+      </Compile>
       <Compile Update="App\Service\Speaker\EWasilewski.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
@@ -68,6 +128,69 @@
     </ItemGroup>
 
     <ItemGroup>
+      <EmbeddedResource Update="App\Service\Partners\Beetroot.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>Beetroot.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\Beetroot.ru.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\Beetroot.uk-UA.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\Bodo.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>Bodo.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\BrainBasket.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>BrainBasket.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\BrainBasket.ru.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\BrainBasket.uk-UA.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\BrainTV.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>BrainTV.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\DevArt.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>DevArt.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\DevArt.ru.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\Dou.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>Dou.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\ITClusterKonotop.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>ITClusterKonotop.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\ITRatingUkraine.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>ITRatingUkraine.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\KyivITCluster.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>KyivITCluster.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\Luxoft.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>Luxoft.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\ScrumUkraine.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>ScrumUkraine.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\WeeklyIT.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>WeeklyIT.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Speaker\EWasilewski.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>EWasilewski.Designer.cs</LastGenOutput>

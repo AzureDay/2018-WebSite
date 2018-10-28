@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Description" xml:space="preserve">
-    <value />
+    <value>You know that companies aspire to make data-driven decisions. Mastering data engineering is a business necessity. So companies need a tool that can be simple and powerful at the same times. That is Azure Databricks. Built on Apache Spark™, Azure Databricks provides scale, compatibility and reliability that expand your data engineering capabilities. Come to my session and I will show you how you can scale mission-critical data cleansing, transformations, and manipulations to make business use cases such as real-time dashboards or fraud detection possible with Azure Databricks.</value>
   </data>
   <data name="Title" xml:space="preserve">
     <value>Azure Databricks for Data Engineering</value>

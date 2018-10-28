@@ -22,14 +22,14 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class DevArt {
+    public class Beetroot {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal DevArt() {
+        internal Beetroot() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Partners.DevArt", typeof(DevArt).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Partners.Beetroot", typeof(Beetroot).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,8 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Founded in 1997, Devart is currently one of the leading developers of database management software, ALM solutions and data providers for most popular database servers..
+        ///   Looks up a localized string similar to &quot;Привет! Мы — шведско-украинская компания 
+        ///Beetroot. Наша команда объединяет веб-разработчиков, дизайнеров и иллюстраторов, работающих над интересными проектами для международных клиентов. Открыв свой первый офис в Одессе в 2012 году, сегодня Beetroot — это большая семья из более чем двухсот человек, которые поддерживают друг друга и варят вкусный борщ в Стокгольме, Киеве, Полтаве, Ивано-Франковске, Харькове и, конечно, Одессе. А еще, Beetroot имеет свою собственную образовательную программу — Beetroot Aca [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Description {
             get {
@@ -70,7 +71,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DevArt.
+        ///   Looks up a localized string similar to Beetroot.
         /// </summary>
         public static string Title {
             get {

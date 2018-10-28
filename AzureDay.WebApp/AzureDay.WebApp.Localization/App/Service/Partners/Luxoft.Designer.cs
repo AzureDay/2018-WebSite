@@ -22,14 +22,14 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class DevArt {
+    public class Luxoft {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal DevArt() {
+        internal Luxoft() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Partners.DevArt", typeof(DevArt).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Partners.Luxoft", typeof(Luxoft).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,8 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Founded in 1997, Devart is currently one of the leading developers of database management software, ALM solutions and data providers for most popular database servers..
+        ///   Looks up a localized string similar to Luxoft Ukraine is a leading IT service provider of innovative technology solutions that delivers measurable business outcomes to multinational companies. Its offerings encompass strategic consulting, custom software development services, and digital solution engineering. Established in 2005 in Kyiv, Luxoft Ukraine now includes more than 3900 professionals serving global clients from its delivery locations in Kyiv, Odesa and Dnipro.
+        ///Luxoft Ukraine enables companies to compete by leveraging its multi-industr [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Description {
             get {
@@ -70,7 +71,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DevArt.
+        ///   Looks up a localized string similar to Luxoft Ukraine.
         /// </summary>
         public static string Title {
             get {
