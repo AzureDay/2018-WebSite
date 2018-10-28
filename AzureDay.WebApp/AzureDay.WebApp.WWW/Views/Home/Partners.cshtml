@@ -80,7 +80,7 @@
 						<img src="@partner.LogoUrl" alt="@partner.Title" class="img-responsive" />
 					</div>
 					<div class="col-md-5 text-justify">
-						@partner.Description
+						@Html.Raw(partner.Description)
 					</div>
 					<div class="col-md-2">
 						<a href="@partner.WebUrl" target="_blank" style="white-space: nowrap;">@partner.WebUrl</a>
