@@ -61,7 +61,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Topics {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to История создания и внедрения IoT концентратора благодаря которому можно построить решение по управлению телеметрией, используя современные облачные технологии Azure. В презентации будет представлена архитектура построения программного обеспечения для трех промышленных компаний, которые внедрили IoT у себя в компании тем самым уменьшили затраты на логистику и использование ресурсов..
+        ///   Looks up a localized string similar to A story of creation and implementation of IOT concentrator that allows us to build a solution that is managing telemetry with the help of cutting-edge Azure technology. In this presentation I will introduce the architecture of software of three industrial companies that have implemented IOT in its operation and that way were able to reduce logistics and resource costs..
         /// </summary>
         public static string Description {
             get {

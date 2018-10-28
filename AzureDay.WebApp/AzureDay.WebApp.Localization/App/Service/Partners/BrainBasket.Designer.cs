@@ -22,14 +22,14 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class DevArt {
+    public class BrainBasket {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal DevArt() {
+        internal BrainBasket() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Partners.DevArt", typeof(DevArt).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Partners.BrainBasket", typeof(BrainBasket).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Founded in 1997, Devart is currently one of the leading developers of database management software, ALM solutions and data providers for most popular database servers..
+        ///   Looks up a localized string similar to BrainBasket Foundation is a non-profit organization that helps Ukrainians to get educated in the field IT. BrainBasket was founded in 2014 with the vision of uniting the efforts of all IT industry players to facilitate training of 100 000 programmers by 2020..
         /// </summary>
         public static string Description {
             get {
@@ -70,7 +70,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DevArt.
+        ///   Looks up a localized string similar to BrainBasket Foundation.
         /// </summary>
         public static string Title {
             get {

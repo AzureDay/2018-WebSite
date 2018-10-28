@@ -118,9 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Description" xml:space="preserve">
-    <value>Artificial Intelligence is at the core of Microsoft’s business strategy today. In this presentation you are going to learn about recent updates to the Microsoft AI platform in three pieces: our Azure services, our infrastructure, and our tools. We are going to show how any developer can start leveraging AI in the modern applications and services running on premises, on edge, cloud or hybrid.</value>
+    <value>IТ рейтинг Украины – первый сервис, направленный на систематизацию информации о существующих в Украине ИT-компаниях разных сфер деятельности.  В течении определенных промежутков времени (ежеквартально и ежегодно), на сайте публикуется рейтинг представленных компаний, который подсчитывается независимо и максимально объективно. Рейтинг складывается на основе целого ряда важных показателей, таких как портфолио компаний, успешность проектов (PR, ТИЦ), публикуемых статьях и кейсах. Таким образом вы получаете открытый рейтинг, который исходит из непосредственной деятельности компаний и количества их успешных проектов. 
+Вся информация о компаниях собрана в удобные каталоги. Более 10 тыс. портфолио и 1000 веб студий, SEO студий, digital и рекламных агентств представлены в каталогах сервиса. Это превосходная возможность как можно быстрее и в кратчайшие сроки найти компанию, которая возьмется за выполнение любых необходимых вам задач. При этом вы можете быть уверены, что отдаете свое предпочтение настоящим профессионалам своего дела. 
+Сервис it-rating.in.ua полностью бесплатный и обладает уникальным функционалом, который облегчает пребывания пользователей на данном проекте. 
+Присоединяйтесь к  сервису и поучаствуйте в создании проекта с большими возможностями как для компаний, так и для их клиентов!</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Microsoft AI Platform Update.</value>
+    <value>IT рейтинг UA</value>
   </data>
 </root>
