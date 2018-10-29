@@ -118,12 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Bio" xml:space="preserve">
-    <value>Sergey is responsible for the development of Microsoft Azure platform and development tools in Microsoft Ukraine. Over the course of his work he managed to conduct more than 40 deep technical trainings, participated in the development of several projects on Microsoft Azure platform, and has practical experience in deployment of solutions based on it. He has been working with .Net platform using Visual Studio for many years, he has implemented several applications for Windows Phone, Windows and Azure platforms. One of the founders of the Internet of Things Laboratory at Microsoft Ukraine.</value>
+    <value>Team Lead в Aistant, Microsoft Student Partner Lead, Организатор MSP Roadshow, Соорганизатор в .NET Core Ukrainian User Group. Занимаюсь разработкой распределенных систем и систем с использованием Microsoft Azure. Люблю использовать новые продукты и собирать все существующие грабли.</value>
   </data>
   <data name="FirstName" xml:space="preserve">
-    <value>Sergey</value>
+    <value>Illia</value>
   </data>
   <data name="LastName" xml:space="preserve">
-    <value>Poplavskiy</value>
+    <value>Lubenets</value>
   </data>
 </root>

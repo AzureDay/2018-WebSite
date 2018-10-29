@@ -70,6 +70,21 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>EWasilewski.resx</DependentUpon>
       </Compile>
+      <Compile Update="App\Service\Speaker\ILubenets.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ILubenets.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Speaker\KBaczyk.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>KBaczyk.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Speaker\NDranchuk.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>NDranchuk.resx</DependentUpon>
+      </Compile>
       <Compile Update="App\Service\Speaker\SBielskyi.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
@@ -84,6 +99,21 @@
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>SSultanov.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Topics\ILubenets_01.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ILubenets_01.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Topics\KBaczyk_01.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>KBaczyk_01.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Topics\NDranchuk_01.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>NDranchuk_01.resx</DependentUpon>
       </Compile>
       <Compile Update="App\Service\Topics\SBielskyi_01.Designer.cs">
         <DesignTime>True</DesignTime>
@@ -195,6 +225,18 @@
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>EWasilewski.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Speaker\ILubenets.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>ILubenets.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Speaker\KBaczyk.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>KBaczyk.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Speaker\NDranchuk.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>NDranchuk.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Speaker\SBielskyi.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>SBielskyi.Designer.cs</LastGenOutput>
@@ -206,6 +248,18 @@
       <EmbeddedResource Update="App\Service\Speaker\SSultanov.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>SSultanov.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Topics\ILubenets_01.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>ILubenets_01.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Topics\KBaczyk_01.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>KBaczyk_01.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Topics\NDranchuk_01.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>NDranchuk_01.Designer.cs</LastGenOutput>
       </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Topics\SBielskyi_01.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
