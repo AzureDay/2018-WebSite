@@ -22,8 +22,11 @@ namespace AzureDay.WebApp.Database.Services
             _speakers.Add(EPolonychko()); 
             _speakers.Add(EWasilewski());
             _speakers.Add(AVidishchev());
-            _speakers.Add(VBezmaly());
+            _speakers.Add(SPoplavskiy());
             _speakers.Add(OKrakovetskyi());
+            _speakers.Add(NDranchuk());
+            _speakers.Add(KBaczyk());
+            _speakers.Add(ILubenets());
 
             return _speakers;
         }
@@ -95,8 +98,8 @@ namespace AzureDay.WebApp.Database.Services
                 TwitterUrl = "",
                 YouTubeUrl = "",
                 WebUrl = "",
-                CompanyName = "",
-                JobTitle = ""
+                CompanyName = "Microsoft",
+                JobTitle = "Partner Business Evangelist"
             };
         }
 
@@ -113,14 +116,14 @@ namespace AzureDay.WebApp.Database.Services
                 FacebookUrl = "",
                 GitHubUrl = "",
                 GoogleUrl = "",
-                LinkedInUrl = "",
+                LinkedInUrl = "https://www.linkedin.com/in/sergii-bielskyi-884a7a2b/",
                 MsdnUrl = "",
                 MvpUrl = "",
                 TwitterUrl = "",
                 YouTubeUrl = "",
                 WebUrl = "",
-                CompanyName = "",
-                JobTitle = ""
+                CompanyName = "qiio",
+                JobTitle = "Cloud Solution Architect"
             };
         }
 
@@ -137,14 +140,14 @@ namespace AzureDay.WebApp.Database.Services
                 FacebookUrl = "",
                 GitHubUrl = "",
                 GoogleUrl = "",
-                LinkedInUrl = "",
+                LinkedInUrl = "https://www.linkedin.com/in/estelleauberix/",
                 MsdnUrl = "",
                 MvpUrl = "",
                 TwitterUrl = "https://twitter.com/FollowEstelle",
                 YouTubeUrl = "",
                 WebUrl = "",
-                CompanyName = "",
-                JobTitle = ""
+                CompanyName = "ITERFACIO",
+                JobTitle = "CEO, Founder"
             };
         }
 
@@ -161,14 +164,14 @@ namespace AzureDay.WebApp.Database.Services
                 FacebookUrl = "",
                 GitHubUrl = "",
                 GoogleUrl = "",
-                LinkedInUrl = "",
+                LinkedInUrl = "https://www.linkedin.com/in/lebedenkostanislav/",
                 MsdnUrl = "",
                 MvpUrl = "",
                 TwitterUrl = "",
                 YouTubeUrl = "",
                 WebUrl = "",
-                CompanyName = "Sigma Software",
-                JobTitle = ""
+                CompanyName = "Sigma Software Group",
+                JobTitle = ".NET Developer"
             };
         }
 
@@ -181,18 +184,18 @@ namespace AzureDay.WebApp.Database.Services
                 LastName = Localization.App.Service.Speaker.ASurkov.LastName,
                 Bio = Localization.App.Service.Speaker.ASurkov.Bio.Replace(Environment.NewLine, "<br/>"),
                 Country = _countryService.Russia,
-                PhotoUrl = "/images/avatars/ASurkov.jpg",
+                PhotoUrl = "/images/avatars/AOSurkov.png",
                 FacebookUrl = "https://www.facebook.com/AOSurkov",
                 GitHubUrl = "",
                 GoogleUrl = "",
-                LinkedInUrl = "",
+                LinkedInUrl = "https://www.linkedin.com/in/aosurkov/",
                 MsdnUrl = "",
                 MvpUrl = "https://mvp.microsoft.com/ru-ru/PublicProfile/5002197",
                 TwitterUrl = "https://twitter.com/AOSurkov",
                 YouTubeUrl = "",
                 WebUrl = "",
-                CompanyName = "",
-                JobTitle = ""
+                CompanyName = "Yandex",
+                JobTitle = "Architect"
             };
         }
 
@@ -209,14 +212,14 @@ namespace AzureDay.WebApp.Database.Services
                 FacebookUrl = "",
                 GitHubUrl = "",
                 GoogleUrl = "",
-                LinkedInUrl = "",
+                LinkedInUrl = "https://www.linkedin.com/in/stas-sultanov/",
                 MsdnUrl = "",
                 MvpUrl = "",
                 TwitterUrl = "",
                 YouTubeUrl = "",
                 WebUrl = "",
-                CompanyName = "",
-                JobTitle = ""
+                CompanyName = "Ciklum",
+                JobTitle = "Cloud Solutions Archictect"
             };
         }
 
@@ -239,8 +242,8 @@ namespace AzureDay.WebApp.Database.Services
                 TwitterUrl = "",
                 YouTubeUrl = "",
                 WebUrl = "",
-                CompanyName = "",
-                JobTitle = ""
+                CompanyName = "ELEKS",
+                JobTitle = "Senior Software Developer"
             };
         }
      
@@ -253,7 +256,7 @@ namespace AzureDay.WebApp.Database.Services
                 LastName = Localization.App.Service.Speaker.EWasilewski.LastName,
                 Bio = Localization.App.Service.Speaker.EWasilewski.Bio.Replace(Environment.NewLine, "<br/>"),
                 Country = _countryService.Poland,
-                PhotoUrl = "/images/avatars/EmilWasilewski.jpg",
+                PhotoUrl = "/images/avatars/EmilWasilewski2.png",
                 FacebookUrl = "",
                 GitHubUrl = "",
                 GoogleUrl = "",
@@ -337,6 +340,102 @@ namespace AzureDay.WebApp.Database.Services
                 WebUrl = "",
                 CompanyName = "DevRain Solutions",
                 JobTitle = "CEO"
+            };
+        }
+
+        public SpeakerEntity SPoplavskiy()
+        {
+            return new SpeakerEntity
+            {
+                Id = "SPoplavskiy",
+                FirstName = Localization.App.Service.Speaker.SPoplavskiy.FirstName,
+                LastName = Localization.App.Service.Speaker.SPoplavskiy.LastName,
+                Bio = Localization.App.Service.Speaker.SPoplavskiy.Bio.Replace(Environment.NewLine, "<br/>"),
+                Country = _countryService.Ukraine,
+                PhotoUrl = "/images/avatars/SPoplavskiy.png",
+                FacebookUrl = "https://www.facebook.com/sergey.poplavskiy.35",
+                GitHubUrl = "",
+                GoogleUrl = "",
+                LinkedInUrl = "",
+                MsdnUrl = "",
+                MvpUrl = "",
+                TwitterUrl = "",
+                YouTubeUrl = "",
+                WebUrl = "",
+                CompanyName = "Microsoft",
+                JobTitle = "Windows Azure Software Developer"
+            };
+        }
+
+        public SpeakerEntity NDranchuk()
+        {
+            return new SpeakerEntity
+            {
+                Id = "NDranchuk",
+                FirstName = Localization.App.Service.Speaker.NDranchuk.FirstName,
+                LastName = Localization.App.Service.Speaker.NDranchuk.LastName,
+                Bio = Localization.App.Service.Speaker.NDranchuk.Bio.Replace(Environment.NewLine, "<br/>"),
+                Country = _countryService.Ukraine,
+                PhotoUrl = "/images/avatars/NDranchuk.jpg",
+                FacebookUrl = "",
+                GitHubUrl = "",
+                GoogleUrl = "",
+                LinkedInUrl = "https://www.linkedin.com/in/nataliia-dranchuk-0618b0107/",
+                MsdnUrl = "",
+                MvpUrl = "",
+                TwitterUrl = "",
+                YouTubeUrl = "",
+                WebUrl = "",
+                CompanyName = "Smart Business",
+                JobTitle = ".NET developer"
+            };
+        }
+
+        public SpeakerEntity KBaczyk()
+        {
+            return new SpeakerEntity
+            {
+                Id = "KBaczyk",
+                FirstName = Localization.App.Service.Speaker.KBaczyk.FirstName,
+                LastName = Localization.App.Service.Speaker.KBaczyk.LastName,
+                Bio = Localization.App.Service.Speaker.KBaczyk.Bio.Replace(Environment.NewLine, "<br/>"),
+                Country = _countryService.Poland,
+                PhotoUrl = "/images/avatars/KBaczyk.jpg",
+                FacebookUrl = "",
+                GitHubUrl = "",
+                GoogleUrl = "",
+                LinkedInUrl = "https://www.linkedin.com/in/kamil-b%C4%85czyk-32093714/",
+                MsdnUrl = "",
+                MvpUrl = "",
+                TwitterUrl = "https://twitter.com/kamilbaczyk",
+                YouTubeUrl = "",
+                WebUrl = "",
+                CompanyName = "Microsoft",
+                JobTitle = "Microsoft MVP Profile and Public Speaking info"
+            };
+        }
+
+        public SpeakerEntity ILubenets()
+        {
+            return new SpeakerEntity
+            {
+                Id = "ILubenets",
+                FirstName = Localization.App.Service.Speaker.ILubenets.FirstName,
+                LastName = Localization.App.Service.Speaker.ILubenets.LastName,
+                Bio = Localization.App.Service.Speaker.ILubenets.Bio.Replace(Environment.NewLine, "<br/>"),
+                Country = _countryService.Ukraine,
+                PhotoUrl = "/images/avatars/ILubenets.jpg",
+                FacebookUrl = "",
+                GitHubUrl = "",
+                GoogleUrl = "",
+                LinkedInUrl = "https://www.linkedin.com/in/illia-lubenets-b16b15b6/",
+                MsdnUrl = "",
+                MvpUrl = "",
+                TwitterUrl = "",
+                YouTubeUrl = "",
+                WebUrl = "",
+                CompanyName = "Aistant",
+                JobTitle = "Senior Software Engineer Team Lead"
             };
         }
     }
