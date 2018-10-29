@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using AzureDay.WebApp.Database.Entities;
 
 namespace AzureDay.WebApp.Database.Services
@@ -26,6 +27,11 @@ namespace AzureDay.WebApp.Database.Services
             _speakers.Add(OKrakovetskyi());
 
             return _speakers;
+        }
+
+        public override IEnumerable<SpeakerEntity> GetAll()
+        {
+            return base.GetAll().OrderBy(x => x.FullName);
         }
 
         public SpeakerEntity ABoyko()

@@ -11,7 +11,7 @@ namespace AzureDay.WebApp.Database.Services
 
         protected abstract List<T> PopulateStorage();
 
-        public IEnumerable<T> GetAll()
+        public virtual IEnumerable<T> GetAll()
         {
             return Storage;
         }
