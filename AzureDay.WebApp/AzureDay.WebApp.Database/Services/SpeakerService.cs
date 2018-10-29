@@ -74,8 +74,8 @@ namespace AzureDay.WebApp.Database.Services
                 TwitterUrl = "",
                 YouTubeUrl = "",
                 WebUrl = "",
-                CompanyName = "Lead Architect",
-                JobTitle = "Viseo group"
+                CompanyName = "Viseo group",
+                JobTitle = "Lead Architect"
             };
         }
 
@@ -363,7 +363,7 @@ namespace AzureDay.WebApp.Database.Services
                 YouTubeUrl = "",
                 WebUrl = "",
                 CompanyName = "Microsoft",
-                JobTitle = "Windows Azure Software Developer"
+                JobTitle = "Microsoft Azure Software Developer"
             };
         }
 
