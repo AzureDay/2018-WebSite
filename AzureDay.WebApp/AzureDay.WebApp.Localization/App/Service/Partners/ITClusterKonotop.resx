@@ -118,9 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Description" xml:space="preserve">
-    <value />
+    <value>Who We Are
+Konotop IT Cluster is a community of leading IT companies of the region. In cooperation with higher educational establishments they improve and develop IT in the town. We initiated system changes in Konotop business environment and launched worldwide image improvements of the town. 
+Our Objectives 
+Konotop IT Cluster is striving to convert Konotop into powerful IT center of Ukraine and of the whole world. We are about to create better environment for IT professionals self-fulfillment, to involve creative youth into information technologies field, to design competitive regional community of IT specialists. 
+Our Mission 
+Our vision is Konotop as a modern European city. It is the town, where huge IT companies are located, the best educational projects are implemented and in which one can both live and work conveniently.</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value />
+    <value>Konotop IT Cluster</value>
   </data>
 </root>

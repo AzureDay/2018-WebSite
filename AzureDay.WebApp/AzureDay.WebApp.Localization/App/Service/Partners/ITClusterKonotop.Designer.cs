@@ -61,7 +61,10 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Who We Are
+        ///Konotop IT Cluster is a community of leading IT companies of the region. In cooperation with higher educational establishments they improve and develop IT in the town. We initiated system changes in Konotop business environment and launched worldwide image improvements of the town. 
+        ///Our Objectives 
+        ///Konotop IT Cluster is striving to convert Konotop into powerful IT center of Ukraine and of the whole world. We are about to create better environment for IT professionals self-fulfillment, to invol [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Description {
             get {
@@ -70,7 +73,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Konotop IT Cluster.
         /// </summary>
         public static string Title {
             get {

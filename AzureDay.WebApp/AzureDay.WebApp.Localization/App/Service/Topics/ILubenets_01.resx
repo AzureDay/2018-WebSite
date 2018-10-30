@@ -118,9 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Description" xml:space="preserve">
-    <value>В докладе расмотрим что такое azure functions. Пройдемся по новым возможностям второй версии функций. Расмотрим изменения которые вам нужно будет сделать чтобы запускать существующие функции с использованием рантайма второй версии.</value>
+    <value>In my session we will look at Azure Functions and new features of its v2 runtime, and also at the changes you will need to make in your exciting code to be able to run existing functions with the runtime of v2.</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Azure Functions v2. Что нового?</value>
+    <value>Azure Functions v2. What's new?</value>
   </data>
 </root>

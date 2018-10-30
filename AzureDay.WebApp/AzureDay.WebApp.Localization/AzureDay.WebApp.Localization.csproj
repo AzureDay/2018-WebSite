@@ -25,10 +25,20 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>BrainTV.resx</DependentUpon>
       </Compile>
+      <Compile Update="App\Service\Partners\DataScienceUA.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>DataScienceUA.resx</DependentUpon>
+      </Compile>
       <Compile Update="App\Service\Partners\DevArt.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>DevArt.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Partners\DevDigest.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>DevDigest.resx</DependentUpon>
       </Compile>
       <Compile Update="App\Service\Partners\Dou.Designer.cs">
         <DesignTime>True</DesignTime>
@@ -39,6 +49,11 @@
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>ITClusterKonotop.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Partners\ITClusterVinnytsia.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ITClusterVinnytsia.resx</DependentUpon>
       </Compile>
       <Compile Update="App\Service\Partners\ITRatingUkraine.Designer.cs">
         <DesignTime>True</DesignTime>
@@ -60,10 +75,20 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>ScrumUkraine.resx</DependentUpon>
       </Compile>
+      <Compile Update="App\Service\Partners\Skyworker.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Skyworker.resx</DependentUpon>
+      </Compile>
       <Compile Update="App\Service\Partners\WeeklyIT.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>WeeklyIT.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Speaker\AVidishchev.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>AVidishchev.resx</DependentUpon>
       </Compile>
       <Compile Update="App\Service\Speaker\EWasilewski.Designer.cs">
         <DesignTime>True</DesignTime>
@@ -99,6 +124,21 @@
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>SSultanov.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Topics\AVidishchev_01.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>AVidishchev_01.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Topics\EAuberix_01.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>EAuberix_01.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Topics\ILeontiev_01.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ILeontiev_01.resx</DependentUpon>
       </Compile>
       <Compile Update="App\Service\Topics\ILubenets_01.Designer.cs">
         <DesignTime>True</DesignTime>
@@ -186,12 +226,20 @@
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>BrainTV.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\DataScienceUA.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>DataScienceUA.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Partners\DevArt.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>DevArt.Designer.cs</LastGenOutput>
       </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Partners\DevArt.ru.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\DevDigest.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>DevDigest.Designer.cs</LastGenOutput>
       </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Partners\Dou.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
@@ -200,6 +248,10 @@
       <EmbeddedResource Update="App\Service\Partners\ITClusterKonotop.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>ITClusterKonotop.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\ITClusterVinnytsia.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>ITClusterVinnytsia.Designer.cs</LastGenOutput>
       </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Partners\ITRatingUkraine.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
@@ -217,9 +269,17 @@
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>ScrumUkraine.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\Skyworker.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>Skyworker.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Partners\WeeklyIT.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>WeeklyIT.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Speaker\AVidishchev.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>AVidishchev.Designer.cs</LastGenOutput>
       </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Speaker\EWasilewski.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
@@ -248,6 +308,18 @@
       <EmbeddedResource Update="App\Service\Speaker\SSultanov.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>SSultanov.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Topics\AVidishchev_01.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>AVidishchev_01.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Topics\EAuberix_01.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>EAuberix_01.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Topics\ILeontiev_01.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>ILeontiev_01.Designer.cs</LastGenOutput>
       </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Topics\ILubenets_01.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>

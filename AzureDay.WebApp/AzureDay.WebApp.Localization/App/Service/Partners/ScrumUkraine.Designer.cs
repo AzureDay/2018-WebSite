@@ -61,7 +61,10 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Scrum Украина – команда  профессиональных коучей. Используя инновационный подход в менеджменте организаций и продуктов, мы помогаем компаниям достигать поставленных KPI быстрее и проще. Мы проводим корпоративные тренинги, предлагаем организационный коучинг, ScrumAlliance сертификации и осуществляем поддержку Scrum трансформаций. 
+        ///
+        ///Почему Scrum? 
+        ///Мы видели, как Скрам (Scrum) и подобные командные подходы организации труда и модернизации бизнеса успешно работают на практике. Мы видели, как опыт их применени [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Description {
             get {

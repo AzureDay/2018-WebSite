@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Description" xml:space="preserve">
-    <value />
+    <value>Comparison between Device &amp; Digital Twins in Azure and Device Shadow in AWS in order to understand how to use them in an IoT strategy. How the Azure Digital Twins are going to help you in your next-generation IoT solutions?</value>
   </data>
   <data name="Title" xml:space="preserve">
     <value>Understand the Device Twins in Azure and AWS for IoT projects.</value>

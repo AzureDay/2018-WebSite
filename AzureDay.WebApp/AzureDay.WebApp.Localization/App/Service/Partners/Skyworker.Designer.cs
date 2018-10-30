@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AzureDay.WebApp.Localization.App.Service.Topics {
+namespace AzureDay.WebApp.Localization.App.Service.Partners {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace AzureDay.WebApp.Localization.App.Service.Topics {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class NDranchuk_01 {
+    public class Skyworker {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal NDranchuk_01() {
+        internal Skyworker() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Topics {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Topics.NDranchuk_01", typeof(NDranchuk_01).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Partners.Skyworker", typeof(Skyworker).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,15 @@ namespace AzureDay.WebApp.Localization.App.Service.Topics {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to After this session, you will know the basics of the Bot Framework, and which Azure (and not only) services can be combined with chat-bot applications to make them as useful and smart as needed. I will tell you about the problems that we faced while trying to create the most convenient and functional solutions, and share the best practices and some life-hacks..
+        ///   Looks up a localized string similar to Skyworker is the first career analytics company in IT sphere.
+        ///
+        ///Our  product solution allows you to:
+        ///- arrange a consultation or mentorship with top IT professionals worldwide;
+        ///- get deep analytics on existing and planned positions in IT companies;
+        ///- estimate your demand and cost on the market;
+        ///- get support in defending your interests in front of the companies.
+        ///
+        ///For IT companies we deeply analyze their practice / technology stack / domain specifics and provide a flow of recommendations of relevant I [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Description {
             get {
@@ -70,7 +78,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Topics {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Chat-bots made better with Azure..
+        ///   Looks up a localized string similar to Skyworker.
         /// </summary>
         public static string Title {
             get {
