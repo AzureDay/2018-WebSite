@@ -129,6 +129,42 @@ namespace AzureDay.WebApp.Database.Services
                     WebUrl = "http://weekly-it.com/",
                     PartnerType = PartnerType.Info
                 },
+                new PartnerEntity
+                {
+                    Id = "DataScienceUA",
+                    Title = Localization.App.Service.Partners.DataScienceUA.Title,
+                    Description = Localization.App.Service.Partners.DataScienceUA.Description.Replace(Environment.NewLine, "<br/>"),
+                    LogoUrl = "/images/logos/DataScienceUA.png",
+                    WebUrl = "https://data-science.com.ua/ua/conferences/data-science-ua-conference-5th/",
+                    PartnerType = PartnerType.Info
+                },
+                new PartnerEntity
+                {
+                    Id = "DevDigest",
+                    Title = Localization.App.Service.Partners.DevDigest.Title,
+                    Description = Localization.App.Service.Partners.DevDigest.Description.Replace(Environment.NewLine, "<br/>"),
+                    LogoUrl = "/images/logos/devdigest.png",
+                    WebUrl = "https://devdigest.today/",
+                    PartnerType = PartnerType.Info
+                },
+                new PartnerEntity
+                {
+                    Id = "ITClusterVinnytsia",
+                    Title = Localization.App.Service.Partners.ITClusterVinnytsia.Title,
+                    Description = Localization.App.Service.Partners.ITClusterVinnytsia.Description.Replace(Environment.NewLine, "<br/>"),
+                    LogoUrl = "/images/logos/ITClusterVinnytsia.jpg",
+                    WebUrl = "https://www.it-association.vn.ua/",
+                    PartnerType = PartnerType.Info
+                },
+                new PartnerEntity
+                {
+                    Id = "Skyworker",
+                    Title = Localization.App.Service.Partners.Skyworker.Title,
+                    Description = Localization.App.Service.Partners.Skyworker.Description.Replace(Environment.NewLine, "<br/>"),
+                    LogoUrl = "/images/logos/Skyworker.jpg",
+                    WebUrl = "https://skyworker.com.ua/",
+                    PartnerType = PartnerType.Info
+                },
             };
         }
 

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Description" xml:space="preserve">
-    <value />
+    <value>After this session, you will know the basics of the Bot Framework, and which Azure (and not only) services can be combined with chat-bot applications to make them as useful and smart as needed. I will tell you about the problems that we faced while trying to create the most convenient and functional solutions, and share the best practices and some life-hacks.</value>
   </data>
   <data name="Title" xml:space="preserve">
     <value>Chat-bots made better with Azure.</value>

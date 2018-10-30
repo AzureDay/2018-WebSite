@@ -19,7 +19,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Topics {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class ILeontiev_01 {
@@ -61,9 +61,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Topics {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to - talk about different blockchain systems which are available on Azure Marketplace.
-        ///- deep dive into decentralized application architecture.
-        ///- sharing the experience about real project..
+        ///   Looks up a localized string similar to I’ll talk about real use case of connected industrial climate/heating systems. How to adapt your achitecture to changing customer needs, which Azure IoT service to choose? Why Serverless is good and not good in the same time. How to store and process 122TB of Raw Data. Talk is constructed to show step-by-step change in arhitecture design and why it was changed..
         /// </summary>
         public static string Description {
             get {
@@ -72,7 +70,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Topics {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Blockchain as a Service on Azure.
+        ///   Looks up a localized string similar to State of the Art of Azure IoT Arhitecture of how to not fuckup the project. How to choose right cloud services stack for complicated scenario..
         /// </summary>
         public static string Title {
             get {

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AzureDay.WebApp.Localization.App.Service.Topics {
+namespace AzureDay.WebApp.Localization.App.Service.Partners {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace AzureDay.WebApp.Localization.App.Service.Topics {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class NDranchuk_01 {
+    public class DataScienceUA {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal NDranchuk_01() {
+        internal DataScienceUA() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Topics {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Topics.NDranchuk_01", typeof(NDranchuk_01).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Partners.DataScienceUA", typeof(DataScienceUA).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,13 @@ namespace AzureDay.WebApp.Localization.App.Service.Topics {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to After this session, you will know the basics of the Bot Framework, and which Azure (and not only) services can be combined with chat-bot applications to make them as useful and smart as needed. I will tell you about the problems that we faced while trying to create the most convenient and functional solutions, and share the best practices and some life-hacks..
+        ///   Looks up a localized string similar to November 24
+        ///
+        ///Kyiv
+        ///
+        ///The development of data-technology is incredibly fast. Companies that do not use data analysis are difficult to compete with others. Facebook, Google, Amazon - IT giants who created personalized offers to customers precisely because of the information they have. 
+        ///
+        ///On November 24 at Data Science UA Conference, we will bring together more than 500 developers, innovators and entrepreneurs to study complex algorithms such as large neural networks, speech recognition and image recognitio [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Description {
             get {
@@ -70,7 +76,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Topics {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Chat-bots made better with Azure..
+        ///   Looks up a localized string similar to Data Science UA.
         /// </summary>
         public static string Title {
             get {

@@ -61,7 +61,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Topics {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to В докладе расмотрим что такое azure functions. Пройдемся по новым возможностям второй версии функций. Расмотрим изменения которые вам нужно будет сделать чтобы запускать существующие функции с использованием рантайма второй версии..
+        ///   Looks up a localized string similar to In my session we will look at Azure Functions and new features of its v2 runtime, and also at the changes you will need to make in your exciting code to be able to run existing functions with the runtime of v2..
         /// </summary>
         public static string Description {
             get {
@@ -70,7 +70,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Topics {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Azure Functions v2. Что нового?.
+        ///   Looks up a localized string similar to Azure Functions v2. What&apos;s new?.
         /// </summary>
         public static string Title {
             get {
