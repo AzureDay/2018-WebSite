@@ -117,13 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Bio" xml:space="preserve">
-    <value>Solutions Architect is an adept and evangelist of Microsoft's technological stack. Certified Microsoft Professional Developer since 2007.</value>
+  <data name="Description" xml:space="preserve">
+    <value>When IT professionals see a technology of container apps for the first time, often they wonder whether it is really something they need if their systems are running in the cloud environment. Platform as a Service approach allows one to abstract oneself from the low-level details, such as: physical servers, network, storage, etc. That's why adding containers that can be considered as another level of virtualization may seem rather excessive. However, such a decision has its own advantages for business and for developers. In this session we will talk about those particular advantages.</value>
   </data>
-  <data name="FirstName" xml:space="preserve">
-    <value>Stas</value>
-  </data>
-  <data name="LastName" xml:space="preserve">
-    <value>Sultanov</value>
+  <data name="Title" xml:space="preserve">
+    <value>How and why you should use containers in Azure</value>
   </data>
 </root>
