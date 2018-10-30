@@ -19,7 +19,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Topics {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class EAuberix_01 {
@@ -61,7 +61,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Topics {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Presentation of a PoC which demonstrate that Blockchain is a great soluce to build a decentralized identity model, enabling user entities to manage their own identity and profile attributes..
+        ///   Looks up a localized string similar to Comparison between Device &amp; Digital Twins in Azure and Device Shadow in AWS in order to understand how to use them in an IoT strategy. How the Azure Digital Twins are going to help you in your next-generation IoT solutions?.
         /// </summary>
         public static string Description {
             get {
@@ -70,7 +70,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Topics {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Decentralize Authentication with BaaS.
+        ///   Looks up a localized string similar to Understand the Device Twins in Azure and AWS for IoT projects..
         /// </summary>
         public static string Title {
             get {

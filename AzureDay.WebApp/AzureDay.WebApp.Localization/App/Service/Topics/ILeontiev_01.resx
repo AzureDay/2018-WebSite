@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Description" xml:space="preserve">
-    <value />
+    <value>I’ll talk about real use case of connected industrial climate/heating systems. How to adapt your achitecture to changing customer needs, which Azure IoT service to choose? Why Serverless is good and not good in the same time. How to store and process 122TB of Raw Data. Talk is constructed to show step-by-step change in arhitecture design and why it was changed.</value>
   </data>
   <data name="Title" xml:space="preserve">
     <value>State of the Art of Azure IoT Arhitecture of how to not fuckup the project. How to choose right cloud services stack for complicated scenario.</value>

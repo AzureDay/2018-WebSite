@@ -118,18 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Description" xml:space="preserve">
-    <value>Scrum Украина – команда  профессиональных коучей. Используя инновационный подход в менеджменте организаций и продуктов, мы помогаем компаниям достигать поставленных KPI быстрее и проще. Мы проводим корпоративные тренинги, предлагаем организационный коучинг, ScrumAlliance сертификации и осуществляем поддержку Scrum трансформаций. 
-
-Почему Scrum? 
-Мы видели, как Скрам (Scrum) и подобные командные подходы организации труда и модернизации бизнеса успешно работают на практике. Мы видели, как опыт их применения меняет отношения между людьми, меняет отношение людей к работе, повышает качество продуктов. 
- 
-Чего мы хотим для рынка Украины? 
-Мы хотим, чтобы больше людей могли получать радость от работы и соучастия от создания классных продуктов. Мы хотим, чтобы больше компаний перестали мучать своих коллег "мрачным скрамом", и по-настоящему смогли воспользоваться преимуществами такого рода командного спорта ведения бизнеса. 
- 
-Какова наша цель? 
-Мы ставим своей целью популяризацию Scrum и других современных подходов ведения бизнеса и организации процессов так, чтобы каждая компания на украинском и соседних рынках могла позволить себе обучить своих сотрудников и руководство, иметь под рукой толкового и доступного скрам-мастера / коуча, имела доступ к обилию полезных и бесплатных материалов.</value>
+    <value>Developers Digest is an aggregator of news about .NET Core, Azure, Xamarin from the world. Our site is filling with publications related to cross-platform development, .NET technology stack and development for mobile devices on the Xamarin platform.  
+This site is open source project, which placed on GitHub.  
+We use .NET Core for develop it and we host all our stuff on Microsoft Azure.</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Scrum Ukraine</value>
+    <value>DevDigest</value>
   </data>
 </root>

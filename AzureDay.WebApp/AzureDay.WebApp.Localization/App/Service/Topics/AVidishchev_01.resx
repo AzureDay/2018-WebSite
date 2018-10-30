@@ -118,9 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Description" xml:space="preserve">
-    <value />
+    <value>Collaboration technologies that allow fast workplace communication become more and more popular. To get maximum efficiency out of them it’s recommended to set up integration with other software services; that way most of daily tasks can be completed without leaving the messenger window. In my session we will look at the possibility of integration of your products with Microsoft Teams and chat bots created using Microsoft Bot Framework.</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Інтеграція Bot Framework з Microsoft Teams.</value>
+    <value>Integrating Bot Framework with Microsoft Teams.</value>
   </data>
 </root>
