@@ -19,7 +19,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Ciklum {
@@ -61,7 +61,9 @@ namespace AzureDay.WebApp.Localization.App.Service.Partners {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ciklum — датская компания, основанная в 2002 году, работающая в сфере аутсорсинга разработки программного обеспечения. Ciklum — это международная компания с офисами продаж в Дании, Швеции, Великобритании, Германии, Швейцарии и Нидерландах, Израиле, Америке и центрами разработки в крупных городах Украины (Киев, Харьков, Днепропетровск, Львов, Одесса и Винница), в Беларуси (Минск) и Пакистане (Лахор, Исламабад). Компания входит в пятерку крупнейших ИТ компаний Украины..
+        ///   Looks up a localized string similar to Ciklum is a top-five global Digital Solutions Company for Fortune 500 and fast-growing organisations alike around the world.
+        ///
+        ///Our 3,000+ Developers located in the Delivery Centres across the globe, provide our clients with a range of services including outsourcing software development, Enterprise App Development, Quality Assurance, Security, R&amp;D, Big Data &amp; Analytics..
         /// </summary>
         public static string Description {
             get {
