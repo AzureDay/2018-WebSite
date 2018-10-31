@@ -19,7 +19,7 @@ namespace AzureDay.WebApp.Localization.Host.Views.Home {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Schedule {
@@ -61,7 +61,25 @@ namespace AzureDay.WebApp.Localization.Host.Views.Home {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 9th of September.
+        ///   Looks up a localized string similar to buy your tickets here.
+        /// </summary>
+        public static string BuyLoggedIn {
+            get {
+                return ResourceManager.GetString("BuyLoggedIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to register and buy your tickets here.
+        /// </summary>
+        public static string BuyLoggedOut {
+            get {
+                return ResourceManager.GetString("BuyLoggedOut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10th of November.
         /// </summary>
         public static string Date {
             get {
@@ -70,7 +88,7 @@ namespace AzureDay.WebApp.Localization.Host.Views.Home {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to /Theme/img/_slides/2017/en/00-date-en.jpg.
+        ///   Looks up a localized string similar to /Theme/img/_slides/2018/en/00-date-en.jpg.
         /// </summary>
         public static string Img {
             get {

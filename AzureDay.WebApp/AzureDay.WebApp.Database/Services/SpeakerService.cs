@@ -28,7 +28,6 @@ namespace AzureDay.WebApp.Database.Services
             _speakers.Add(NDranchuk());
             _speakers.Add(KBaczyk());
             _speakers.Add(ILubenets());
-            _speakers.Add(SKalinets());
 
             return _speakers;
         }
