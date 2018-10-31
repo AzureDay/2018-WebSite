@@ -32,7 +32,7 @@ namespace AzureDay.WebApp.Database.Services
                 new TimetableEntity { TimeStart = "13:15", TimeEnd = "14:15", Room = _roomService.Room1, Topic = _topicService.SSultanov_01 },
                 new TimetableEntity { TimeStart = "14:45", TimeEnd = "15:45", Room = _roomService.Room1, Topic = _topicService.EWasilewski_01 },
                 new TimetableEntity { TimeStart = "16:00", TimeEnd = "17:00", Room = _roomService.Room1, Topic = _topicService.ILubenets_01 },
-                new TimetableEntity { TimeStart = "17:30", TimeEnd = "18:30", Room = _roomService.Room1, Topic = _topicService.Dummy },
+                new TimetableEntity { TimeStart = "17:30", TimeEnd = "18:30", Room = _roomService.Room1, Topic = _topicService.SKalinets_01 },
 			    new TimetableEntity { TimeStart = "18:30", TimeEnd = "19:15", Room = _roomService.Room1, Topic = _topicService.Endnote }
             });
 

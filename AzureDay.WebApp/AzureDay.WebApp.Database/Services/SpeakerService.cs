@@ -28,6 +28,7 @@ namespace AzureDay.WebApp.Database.Services
             _speakers.Add(NDranchuk());
             _speakers.Add(KBaczyk());
             _speakers.Add(ILubenets());
+            _speakers.Add(SKalinets());
 
             return _speakers;
         }
@@ -442,6 +443,30 @@ namespace AzureDay.WebApp.Database.Services
                 WebUrl = "",
                 CompanyName = "Aistant",
                 JobTitle = "Senior Software Engineer Team Lead"
+            };
+        }
+
+        public SpeakerEntity SKalinets()
+        {
+            return new SpeakerEntity
+            {
+                Id = "SKalinets",
+                FirstName = Localization.App.Service.Speaker.SKalinets.FirstName,
+                LastName = Localization.App.Service.Speaker.SKalinets.LastName,
+                Bio = Localization.App.Service.Speaker.SKalinets.Bio.Replace(Environment.NewLine, "<br/>"),
+                Country = _countryService.Ukraine,
+                PhotoUrl = "/images/avatars/SKalinets.png",
+                FacebookUrl = "",
+                GitHubUrl = "",
+                GoogleUrl = "",
+                LinkedInUrl = "https://www.linkedin.com/in/serhiykalinets/",
+                MsdnUrl = "",
+                MvpUrl = "",
+                TwitterUrl = "",
+                YouTubeUrl = "",
+                WebUrl = "",
+                CompanyName = "Playtika",
+                JobTitle = "System Architect"
             };
         }
     }

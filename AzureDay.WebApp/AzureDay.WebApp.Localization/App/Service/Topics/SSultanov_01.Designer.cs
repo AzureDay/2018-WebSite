@@ -61,7 +61,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Topics {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to In this session we will review the trends in Software Development and consider ways of building solutions based on Microsoft Azure platform. We will discuss how IT companies may improve quality of services they provide by moving from development of solutions to assembly..
         /// </summary>
         public static string Description {
             get {

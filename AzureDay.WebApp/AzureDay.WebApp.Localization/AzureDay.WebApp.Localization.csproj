@@ -115,6 +115,11 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>SBielskyi.resx</DependentUpon>
       </Compile>
+      <Compile Update="App\Service\Speaker\SKalinets.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SKalinets.resx</DependentUpon>
+      </Compile>
       <Compile Update="App\Service\Speaker\SLebedenko.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
@@ -159,6 +164,11 @@
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>SBielskyi_01.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Topics\SKalinets_01.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SKalinets_01.resx</DependentUpon>
       </Compile>
       <Compile Update="App\Service\Topics\SLebedenko_01.Designer.cs">
         <DesignTime>True</DesignTime>
@@ -301,6 +311,10 @@
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>SBielskyi.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Speaker\SKalinets.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>SKalinets.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Speaker\SLebedenko.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>SLebedenko.Designer.cs</LastGenOutput>
@@ -336,6 +350,10 @@
       <EmbeddedResource Update="App\Service\Topics\SBielskyi_01.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>SBielskyi_01.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Topics\SKalinets_01.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>SKalinets_01.Designer.cs</LastGenOutput>
       </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Topics\SLebedenko_01.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>

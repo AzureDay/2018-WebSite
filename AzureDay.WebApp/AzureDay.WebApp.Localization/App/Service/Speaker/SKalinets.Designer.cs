@@ -22,14 +22,14 @@ namespace AzureDay.WebApp.Localization.App.Service.Speaker {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class SSultanov {
+    public class SKalinets {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal SSultanov() {
+        internal SKalinets() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Speaker {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Speaker.SSultanov", typeof(SSultanov).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Speaker.SKalinets", typeof(SKalinets).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,9 @@ namespace AzureDay.WebApp.Localization.App.Service.Speaker {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Solutions Architect is an adept and evangelist of Microsoft&apos;s technological stack. Certified Microsoft Professional Developer since 2007..
+        ///   Looks up a localized string similar to System Architect @Playtika
+        ///A professional developer and a software architect. A fan of XP, TDD. Strives to automate everything and anything.
+        ///Despite being a .NET developer for years, Sergii tries to follow other technologies as well. Presently he&apos;s helping teams to build cool products at Steer73..
         /// </summary>
         public static string Bio {
             get {
@@ -70,7 +72,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Speaker {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Stas.
+        ///   Looks up a localized string similar to Sergii.
         /// </summary>
         public static string FirstName {
             get {
@@ -79,7 +81,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Speaker {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sultanov.
+        ///   Looks up a localized string similar to Kalinets.
         /// </summary>
         public static string LastName {
             get {
