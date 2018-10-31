@@ -205,6 +205,11 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>VTsykunov_01.resx</DependentUpon>
       </Compile>
+      <Compile Update="Host\Views\Home\Schedule.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Schedule.resx</DependentUpon>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>
@@ -382,6 +387,10 @@
       <EmbeddedResource Update="App\Service\Workshops\VTsykunov_01.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>VTsykunov_01.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Host\Views\Home\Schedule.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>Schedule.Designer.cs</LastGenOutput>
       </EmbeddedResource>
     </ItemGroup>
 
