@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AzureDay.WebApp.Localization.App.Service.Speaker {
+namespace AzureDay.WebApp.Localization.App.Service.Topics {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace AzureDay.WebApp.Localization.App.Service.Speaker {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class SSultanov {
+    public class SKalinets_01 {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal SSultanov() {
+        internal SKalinets_01() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Speaker {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Speaker.SSultanov", typeof(SSultanov).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AzureDay.WebApp.Localization.App.Service.Topics.SKalinets_01", typeof(SKalinets_01).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,29 +61,20 @@ namespace AzureDay.WebApp.Localization.App.Service.Speaker {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Solutions Architect is an adept and evangelist of Microsoft&apos;s technological stack. Certified Microsoft Professional Developer since 2007..
+        ///   Looks up a localized string similar to When IT professionals see a technology of container apps for the first time, often they wonder whether it is really something they need if their systems are running in the cloud environment. Platform as a Service approach allows one to abstract oneself from the low-level details, such as: physical servers, network, storage, etc. That&apos;s why adding containers that can be considered as another level of virtualization may seem rather excessive. However, such a decision has its own advantages for business and fo [rest of string was truncated]&quot;;.
         /// </summary>
-        public static string Bio {
+        public static string Description {
             get {
-                return ResourceManager.GetString("Bio", resourceCulture);
+                return ResourceManager.GetString("Description", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Stas.
+        ///   Looks up a localized string similar to How and why you should use containers in Azure.
         /// </summary>
-        public static string FirstName {
+        public static string Title {
             get {
-                return ResourceManager.GetString("FirstName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Sultanov.
-        /// </summary>
-        public static string LastName {
-            get {
-                return ResourceManager.GetString("LastName", resourceCulture);
+                return ResourceManager.GetString("Title", resourceCulture);
             }
         }
     }
