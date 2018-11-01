@@ -165,6 +165,15 @@ namespace AzureDay.WebApp.Database.Services
                     WebUrl = "https://skyworker.com.ua/",
                     PartnerType = PartnerType.Info
                 },
+                new PartnerEntity
+                {
+                    Id = "Ciklum",
+                    Title = Localization.App.Service.Partners.Ciklum.Title,
+                    Description = Localization.App.Service.Partners.Ciklum.Description.Replace(Environment.NewLine, "<br/>"),
+                    LogoUrl = "/images/logos/ciklum_v1.png",
+                    WebUrl = "https://www.ciklum.com/",
+                    PartnerType = PartnerType.Silver
+                },
             };
         }
 

@@ -25,6 +25,11 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>BrainTV.resx</DependentUpon>
       </Compile>
+      <Compile Update="App\Service\Partners\Ciklum.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Ciklum.resx</DependentUpon>
+      </Compile>
       <Compile Update="App\Service\Partners\DataScienceUA.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
@@ -240,6 +245,10 @@
       <EmbeddedResource Update="App\Service\Partners\BrainTV.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>BrainTV.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\Ciklum.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>Ciklum.Designer.cs</LastGenOutput>
       </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Partners\DataScienceUA.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
