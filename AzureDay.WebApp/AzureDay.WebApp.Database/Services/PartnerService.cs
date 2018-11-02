@@ -170,9 +170,36 @@ namespace AzureDay.WebApp.Database.Services
                     Id = "Ciklum",
                     Title = Localization.App.Service.Partners.Ciklum.Title,
                     Description = Localization.App.Service.Partners.Ciklum.Description.Replace(Environment.NewLine, "<br/>"),
-                    LogoUrl = "/images/logos/ciklum_v1.png",
+                    LogoUrl = "/images/logos/ciklum_v3.png",
                     WebUrl = "https://www.ciklum.com/",
                     PartnerType = PartnerType.Silver
+                },
+                new PartnerEntity
+                {
+                    Id = "Dev-Pro",
+                    Title = Localization.App.Service.Partners.DevPro.Title,
+                    Description = Localization.App.Service.Partners.DevPro.Description.Replace(Environment.NewLine, "<br/>"),
+                    LogoUrl = "/images/logos/DevPro.png",
+                    WebUrl = "https://www.dev-pro.net/",
+                    PartnerType = PartnerType.Silver
+                },
+                new PartnerEntity
+                {
+                    Id = "Wirex",
+                    Title = Localization.App.Service.Partners.Wirex.Title,
+                    Description = Localization.App.Service.Partners.Wirex.Description.Replace(Environment.NewLine, "<br/>"),
+                    LogoUrl = "/images/logos/Wirex.png",
+                    WebUrl = "https://wirexapp.com/",
+                    PartnerType = PartnerType.Bronze
+                },
+                new PartnerEntity
+                {
+                    Id = "Salateira",
+                    Title = Localization.App.Service.Partners.Salateira.Title,
+                    Description = Localization.App.Service.Partners.Salateira.Description.Replace(Environment.NewLine, "<br/>"),
+                    LogoUrl = "/images/logos/salateira_v1.jpg",
+                    WebUrl = "https://salateira.ua/",
+                    PartnerType = PartnerType.Info | PartnerType.Raffle
                 },
             };
         }
