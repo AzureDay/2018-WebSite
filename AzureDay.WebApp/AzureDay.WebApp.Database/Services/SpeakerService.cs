@@ -341,7 +341,7 @@ namespace AzureDay.WebApp.Database.Services
                 LinkedInUrl = "https://www.linkedin.com/in/krakovetskiy/",
                 MsdnUrl = "",
                 MvpUrl = "",
-                TwitterUrl = "https://twitter.com/msugvnua",
+                TwitterUrl = "https://twitter.com/sashaeve",
                 YouTubeUrl = "",
                 WebUrl = "",
                 CompanyName = "DevRain Solutions",
