@@ -70,7 +70,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Topics {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TBA.
+        ///   Looks up a localized string similar to Azure policies or PIM..
         /// </summary>
         public static string Title {
             get {
