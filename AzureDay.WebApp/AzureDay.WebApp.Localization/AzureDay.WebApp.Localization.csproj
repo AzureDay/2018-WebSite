@@ -45,6 +45,11 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>DevDigest.resx</DependentUpon>
       </Compile>
+      <Compile Update="App\Service\Partners\DevPro.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>DevPro.resx</DependentUpon>
+      </Compile>
       <Compile Update="App\Service\Partners\Dou.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
@@ -75,6 +80,11 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>Luxoft.resx</DependentUpon>
       </Compile>
+      <Compile Update="App\Service\Partners\Salateira.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Salateira.resx</DependentUpon>
+      </Compile>
       <Compile Update="App\Service\Partners\ScrumUkraine.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
@@ -89,6 +99,11 @@
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>WeeklyIT.resx</DependentUpon>
+      </Compile>
+      <Compile Update="App\Service\Partners\Wirex.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Wirex.resx</DependentUpon>
       </Compile>
       <Compile Update="App\Service\Speaker\AVidishchev.Designer.cs">
         <DesignTime>True</DesignTime>
@@ -265,6 +280,10 @@
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>DevDigest.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\DevPro.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>DevPro.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Partners\Dou.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>Dou.Designer.cs</LastGenOutput>
@@ -289,6 +308,10 @@
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>Luxoft.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\Salateira.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>Salateira.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Partners\ScrumUkraine.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>ScrumUkraine.Designer.cs</LastGenOutput>
@@ -300,6 +323,10 @@
       <EmbeddedResource Update="App\Service\Partners\WeeklyIT.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>WeeklyIT.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\Wirex.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>Wirex.Designer.cs</LastGenOutput>
       </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Speaker\AVidishchev.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
