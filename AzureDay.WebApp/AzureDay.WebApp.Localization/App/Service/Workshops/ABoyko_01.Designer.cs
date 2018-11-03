@@ -61,7 +61,7 @@ namespace AzureDay.WebApp.Localization.App.Service.Workshops {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unfortunately, there are still a lot of projects where engineers deploy their apps using &quot;Right click -&gt; Deploy -&gt; Productio&quot; approach. This is sad, but true. At some point we can face this just because no one knows how to configure a build server, how to automate deployment process. And, for some reason, a lot of engineers believe that it is some super complicated stuff. During my speech I will talk about general approaches for automating build, deployments and managing releases. After short talk we will g [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Unfortunately, there are still a lot of projects where engineers deploy their apps using &quot;Right click -&gt; Deploy -&gt; Production&quot; approach. This is sad, but true. At some point we can face this just because no one knows how to configure a build server, how to automate deployment process. And, for some reason, a lot of engineers believe that it is some super complicated stuff. During my speech I will talk about general approaches for automating build, deployments and managing releases. After short talk we will  [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Description {
             get {
