@@ -28,6 +28,7 @@ namespace AzureDay.WebApp.Database.Services
             _speakers.Add(NDranchuk());
             _speakers.Add(KBaczyk());
             _speakers.Add(ILubenets());
+            _speakers.Add(NMykhailenko());
 
             return _speakers;
         }
@@ -466,6 +467,30 @@ namespace AzureDay.WebApp.Database.Services
                 WebUrl = "",
                 CompanyName = "Playtika",
                 JobTitle = "System Architect"
+            };
+        }
+
+        public SpeakerEntity NMykhailenko()
+        {
+            return new SpeakerEntity
+            {
+                Id = "NMykhailenko",
+                FirstName = Localization.App.Service.Speaker.NMykhailenko.FirstName,
+                LastName = Localization.App.Service.Speaker.NMykhailenko.LastName,
+                Bio = Localization.App.Service.Speaker.NMykhailenko.Bio.Replace(Environment.NewLine, "<br/>"),
+                Country = _countryService.Ukraine,
+                PhotoUrl = "/images/avatars/NMykhailenko.png",
+                FacebookUrl = "",
+                GitHubUrl = "",
+                GoogleUrl = "",
+                LinkedInUrl = "https://www.linkedin.com/in/nikita-mykhailenko/",
+                MsdnUrl = "",
+                MvpUrl = "",
+                TwitterUrl = "",
+                YouTubeUrl = "",
+                WebUrl = "",
+                CompanyName = "",
+                JobTitle = "Software Engineer"
             };
         }
     }
