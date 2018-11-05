@@ -55,6 +55,11 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>Dou.resx</DependentUpon>
       </Compile>
+      <Compile Update="App\Service\Partners\Eleks.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Eleks.resx</DependentUpon>
+      </Compile>
       <Compile Update="App\Service\Partners\ITClusterKonotop.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
@@ -297,6 +302,10 @@
       <EmbeddedResource Update="App\Service\Partners\Dou.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>Dou.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\Eleks.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>Eleks.Designer.cs</LastGenOutput>
       </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Partners\ITClusterKonotop.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>

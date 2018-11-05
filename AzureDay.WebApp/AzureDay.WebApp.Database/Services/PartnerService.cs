@@ -201,6 +201,15 @@ namespace AzureDay.WebApp.Database.Services
                     WebUrl = "https://salateira.ua/",
                     PartnerType = PartnerType.Info | PartnerType.Raffle
                 },
+                new PartnerEntity
+                {
+                    Id = "Eleks",
+                    Title = Localization.App.Service.Partners.Eleks.Title,
+                    Description = Localization.App.Service.Partners.Eleks.Description.Replace(Environment.NewLine, "<br/>"),
+                    LogoUrl = "/images/logos/ELEKS.png",
+                    WebUrl = "https://eleks.com/",
+                    PartnerType = PartnerType.Silver
+                },
             };
         }
 
