@@ -210,6 +210,11 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>SLebedenko_01.resx</DependentUpon>
       </Compile>
+      <Compile Update="App\Service\Topics\SPoplavskiy_01.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SPoplavskiy_01.resx</DependentUpon>
+      </Compile>
       <Compile Update="App\Service\Topics\SSultanov_01.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
@@ -426,6 +431,10 @@
       <EmbeddedResource Update="App\Service\Topics\SLebedenko_01.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>SLebedenko_01.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Topics\SPoplavskiy_01.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>SPoplavskiy_01.Designer.cs</LastGenOutput>
       </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Topics\SSultanov_01.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
