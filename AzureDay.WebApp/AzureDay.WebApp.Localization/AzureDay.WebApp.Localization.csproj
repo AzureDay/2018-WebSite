@@ -100,6 +100,11 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>Skyworker.resx</DependentUpon>
       </Compile>
+      <Compile Update="App\Service\Partners\SmartIT.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SmartIT.resx</DependentUpon>
+      </Compile>
       <Compile Update="App\Service\Partners\WeeklyIT.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
@@ -343,6 +348,10 @@
       <EmbeddedResource Update="App\Service\Partners\Skyworker.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>Skyworker.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\SmartIT.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>SmartIT.Designer.cs</LastGenOutput>
       </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Partners\WeeklyIT.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>

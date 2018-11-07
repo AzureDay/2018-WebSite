@@ -210,6 +210,15 @@ namespace AzureDay.WebApp.Database.Services
                     WebUrl = "https://eleks.com/",
                     PartnerType = PartnerType.Silver
                 },
+                new PartnerEntity
+                {
+                    Id = "SmartIT",
+                    Title = Localization.App.Service.Partners.SmartIT.Title,
+                    Description = Localization.App.Service.Partners.SmartIT.Description.Replace(Environment.NewLine, "<br/>"),
+                    LogoUrl = "/images/logos/smart_it.jpg",
+                    WebUrl = "http://www.smart-it.com/",
+                    PartnerType = PartnerType.Info
+                },
             };
         }
 
