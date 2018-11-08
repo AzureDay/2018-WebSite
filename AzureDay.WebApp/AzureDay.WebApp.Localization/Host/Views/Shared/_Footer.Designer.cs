@@ -19,7 +19,7 @@ namespace AzureDay.WebApp.Localization.Host.Views.Shared {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class _Footer {
@@ -61,7 +61,7 @@ namespace AzureDay.WebApp.Localization.Host.Views.Shared {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kyiv, Hospitalna str. 12, President Hotel.
+        ///   Looks up a localized string similar to Kyiv, 6 Vadyma Hetmana Str., 03057, Mercure Kyiv Congress.
         /// </summary>
         public static string Address {
             get {
@@ -70,7 +70,7 @@ namespace AzureDay.WebApp.Localization.Host.Views.Shared {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to September 8th and 9th.
+        ///   Looks up a localized string similar to November 9th and 10th.
         /// </summary>
         public static string Date {
             get {
@@ -84,6 +84,15 @@ namespace AzureDay.WebApp.Localization.Host.Views.Shared {
         public static string Get_in_touch {
             get {
                 return ResourceManager.GetString("Get_in_touch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AzureDay UA Mobile App:.
+        /// </summary>
+        public static string MobileApp {
+            get {
+                return ResourceManager.GetString("MobileApp", resourceCulture);
             }
         }
         

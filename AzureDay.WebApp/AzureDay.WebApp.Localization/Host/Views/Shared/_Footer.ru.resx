@@ -126,6 +126,9 @@
   <data name="Get_in_touch" xml:space="preserve">
     <value>Свяжитесь с нами:</value>
   </data>
+  <data name="MobileApp" xml:space="preserve">
+    <value>AzureDay UA приложение:</value>
+  </data>
   <data name="Subtitle1" xml:space="preserve">
     <value>Технологии, люди, опыт, инновации и сообщество профессионалов.</value>
   </data>
