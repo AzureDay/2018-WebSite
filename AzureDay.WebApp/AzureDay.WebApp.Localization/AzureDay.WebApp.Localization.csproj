@@ -70,6 +70,11 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>ITClusterVinnytsia.resx</DependentUpon>
       </Compile>
+      <Compile Update="App\Service\Partners\ITKPI.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ITKPI.resx</DependentUpon>
+      </Compile>
       <Compile Update="App\Service\Partners\ITRatingUkraine.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
@@ -329,6 +334,10 @@
       <EmbeddedResource Update="App\Service\Partners\ITClusterVinnytsia.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>ITClusterVinnytsia.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="App\Service\Partners\ITKPI.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>ITKPI.Designer.cs</LastGenOutput>
       </EmbeddedResource>
       <EmbeddedResource Update="App\Service\Partners\ITRatingUkraine.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
