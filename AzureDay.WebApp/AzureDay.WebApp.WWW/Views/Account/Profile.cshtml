@@ -121,12 +121,16 @@
             
                             @if (Model.PayedWorkshopTicket == null)
                             {
-                                <div class="input-group myInputGroupdivider">
+                                <div class="col-md-12 alert alert-danger" style="font-size: 1.3em;">
+                                    Все места на лабораторные работы уже заняты другими участниками.
+                                </div>
+                                
+                                <div style="display: none" class="input-group myInputGroupdivider">
                                     <span class="input-group-addon" style="width: 150px;">@My.Ticket02</span>
-                                    <input id="cbWorkshopTicket" type="checkbox" class="form-control"style="width: 50px;" data-bind="checked: isWorkshopTicket" />
+                                    <input readonly="readonly" id="cbWorkshopTicket" type="checkbox" class="form-control"style="width: 50px;" data-bind="checked: isWorkshopTicket" />
                                     <input type="hidden" name="hasWorkshopTicket"/>
                                 </div>
-                                <div class="input-group myInputGroupdivider" data-bind="visible: isWorkshopTicket">
+                                <div style="display: none" class="input-group myInputGroupdivider"> @* data-bind="visible: isWorkshopTicket" *@
                                     <span class="input-group-addon" style="width: 150px;">@My.Lab01</span>
                                     <select class="form-control" name="ddlWorkshop" data-bind="options: workshops, optionsValue: 'id', optionsText: 'title', value: selectedWorkshop" style="width: 250px;"></select>
                                 </div>
