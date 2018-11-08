@@ -219,6 +219,15 @@ namespace AzureDay.WebApp.Database.Services
                     WebUrl = "http://www.smart-it.com/",
                     PartnerType = PartnerType.Info
                 },
+                new PartnerEntity
+                {
+                    Id = "ITKPI",
+                    Title = Localization.App.Service.Partners.ITKPI.Title,
+                    Description = Localization.App.Service.Partners.ITKPI.Description.Replace(Environment.NewLine, "<br/>"),
+                    LogoUrl = "/images/logos/ITKPI.png",
+                    WebUrl = "https://t.me/itkpi",
+                    PartnerType = PartnerType.Info
+                },
             };
         }
 
