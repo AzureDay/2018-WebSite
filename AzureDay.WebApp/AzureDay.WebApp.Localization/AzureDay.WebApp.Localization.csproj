@@ -255,6 +255,11 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>Schedule.resx</DependentUpon>
       </Compile>
+      <Compile Update="Host\Views\Shared\_Footer.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>_Footer.resx</DependentUpon>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>
@@ -472,6 +477,16 @@
       <EmbeddedResource Update="Host\Views\Home\Schedule.resx">
         <Generator>PublicResXFileCodeGenerator</Generator>
         <LastGenOutput>Schedule.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Host\Views\Shared\_Footer.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>_Footer.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Host\Views\Shared\_Footer.ru.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Host\Views\Shared\_Footer.uk-UA.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
       </EmbeddedResource>
     </ItemGroup>
 
