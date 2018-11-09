@@ -3,3 +3,8 @@
 ```
 -o $(Build.ArtifactStagingDirectory)
 ```
+
+```
+AzureStorageAccountName
+AzureStorageAccountKey
+```
